@@ -390,7 +390,7 @@ function BottomNav({ screen, go }) {
     { id: "profile", icon: User, label: "Profile" },
   ];
   return (
-    <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: C.card, borderTop: `1px solid ${C.line}`, display: "flex", padding: "10px 6px 18px", justifyContent: "space-around" }}>
+    <div style={{ position: "fixed", bottom: 0, left: "50%", transform: "translateX(-50%)", width: "100%", maxWidth: 480, background: C.card, borderTop: `1px solid ${C.line}`, display: "flex", padding: "10px 6px 18px", justifyContent: "space-around", zIndex: 10 }}>
       {items.map((it) => {
         const active = screen === it.id;
         const Icon = it.icon;
@@ -421,7 +421,7 @@ function Welcome({ go }) {
   };
 
   return (
-    <div style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", background: `linear-gradient(180deg, ${C.blueDeep} 0%, ${C.blue} 55%, #3B7CF5 100%)`, padding: "60px 28px 40px", color: "white" }}>
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "space-between", background: `linear-gradient(180deg, ${C.blueDeep} 0%, ${C.blue} 55%, #3B7CF5 100%)`, padding: "60px 28px 40px", color: "white" }}>
       <div />
       <div style={{ textAlign: "center" }}>
         <div style={{ width: 86, height: 86, background: "rgba(255,255,255,0.15)", borderRadius: 24, margin: "0 auto 22px", display: "flex", alignItems: "center", justifyContent: "center", backdropFilter: "blur(4px)" }}>
@@ -482,7 +482,7 @@ function Welcome({ go }) {
 function HomeScreen({ go, openSearch, favorites, toggleFav, openProduct }) {
   const C = useTheme();
   return (
-    <div style={{ height: "100%", overflowY: "auto", paddingBottom: 90 }}>
+    <div style={{ paddingBottom: 90 }}>
       <div style={{ padding: "22px 20px 6px" }}>
         <div style={{ fontSize: 13, color: C.inkSoft }}>Good evening 👋</div>
         <div style={{ fontFamily: displayFont, fontWeight: 800, fontSize: 22, color: C.ink }}>Find your best price</div>
@@ -544,7 +544,7 @@ function SearchResults({ go, favorites, toggleFav, openProduct, initialCategory 
   const pool = cat === "foryou" ? (q ? PRODUCTS : FOR_YOU) : PRODUCTS.filter((p) => p.cat === cat);
   const filtered = pool.filter((p) => p.name.toLowerCase().includes(q.toLowerCase()));
   return (
-    <div style={{ height: "100%", display: "flex", flexDirection: "column" }}>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <div style={{ padding: "18px 20px 10px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10, background: C.card, border: `1px solid ${C.line}`, borderRadius: 16, padding: "12px 16px" }}>
           <Search size={17} color={C.inkSoft} />
@@ -561,7 +561,7 @@ function SearchResults({ go, favorites, toggleFav, openProduct, initialCategory 
         <div style={{ padding: "0 20px 8px", fontSize: 11, color: C.inkSoft }}>Based on what's trending and what you've searched for</div>
       )}
       <div style={{ padding: "0 20px", fontSize: 12, color: C.inkSoft }}>{filtered.length} results</div>
-      <div style={{ flex: 1, overflowY: "auto", padding: "12px 20px 90px", display: "flex", flexDirection: "column", gap: 12 }}>
+      <div style={{ padding: "12px 20px 90px", display: "flex", flexDirection: "column", gap: 12 }}>
         {filtered.map((p) => {
           const pBest = bestValue(p.prices);
           return (
@@ -596,7 +596,7 @@ function ProductDetails({ product, onBack, favorites, toggleFav, addAlert, stock
   const cheapest = [...inStockScored].sort((a, b) => (a.price + a.shipping) - (b.price + b.shipping))[0] || best;
   const bestIsCheapest = best.store === cheapest.store;
   return (
-    <div style={{ height: "100%", overflowY: "auto", paddingBottom: 100 }}>
+    <div style={{ paddingBottom: 100 }}>
       <TopBar title="Product Details" onBack={onBack} />
       <div style={{ padding: "0 20px" }}>
         <div style={{ background: C.blueSoft, borderRadius: 20, padding: "36px 0", textAlign: "center", fontSize: 76, position: "relative" }}>
@@ -723,7 +723,7 @@ const CATEGORY_LABELS = { electronics: "Electronics", fashion: "Fashion", home: 
 function StoresDirectory({ onBack }) {
   const C = useTheme();
   return (
-    <div style={{ height: "100%", overflowY: "auto", paddingBottom: 90 }}>
+    <div style={{ paddingBottom: 90 }}>
       <TopBar title="Partner Stores" onBack={onBack} />
       <div style={{ padding: "0 20px" }}>
         <div style={{ fontSize: 11.5, color: C.inkSoft, marginBottom: 16, lineHeight: 1.5 }}>
@@ -754,7 +754,7 @@ function Favorites({ favorites, toggleFav, openProduct }) {
   const C = useTheme();
   const items = PRODUCTS.filter((p) => favorites.includes(p.id));
   return (
-    <div style={{ height: "100%", overflowY: "auto", paddingBottom: 90 }}>
+    <div style={{ paddingBottom: 90 }}>
       <TopBar title="Favorites" />
       <div style={{ padding: "0 20px" }}>
         {items.length === 0 ? (
@@ -777,7 +777,7 @@ function Favorites({ favorites, toggleFav, openProduct }) {
 function Alerts({ alerts, removeAlert, targets, adjustTarget }) {
   const C = useTheme();
   return (
-    <div style={{ height: "100%", overflowY: "auto", paddingBottom: 90 }}>
+    <div style={{ paddingBottom: 90 }}>
       <TopBar title="Price Alerts" />
       <div style={{ padding: "0 20px" }}>
         {alerts.length === 0 ? (
@@ -841,7 +841,7 @@ function Profile({ dark, setDark }) {
   const C = useTheme();
   const [notif, setNotif] = useState(true);
   return (
-    <div style={{ height: "100%", overflowY: "auto", paddingBottom: 90 }}>
+    <div style={{ paddingBottom: 90 }}>
       <TopBar title="Profile" />
       <div style={{ padding: "0 20px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
@@ -893,7 +893,7 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value={theme}>
-    <div style={{ width: "100%", maxWidth: 480, height: "100dvh", margin: "0 auto", background: theme.bg, fontFamily: bodyFont, position: "relative", overflow: "hidden", transition: "background .2s" }}>
+    <div style={{ width: "100%", maxWidth: 480, minHeight: "100vh", margin: "0 auto", background: theme.bg, fontFamily: bodyFont, position: "relative", transition: "background .2s" }}>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" />
       {screen === "welcome" && <Welcome go={setScreen} />}
       {screen === "home" && <HomeScreen go={setScreen} openSearch={openSearch} favorites={favorites} toggleFav={toggleFav} openProduct={openProduct} />}
