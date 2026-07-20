@@ -380,6 +380,19 @@ function ProductCard({ product, onOpen, onFav, isFav }) {
   );
 }
 
+/* brief confirmation toast — gives instant feedback for actions like
+   setting an alert, instead of leaving the user guessing whether a tap
+   registered */
+function Toast({ message }) {
+  const C = useTheme();
+  if (!message) return null;
+  return (
+    <div style={{ position: "fixed", bottom: 90, left: "50%", transform: "translateX(-50%)", maxWidth: 420, width: "calc(100% - 40px)", background: C.ink, color: "white", borderRadius: 12, padding: "12px 16px", fontSize: 12.5, fontWeight: 600, textAlign: "center", boxShadow: "0 4px 20px rgba(0,0,0,0.25)", zIndex: 50 }}>
+      {message}
+    </div>
+  );
+}
+
 function BottomNav({ screen, go }) {
   const C = useTheme();
   const items = [
@@ -586,7 +599,7 @@ function SearchResults({ go, favorites, toggleFav, openProduct, initialCategory 
   );
 }
 
-function ProductDetails({ product, onBack, favorites, toggleFav, addAlert, stockAlerts, toggleStockAlert }) {
+function ProductDetails({ product, onBack, favorites, toggleFav, addAlert, stockAlerts, toggleStockAlert, alerts, alertTargets, adjustTarget, showToast }) {
   const C = useTheme();
   if (!product) return null;
   const isFav = favorites.includes(product.id);
@@ -710,9 +723,39 @@ function ProductDetails({ product, onBack, favorites, toggleFav, addAlert, stock
           </div>
         </div>
 
-        <button onClick={() => addAlert(product)} style={{ width: "100%", marginTop: 20, background: C.blueSoft, color: C.blue, border: "none", borderRadius: 14, padding: "13px 0", fontWeight: 700, fontSize: 13.5, display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}>
-          <Bell size={15} /> Set a price alert
-        </button>
+        {(() => {
+          const hasAlert = alerts?.some((a) => a.id === product.id);
+          const target = alertTargets?.[product.id];
+          if (!hasAlert) {
+            return (
+              <button
+                onClick={() => {
+                  addAlert(product);
+                  const t = Math.round((lowest(product).price - 5) * 2) / 2;
+                  showToast?.(`🔔 Alert set — we'll notify you if the price drops below ${fmt(t)}`);
+                }}
+                style={{ width: "100%", marginTop: 20, background: C.blueSoft, color: C.blue, border: "none", borderRadius: 14, padding: "13px 0", fontWeight: 700, fontSize: 13.5, display: "flex", alignItems: "center", justifyContent: "center", gap: 6, cursor: "pointer" }}
+              >
+                <Bell size={15} /> Set a price alert
+              </button>
+            );
+          }
+          return (
+            <div style={{ width: "100%", marginTop: 20, background: C.greenSoft, border: `1px solid ${C.green}`, borderRadius: 14, padding: "12px 16px" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12.5, fontWeight: 700, color: C.green }}>
+                <Bell size={14} /> Alert active
+              </div>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 8 }}>
+                <span style={{ fontSize: 11.5, color: C.inkSoft }}>Notify me below</span>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <button onClick={() => adjustTarget?.(product.id, -1)} style={{ width: 24, height: 24, borderRadius: 8, border: "none", background: C.card, color: C.blue, fontWeight: 800, fontSize: 14, cursor: "pointer" }}>−</button>
+                  <span style={{ fontSize: 13, fontWeight: 800, color: C.blueDeep, fontFamily: displayFont, minWidth: 62, textAlign: "center" }}>{fmt(target ?? 0)}</span>
+                  <button onClick={() => adjustTarget?.(product.id, 1)} style={{ width: 24, height: 24, borderRadius: 8, border: "none", background: C.card, color: C.blue, fontWeight: 800, fontSize: 14, cursor: "pointer" }}>+</button>
+                </div>
+              </div>
+            </div>
+          );
+        })()}
       </div>
     </div>
   );
@@ -879,6 +922,12 @@ export default function App() {
   const toggleStockAlert = (key) => setStockAlerts((s) => (s.includes(key) ? s.filter((x) => x !== key) : [...s, key]));
   const [searchCategory, setSearchCategory] = useState("foryou");
   const [dark, setDark] = useState(false);
+  const [toast, setToast] = useState(null);
+  const showToast = (msg) => {
+    setToast(msg);
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(() => setToast(null), 2600);
+  };
   const theme = dark ? DARK : LIGHT;
 
   const toggleFav = (id) => setFavorites((f) => (f.includes(id) ? f.filter((x) => x !== id) : [...f, id]));
@@ -898,12 +947,13 @@ export default function App() {
       {screen === "welcome" && <Welcome go={setScreen} />}
       {screen === "home" && <HomeScreen go={setScreen} openSearch={openSearch} favorites={favorites} toggleFav={toggleFav} openProduct={openProduct} />}
       {screen === "search" && <SearchResults go={setScreen} favorites={favorites} toggleFav={toggleFav} openProduct={openProduct} initialCategory={searchCategory} />}
-      {screen === "product" && <ProductDetails product={selected} onBack={() => setScreen("search")} favorites={favorites} toggleFav={toggleFav} addAlert={addAlert} stockAlerts={stockAlerts} toggleStockAlert={toggleStockAlert} />}
+      {screen === "product" && <ProductDetails product={selected} onBack={() => setScreen("search")} favorites={favorites} toggleFav={toggleFav} addAlert={addAlert} stockAlerts={stockAlerts} toggleStockAlert={toggleStockAlert} alerts={alerts} alertTargets={alertTargets} adjustTarget={adjustTarget} showToast={showToast} />}
       {screen === "favorites" && <Favorites favorites={favorites} toggleFav={toggleFav} openProduct={openProduct} />}
       {screen === "alerts" && <Alerts alerts={alerts} removeAlert={removeAlert} targets={alertTargets} adjustTarget={adjustTarget} />}
       {screen === "profile" && <Profile dark={dark} setDark={setDark} />}
       {screen === "stores" && <StoresDirectory onBack={() => setScreen("home")} />}
       {screen !== "welcome" && <BottomNav screen={screen} go={setScreen} />}
+      <Toast message={toast} />
     </div>
     </ThemeContext.Provider>
   );
