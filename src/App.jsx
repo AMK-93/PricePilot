@@ -893,7 +893,7 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value={theme}>
-    <div style={{ width: "100%", maxWidth: 400, height: 780, margin: "0 auto", background: theme.bg, fontFamily: bodyFont, position: "relative", overflow: "hidden", borderRadius: 28, boxShadow: "0 8px 40px rgba(14,27,51,0.18)", transition: "background .2s" }}>
+    <div style={{ width: "100%", maxWidth: 480, height: "100dvh", margin: "0 auto", background: theme.bg, fontFamily: bodyFont, position: "relative", overflow: "hidden", transition: "background .2s" }}>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" />
       {screen === "welcome" && <Welcome go={setScreen} />}
       {screen === "home" && <HomeScreen go={setScreen} openSearch={openSearch} favorites={favorites} toggleFav={toggleFav} openProduct={openProduct} />}
