@@ -174,7 +174,14 @@ const PRODUCTS = [
 ];
 
 const TRENDING = [PRODUCTS[0], PRODUCTS[3], PRODUCTS[4]];
-const RECENT_SEARCHES = ["iPhone 15", "Wireless headphones", "Running shoes"];
+/* Each recent search links to the specific product the customer was
+   actually looking at, so tapping it re-opens that product directly
+   instead of re-running a text search and making them find it again. */
+const RECENT_SEARCHES = [
+  { label: "iPhone 15", productId: 1 },
+  { label: "Wireless headphones", productId: 2 },
+  { label: "Running shoes", productId: 4 },
+];
 
 /* "For You" — trending items plus anything matching the customer's recent
    searches, deduplicated. Replaces a flat "All" tab so the default view
@@ -185,12 +192,9 @@ const FOR_YOU = (() => {
   const list = [];
   const add = (p) => { if (!seen.has(p.id)) { seen.add(p.id); list.push(p); } };
   TRENDING.forEach(add);
-  RECENT_SEARCHES.forEach((term) => {
-    const words = term.toLowerCase().split(" ");
-    PRODUCTS.forEach((p) => {
-      const name = p.name.toLowerCase();
-      if (words.some((w) => w.length > 2 && name.includes(w))) add(p);
-    });
+  RECENT_SEARCHES.forEach((r) => {
+    const p = PRODUCTS.find((x) => x.id === r.productId);
+    if (p) add(p);
   });
   return list;
 })();
@@ -537,19 +541,20 @@ function HomeScreen({ go, openSearch, favorites, toggleFav, openProduct }) {
           <span style={{ fontFamily: displayFont, fontWeight: 700, fontSize: 15, color: C.ink }}>Recent searches</span>
         </div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-          {RECENT_SEARCHES.map((s) => (
-            <div key={s} onClick={() => openSearch()} style={{ background: C.card, border: `1px solid ${C.line}`, borderRadius: 999, padding: "8px 14px", fontSize: 12.5, color: C.ink, cursor: "pointer" }}>{s}</div>
-          ))}
+          {RECENT_SEARCHES.map((r) => {
+            const p = PRODUCTS.find((x) => x.id === r.productId);
+            return (
+              <div key={r.label} onClick={() => p && openProduct(p)} style={{ background: C.card, border: `1px solid ${C.line}`, borderRadius: 999, padding: "8px 14px", fontSize: 12.5, color: C.ink, cursor: "pointer" }}>{r.label}</div>
+            );
+          })}
         </div>
       </div>
     </div>
   );
 }
 
-function SearchResults({ go, favorites, toggleFav, openProduct, initialCategory }) {
+function SearchResults({ go, favorites, toggleFav, openProduct, q, setQ, cat, setCat }) {
   const C = useTheme();
-  const [q, setQ] = useState("");
-  const [cat, setCat] = useState(initialCategory || "foryou");
   // "For You" with no typed query shows the curated recommendation list;
   // typing a query always searches the full catalog since that's an
   // explicit request, not a browsing preference. Picking a specific
@@ -561,7 +566,7 @@ function SearchResults({ go, favorites, toggleFav, openProduct, initialCategory 
       <div style={{ padding: "18px 20px 10px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10, background: C.card, border: `1px solid ${C.line}`, borderRadius: 16, padding: "12px 16px" }}>
           <Search size={17} color={C.inkSoft} />
-          <input autoFocus value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search for any product…" style={{ border: "none", outline: "none", fontSize: 14, flex: 1, fontFamily: bodyFont }} />
+          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search for any product…" style={{ border: "none", outline: "none", fontSize: 14, flex: 1, fontFamily: bodyFont }} />
         </div>
       </div>
       <div style={{ display: "flex", gap: 8, padding: "2px 20px 10px", overflowX: "auto" }}>
@@ -599,7 +604,7 @@ function SearchResults({ go, favorites, toggleFav, openProduct, initialCategory 
   );
 }
 
-function ProductDetails({ product, onBack, favorites, toggleFav, addAlert, stockAlerts, toggleStockAlert, alerts, alertTargets, adjustTarget, showToast }) {
+function ProductDetails({ product, onBack, favorites, toggleFav, addAlert, removeAlert, stockAlerts, toggleStockAlert, alerts, alertTargets, adjustTarget, showToast }) {
   const C = useTheme();
   if (!product) return null;
   const isFav = favorites.includes(product.id);
@@ -742,8 +747,16 @@ function ProductDetails({ product, onBack, favorites, toggleFav, addAlert, stock
           }
           return (
             <div style={{ width: "100%", marginTop: 20, background: C.greenSoft, border: `1px solid ${C.green}`, borderRadius: 14, padding: "12px 16px" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12.5, fontWeight: 700, color: C.green }}>
-                <Bell size={14} /> Alert active
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12.5, fontWeight: 700, color: C.green }}>
+                  <Bell size={14} /> Alert active
+                </div>
+                <button
+                  onClick={() => { removeAlert?.(product.id); showToast?.("Alert removed"); }}
+                  style={{ background: "none", border: "none", color: C.inkSoft, fontSize: 11, fontWeight: 700, cursor: "pointer", textDecoration: "underline" }}
+                >
+                  Remove
+                </button>
               </div>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 8 }}>
                 <span style={{ fontSize: 11.5, color: C.inkSoft }}>Notify me below</span>
@@ -921,6 +934,7 @@ export default function App() {
   const [stockAlerts, setStockAlerts] = useState([]);
   const toggleStockAlert = (key) => setStockAlerts((s) => (s.includes(key) ? s.filter((x) => x !== key) : [...s, key]));
   const [searchCategory, setSearchCategory] = useState("foryou");
+  const [searchQuery, setSearchQuery] = useState("");
   const [dark, setDark] = useState(false);
   const [toast, setToast] = useState(null);
   const showToast = (msg) => {
@@ -938,7 +952,7 @@ export default function App() {
   const removeAlert = (id) => setAlerts((a) => a.filter((x) => x.id !== id));
   const adjustTarget = (id, delta) => setAlertTargets((t) => ({ ...t, [id]: Math.max(0, Math.round(((t[id] ?? 0) + delta) * 2) / 2) }));
   const openProduct = (p) => { setSelected(p); setScreen("product"); };
-  const openSearch = (categoryId) => { setSearchCategory(categoryId || "foryou"); setScreen("search"); };
+  const openSearch = (categoryId) => { setSearchCategory(categoryId || "foryou"); setSearchQuery(""); setScreen("search"); };
 
   return (
     <ThemeContext.Provider value={theme}>
@@ -946,8 +960,8 @@ export default function App() {
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" />
       {screen === "welcome" && <Welcome go={setScreen} />}
       {screen === "home" && <HomeScreen go={setScreen} openSearch={openSearch} favorites={favorites} toggleFav={toggleFav} openProduct={openProduct} />}
-      {screen === "search" && <SearchResults go={setScreen} favorites={favorites} toggleFav={toggleFav} openProduct={openProduct} initialCategory={searchCategory} />}
-      {screen === "product" && <ProductDetails product={selected} onBack={() => setScreen("search")} favorites={favorites} toggleFav={toggleFav} addAlert={addAlert} stockAlerts={stockAlerts} toggleStockAlert={toggleStockAlert} alerts={alerts} alertTargets={alertTargets} adjustTarget={adjustTarget} showToast={showToast} />}
+      {screen === "search" && <SearchResults go={setScreen} favorites={favorites} toggleFav={toggleFav} openProduct={openProduct} q={searchQuery} setQ={setSearchQuery} cat={searchCategory} setCat={setSearchCategory} />}
+      {screen === "product" && <ProductDetails product={selected} onBack={() => setScreen("search")} favorites={favorites} toggleFav={toggleFav} addAlert={addAlert} removeAlert={removeAlert} stockAlerts={stockAlerts} toggleStockAlert={toggleStockAlert} alerts={alerts} alertTargets={alertTargets} adjustTarget={adjustTarget} showToast={showToast} />}
       {screen === "favorites" && <Favorites favorites={favorites} toggleFav={toggleFav} openProduct={openProduct} />}
       {screen === "alerts" && <Alerts alerts={alerts} removeAlert={removeAlert} targets={alertTargets} adjustTarget={adjustTarget} />}
       {screen === "profile" && <Profile dark={dark} setDark={setDark} />}
