@@ -47,29 +47,15 @@ const CATEGORIES = [
   { id: "sports", label: "Sports", icon: Dumbbell },
 ];
 
-/* Every store below has a confirmed GCC-region affiliate program (verified
-   via ArabClicks, DCMnetwork, or the retailer's own program), spanning
-   large international names and regional/local GCC chains, so the
-   comparison table isn't limited to just 2-3 big names. "local: true"
-   marks GCC-headquartered or GCC-only chains, shown to the user so it's
-   clear this app supports local businesses, not just international giants. */
+/* Every store below has a CONFIRMED, live UK affiliate feed — verified
+   directly in the network dashboard (product feed present, not just
+   tracking links) before being added here. "local: true" marks UK-based
+   retailers, shown to the user so it's clear which stores are UK
+   businesses vs. international sellers shipping into the UK.
+   Currently just LaptopHub (via TradeTracker) — more stores get added
+   here only once their own feed is confirmed the same way, not before. */
 const STORES = {
-  amazon: { name: "Amazon.ae", color: "#FF9900", cat: "electronics", local: false },
-  noon: { name: "Noon", color: "#FEEE00", cat: "electronics", local: false },
-  sharaf: { name: "Sharaf DG", color: "#D71920", cat: "electronics", local: true },
-  jarir: { name: "Jarir", color: "#0072BC", cat: "electronics", local: true },
-  extra: { name: "Extra", color: "#E4002B", cat: "electronics", local: true },
-  banggood: { name: "Banggood", color: "#FF6600", cat: "electronics", local: false },
-  namshi: { name: "Namshi", color: "#000000", cat: "fashion", local: true },
-  ounass: { name: "Ounass", color: "#B08D57", cat: "fashion", local: true },
-  farfetch: { name: "Farfetch", color: "#000000", cat: "fashion", local: false },
-  sixthstreet: { name: "6th Street", color: "#111111", cat: "fashion", local: true },
-  danubehome: { name: "Danube Home", color: "#C8102E", cat: "home", local: true },
-  homecentre: { name: "Home Centre", color: "#00539F", cat: "home", local: true },
-  carrefour: { name: "Carrefour", color: "#004E9E", cat: "grocery", local: false },
-  ourshoppe: { name: "Our Shoppe", color: "#F26522", cat: "grocery", local: true },
-  myprotein: { name: "Myprotein", color: "#1A1A1A", cat: "sports", local: false },
-  iherb: { name: "iHerb", color: "#71B62C", cat: "grocery", local: false },
+  laptophub: { name: "LaptopHub", color: "#1E3A8A", cat: "electronics", local: true },
 };
 
 /* Stores grouped by category, for the browsable directory */
@@ -78,97 +64,433 @@ const STORE_GROUPS = Object.entries(STORES).reduce((groups, [id, store]) => {
   return groups;
 }, {});
 
+/* REAL data pulled from LaptopHub's live TradeTracker product feed
+   (Electronics/Laptops category only — the only vertical with a
+   confirmed real feed so far). No rating/reviews/AI-summary/price-history
+   are fabricated — those UI elements gracefully hide or show an honest
+   message when this data isn't available (see RatingRow, PriceHistoryChart,
+   and the PRODUCT OVERVIEW block). shipping/delivery fields are NOT in the
+   feed — using neutral placeholders (shipping: 0, "Standard delivery")
+   until LaptopHub's actual shipping terms are verified directly. */
 const PRODUCTS = [
   {
-    id: 1, name: "iPhone 15 Pro 128GB", cat: "electronics",
-    img: "📱", rating: 4.8, reviews: 2140, lastUpdated: "2 hours ago",
-    specs: ["6.1\" Super Retina XDR", "A17 Pro chip", "48MP camera", "Titanium build"],
-    ai: "Consistently praised for camera quality and build. A few reviewers note battery life is average for heavy users — otherwise the top pick in this price tier.",
-    history: [359.0, 356.5, 352.0, 348.9, 345.0, 349.9, 344.5, 342.5],
+    id: 1, name: "Lenovo ThinkPad X13 Gen 1 (Intel Core i5)", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/9Ist2BTU8k-ndga9fzAkNg.c-r.jpg", lastUpdated: "Today",
+    specs: ["13.3\" Full HD display", "Intel Core i5-10210U", "8GB RAM / 256GB SSD", "Windows 10 Pro"],
+    ai: "A compact business laptop built for travel — thin, light, and durable, with all-day battery life and Wi-Fi 6 connectivity.",
+    history: [480.17],
     prices: [
-      { store: "amazon", price: 349.900, shipping: 0, delivery: "Tomorrow", affiliateLink: "https://amazon.ae/dp/EXAMPLE?tag=pricepilot-21", inStock: true },
-      { store: "noon", price: 342.500, shipping: 1.500, delivery: "2 days", affiliateLink: "https://noon.com/track?ref=pricepilot&id=IPH15PRO128", inStock: true, couponCode: "NOON20" },
-      { store: "sharaf", price: 359.000, shipping: 0, delivery: "Today", affiliateLink: "https://sharafdg.com/track?ref=pricepilot&id=IPH15PRO128", inStock: true },
-      { store: "jarir", price: 355.750, shipping: 2.000, delivery: "3 days", affiliateLink: "https://jarir.com/track?ref=pricepilot&id=IPH15PRO128", inStock: true },
+      { store: "laptophub", price: 480.17, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Flenovo-thinkpad-x13-gen-1-intel-intelr-coretm-i5-i5-10210u-laptop-33-8-cm-13-3-full-hd-8-gb-ddr4-sdram-256-gb-ssd-wi-fi-6-802-11ax-windows-10-pro-black.html", inStock: true },
     ],
   },
   {
-    id: 2, name: "Sony WH-1000XM5 Headphones", cat: "electronics",
-    img: "🎧", rating: 4.7, reviews: 980, lastUpdated: "5 hours ago",
-    specs: ["Industry-leading ANC", "30hr battery", "Multipoint pairing", "Touch controls"],
-    ai: "Best-in-class noise cancelling according to most reviewers. Comfortable for long wear; a minority found the case bulky for travel.",
-    history: [96.0, 94.5, 92.0, 93.5, 89.9, 88.0, 84.0],
+    id: 2, name: "Microsoft Surface Laptop 7 Copilot+ PC (Core Ultra 5)", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/oPvDTw7dCki3a2FbceHDWw.c-r.jpg", lastUpdated: "Today",
+    specs: ["15\" touchscreen", "Intel Core Ultra 5 236V", "16GB RAM / 512GB SSD", "Windows 11 Pro"],
+    ai: "A business-focused Copilot+ PC with AI-enabled performance, built for collaboration and productivity on the move.",
+    history: [1568.33],
     prices: [
-      { store: "amazon", price: 89.900, shipping: 0, delivery: "Tomorrow", affiliateLink: "https://amazon.ae/dp/EXAMPLE2?tag=pricepilot-21", inStock: true },
-      { store: "extra", price: 84.000, shipping: 2.500, delivery: "4 days", affiliateLink: "https://extra.com/track?ref=pricepilot&id=SONYXM5", inStock: true, couponCode: "EXTRA10" },
-      { store: "noon", price: 91.250, shipping: 0, delivery: "2 days", affiliateLink: "https://noon.com/track?ref=pricepilot&id=SONYXM5", inStock: true },
+      { store: "laptophub", price: 1568.33, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fmicrosoft-surface-laptop-7-copilot-pc-intel-core-ultra-5-236v-38-1-cm-15-touchscreen-16-gb-lpddr5x-sdram-512-gb-ssd-wi-fi-7-802-11be-windows-11-pro-black.html", inStock: true },
     ],
   },
   {
-    id: 3, name: "Samsung 55\" 4K QLED TV", cat: "electronics",
-    img: "📺", rating: 4.5, reviews: 610, lastUpdated: "1 hour ago",
-    specs: ["QLED HDR10+", "120Hz refresh", "Smart TV, Tizen OS", "3x HDMI 2.1"],
-    ai: "Strong value for the panel quality. Sound is described as thin by several reviewers — a soundbar is commonly recommended alongside it.",
-    history: [265.0, 262.0, 258.0, 250.0, 245.0, 242.0, 239.5],
+    id: 3, name: "HP Fortis G11 Chromebook (14\")", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/tGdi7dbCNE-bsLXNW3zDUQ.c-r.jpg", lastUpdated: "Today",
+    specs: ["14\" Full HD display", "Intel N100 quad-core", "4GB RAM / 32GB eMMC", "ChromeOS, rugged design"],
+    ai: "A ruggedized Chromebook built for everyday reliability, with a reinforced 180-degree hinge and long battery life.",
+    history: [343.37],
     prices: [
-      { store: "sharaf", price: 249.000, shipping: 5.000, delivery: "3 days", affiliateLink: "https://sharafdg.com/track?ref=pricepilot&id=SAMSTV55", inStock: true },
-      { store: "extra", price: 239.500, shipping: 5.000, delivery: "5 days", affiliateLink: "https://extra.com/track?ref=pricepilot&id=SAMSTV55", inStock: true },
-      { store: "jarir", price: 255.000, shipping: 0, delivery: "2 days", affiliateLink: "https://jarir.com/track?ref=pricepilot&id=SAMSTV55", inStock: true },
+      { store: "laptophub", price: 343.37, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fhp-fortis-g11-intelr-n-n100-chromebook-35-6-cm-14-full-hd-4-gb-lpddr5-sdram-32-gb-emmc-wi-fi-6e-802-11ax-chromeos-black.html", inStock: true },
     ],
   },
   {
-    id: 4, name: "Nike Air Zoom Pegasus 40", cat: "fashion",
-    img: "👟", rating: 4.6, reviews: 1420, lastUpdated: "4 hours ago",
-    specs: ["Responsive foam", "Breathable mesh", "Road running", "Available in 6 colors"],
-    ai: "Reviewers consistently call this a reliable daily trainer. Sizing runs slightly small — most suggest ordering half a size up.",
-    history: [36.9, 36.9, 35.0, 34.5, 33.9, 32.9, 32.9],
+    id: 4, name: "Samsung Galaxy Book4 (15.6\", Core 3, 8GB)", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/kZ74a4Os8UKIVaEyG_DG_w.c-r.jpg", lastUpdated: "Today",
+    specs: ["15.6\" display", "Intel Core 3", "8GB RAM", "NVIDIA GeForce MX570 A graphics"],
+    ai: "A slim, well-connected laptop with a wide range of built-in ports and seamless integration with Samsung Galaxy devices.",
+    history: [391.47],
     prices: [
-      { store: "noon", price: 32.900, shipping: 1.000, delivery: "2 days", affiliateLink: "https://noon.com/track?ref=pricepilot&id=NIKEPEG40", inStock: false },
-      { store: "amazon", price: 34.500, shipping: 0, delivery: "Tomorrow", affiliateLink: "https://amazon.ae/dp/EXAMPLE4?tag=pricepilot-21", inStock: true },
+      { store: "laptophub", price: 391.47, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fsamsung-galaxy-book4-15-6-core-3-8gb.html", inStock: true },
     ],
   },
   {
-    id: 5, name: "Adidas Ultraboost 22", cat: "fashion",
-    img: "👟", rating: 4.7, reviews: 860, lastUpdated: "6 hours ago",
-    specs: ["Boost midsole", "Primeknit upper", "Continental rubber outsole", "Available in 8 colors"],
-    ai: "Praised for all-day comfort and energy return. A few reviewers mention the knit upper shows wear faster than expected with heavy daily use.",
-    history: [46.0, 45.5, 44.0, 42.5, 41.9, 39.9, 38.500],
+    id: 5, name: "Apple MacBook Pro 2023 16.2\" M2 Pro (16GB/500GB)", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/mnY4KKVKPEGo6llO0A3aLQ.c-r.jpg", lastUpdated: "Today",
+    specs: ["16.2\" Liquid Retina XDR", "Apple M2 Pro chip", "16GB RAM / 500GB SSD", "Silver"],
+    ai: "Apple's pro-tier laptop, built for demanding creative and professional workloads with exceptional battery efficiency.",
+    history: [2220.02],
     prices: [
-      { store: "noon", price: 38.500, shipping: 1.000, delivery: "2 days", affiliateLink: "https://noon.com/track?ref=pricepilot&id=ADIUB22", inStock: true },
-      { store: "sharaf", price: 41.000, shipping: 0, delivery: "Today", affiliateLink: "https://sharafdg.com/track?ref=pricepilot&id=ADIUB22", inStock: true },
+      { store: "laptophub", price: 2220.02, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fapple-macbook-pro-2023-16-2in-m2-pro-16gb-500gb-silver.html", inStock: true },
     ],
   },
   {
-    id: 6, name: "Levi's 501 Original Jeans", cat: "fashion",
-    img: "👖", rating: 4.5, reviews: 2210, lastUpdated: "3 hours ago",
-    specs: ["100% cotton denim", "Straight fit", "Button fly", "Classic 5-pocket styling"],
-    ai: "Reviewers consistently call this the most reliable classic fit. Sizing is described as true to size for most, running slightly long in the leg.",
-    history: [22.0, 21.5, 20.9, 19.900, 18.9, 18.500, 18.500],
+    id: 6, name: "Acer Predator Helios 18 AI (Core Ultra 9, RTX 5090)", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/8DUbqpx8Q0O4vR8sKTKUWQ.c-r.jpg", lastUpdated: "Today",
+    specs: ["18\" Mini LED display", "Intel Core Ultra 9", "192GB RAM / 5TB SSD", "NVIDIA GeForce RTX 5090"],
+    ai: "A flagship gaming laptop with desktop-level performance, a 4K Mini LED display, and NVIDIA's latest RTX 50-series graphics.",
+    history: [4340.99],
     prices: [
-      { store: "noon", price: 18.500, shipping: 1.000, delivery: "2 days", affiliateLink: "https://noon.com/track?ref=pricepilot&id=LEVI501", inStock: true },
-      { store: "amazon", price: 19.900, shipping: 0, delivery: "Tomorrow", affiliateLink: "https://amazon.ae/dp/EXAMPLE6?tag=pricepilot-21", inStock: true },
+      { store: "laptophub", price: 4340.99, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Facer-predator-helios-18-ai-ph18-73-intel-ultra-9-192gb-5tb-ssd-rtx5090-18-wquxga-windows-11-gaming-notebook.html", inStock: true },
     ],
   },
   {
-    id: 7, name: "3-Seater Fabric Sofa", cat: "home",
-    img: "🛋️", rating: 4.4, reviews: 340, lastUpdated: "1 day ago",
-    specs: ["Solid wood frame", "High-density foam", "Removable covers", "Grey or beige"],
-    ai: "Reviewers say assembly is straightforward and the cushions hold shape well after months of use. A few mention delivery scheduling can run a day or two behind the estimate.",
-    history: [199.0, 195.0, 189.0, 185.0, 179.900, 179.900, 174.000],
+    id: 7, name: "ASUS Chromebook Plus Enterprise CX54", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/WgMRlTF1AUegno3TD_M1Tg.c-r.jpg", lastUpdated: "Today",
+    specs: ["14\" touchscreen, WQXGA", "Intel Core Ultra 7 155U", "8GB RAM / 512GB SSD", "ChromeOS"],
+    ai: "A business-focused Chromebook Plus with enhanced video-call tools and offline productivity features.",
+    history: [668.12],
     prices: [
-      { store: "danubehome", price: 174.000, shipping: 0, delivery: "5 days", affiliateLink: "https://danubehome.com/track?ref=pricepilot&id=SOFA3S", inStock: true },
-      { store: "homecentre", price: 179.900, shipping: 0, delivery: "4 days", affiliateLink: "https://homecentre.com/track?ref=pricepilot&id=SOFA3S", inStock: true },
+      { store: "laptophub", price: 668.12, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fasus-chromebook-plus-enterprise-cx54-cx5403cma-qm0381-intel-core-ultra-7-155u-35-6-cm-14-touchscreen-wqxga-8-gb-lpddr5x-sdram-512-gb-ssd-wi-fi-6e-802-11ax-chromeos-silver.html", inStock: true },
     ],
   },
   {
-    id: 8, name: "Weekly Grocery Essentials Pack", cat: "grocery",
-    img: "🛒", rating: 4.3, reviews: 190, lastUpdated: "30 minutes ago",
-    specs: ["Rice, pasta & staples", "Dairy & eggs", "Fresh produce box", "Household cleaning basics"],
-    ai: "Reviewers say the freshness of produce is consistent and substitutions are rare. A few note prices fluctuate week to week more than in-store, so checking before ordering helps.",
-    history: [15.5, 15.200, 14.900, 15.000, 14.700, 14.500, 14.250],
+    id: 8, name: "ASUS Chromebook CZ11 CZ1104CM4A-MZ0022 MediaTek Kompanio 540 29.5 cm (", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/cwGDjqsmykGPkhDs_PGQBQ.c-r.jpg", lastUpdated: "Today",
+    specs: ["MediaTek Kompanio 540", "Full specs on retailer page"],
+    ai: "The rugged. student-centric study mate ASUS Chromebook CZ11 is an excellent study companion for K-12 students. with a portable and durable design that guarantees enduring value and empowers engaged learning - anywhere.",
+    history: [239.37],
     prices: [
-      { store: "carrefour", price: 14.250, shipping: 1.000, delivery: "Today", affiliateLink: "https://carrefouruae.com/track?ref=pricepilot&id=GROCPACK", inStock: true },
-      { store: "ourshoppe", price: 14.900, shipping: 0, delivery: "Tomorrow", affiliateLink: "https://ourshopee.com/track?ref=pricepilot&id=GROCPACK", inStock: true },
+      { store: "laptophub", price: 239.37, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fasus-chromebook-cz11-cz1104cm4a-mz0022-mediatek-kompanio-540-29-5-cm-11-6-hd-4-gb-lpddr5x-sdram-64-gb-emmc-wi-fi-6e-802-11ax-chromeos-grey-qwerty-uk-english.html", inStock: true },
+    ],
+  },
+  {
+    id: 9, name: "HP Fortis G1m 11 Chromebook MediaTek 520 29.5 cm (11.6\") HD 4 GB", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/kOBbSka5uUmK58VZC3fpDA.c-r.jpg", lastUpdated: "Today",
+    specs: ["11.6\" display", "MediaTek 520", "ChromeOS"],
+    ai: "The HP Fortis G1m Chromebook is purpose-built to handle the demands of modern classrooms and busy work environments. Designed with reinforced edges. a rugged chassis. and a spill-resistant keyboard.",
+    history: [245.02],
+    prices: [
+      { store: "laptophub", price: 245.02, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fhp-fortis-g1m-11-chromebook-mediatek-520-29-5-cm-11-6-hd-4-gb-lpddr4x-sdram-32-gb-emmc-wi-fi-6-802-11ax-chromeos-black.html", inStock: true },
+    ],
+  },
+  {
+    id: 10, name: "Lenovo Chrome 100e G5 M89 MediaTek Kompanio 540 Chromebook 29.5 cm (11", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/-12992HXwU63W8BUQzZHGQ.c-r.jpg", lastUpdated: "Today",
+    specs: ["MediaTek Kompanio 540", "Full specs on retailer page"],
+    ai: "Full product details available on LaptopHub's listing.",
+    history: [246.62],
+    prices: [
+      { store: "laptophub", price: 246.62, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Flenovo-chrome-100e-g5-m89-mediatek-kompanio-540-chromebook-29-5-cm-11-6-hd-4-gb-lpddr5x-sdram-64-gb-ufs-wi-fi-6e-802-11ax-chromeos-english-grey.html", inStock: true },
+    ],
+  },
+  {
+    id: 11, name: "Acer Chromebook 314 CBOA314-2H-84H8", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/U9RpFkMc0kuNQz1bVqM9Nw.c-r.jpg", lastUpdated: "Today",
+    specs: ["ChromeOS", "Full specs on retailer page"],
+    ai: "The Acer Chromebook 314 CBOA314-2H is a lightweight and efficient 14\" Chromebook designed for fast browsing. cloud-based work and everyday learning. Its sharp WUXGA IPS display provides clear visuals.",
+    history: [281.36],
+    prices: [
+      { store: "laptophub", price: 281.36, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Facer-chromebook-314-cboa314-2h-84h8.html", inStock: true },
+    ],
+  },
+  {
+    id: 12, name: "Acer Chromebook 311 C725-853M", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/PZAporhOS0-ObWy3_U1iXg.c-r.jpg", lastUpdated: "Today",
+    specs: ["Full specs on retailer page"],
+    ai: "Full product details available on LaptopHub's listing.",
+    history: [312.58],
+    prices: [
+      { store: "laptophub", price: 312.58, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Facer-chromebook-311-c725-853m.html", inStock: true },
+    ],
+  },
+  {
+    id: 13, name: "Acer Chromebook 311 (C725) - MediaTek Kompanio 540. 4GB RAM. 64GB. 11", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/BWBnY7OOVkaflas-IwSt3w.c-r.jpg", lastUpdated: "Today",
+    specs: ["11.6\" display", "MediaTek Kompanio 540", "4GB RAM", "ChromeOS"],
+    ai: "Acer Chromebook 311 (C725) - MediaTek Kompanio 540. 4GB RAM. 64GB. 11.6\" HD display. Chrome OS. Product type: Chromebook. Form factor: Clamshell. Processor family: MediaTek Kompanio. Processor model: 540.",
+    history: [251.48],
+    prices: [
+      { store: "laptophub", price: 251.48, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Facer-chromebook-311-c725-mediatek-kompanio-540-4gb-ram-64gb-11-6-hd-display-chrome-os.html", inStock: true },
+    ],
+  },
+  {
+    id: 14, name: "Acer Chromebook 514 (C937) - Intel N150. 4GB RAM. 128GB. 14\" WUXG", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/2_Za5rG2lyG75JIBtXJ1pA.c-r.png", lastUpdated: "Today",
+    specs: ["Intel N150", "4GB RAM", "ChromeOS"],
+    ai: "Acer Chromebook 514 (C937) - Intel N150. 4GB RAM. 128GB. 14\" WUXGA display. Chrome OS. Product type: Chromebook. Form factor: Clamshell. Processor family: Intel\u00ae N. Processor model: N150. Display diagonal: 35.6 cm (14\").",
+    history: [347.76],
+    prices: [
+      { store: "laptophub", price: 347.76, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fcatalog%2Fproduct%2Fview%2Fid%2F3616003%2F", inStock: true },
+    ],
+  },
+  {
+    id: 15, name: "Lenovo V15 G4 AMN AMD Ryzen\u2122 5 7520U Laptop 39.6 cm (15.6\") Full", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/fgi6y43qLkSTfeYKDfCJNA.c-r.jpg", lastUpdated: "Today",
+    specs: ["15.6\" display", "Full specs on retailer page"],
+    ai: "Improves productivity everywhere- Powerful AMD Ryzen\u2122 processors with AMD Radeon\u2122 graphics- 15\" FHD (1920 x 1080) display with low-blue light to reduce eye strain- Enhanced security features keep critical data protected- Includes numeric keypad & Service Hot Key- Ideal for on-the-go multitasking",
+    history: [482.49],
+    prices: [
+      { store: "laptophub", price: 482.49, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Flenovo-v15-g4-amn-amd-ryzentm-5-7520u-laptop-39-6-cm-15-6-full-hd-16-gb-lpddr5-sdram-256-gb-ssd-wi-fi-6-802-11ax-windows-11-pro-black-uk-english.html", inStock: true },
+    ],
+  },
+  {
+    id: 16, name: "Acer Aspire Lite AL15-410P-R6JU Notebook", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/pJ-yK6KVI0GlbabLC5vhLw.c-r.jpg", lastUpdated: "Today",
+    specs: ["AMD Ryzen 5 3500U", "8GB RAM", "Windows 11 Home"],
+    ai: "The Acer Aspire Lite AL15-410P is a slim. lightweight 15.6-inch notebook designed for everyday productivity. Powered by the AMD Ryzen 5 3500U processor. 8GB DDR4 memory and fast 256GB PCIe NVMe SSD storage.",
+    history: [491.73],
+    prices: [
+      { store: "laptophub", price: 491.73, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Facer-aspire-lite-al15-410p-r6ju-notebook.html", inStock: true },
+    ],
+  },
+  {
+    id: 17, name: "HP ProBook 4 G1iR Intel Core 5 120U Laptop 35.6 cm (14\") WUXGA 16", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/wnHSrEl1aU-BiJ6zl4_vyA.c-r.jpg", lastUpdated: "Today",
+    specs: ["Full specs on retailer page"],
+    ai: "Optimize your work with a resilient. future-ready laptopThe HP ProBook 4 G1iR 14-inch Notebook PC provides growing businesses with commercial-grade performance. multi-layered endpoint security[5].",
+    history: [770.58],
+    prices: [
+      { store: "laptophub", price: 770.58, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fhp-probook-4-g1ir-intel-core-5-120u-laptop-35-6-cm-14-wuxga-16-gb-ddr5-sdram-256-gb-ssd-wi-fi-6e-802-11ax-windows-11-pro-silver.html", inStock: true },
+    ],
+  },
+  {
+    id: 18, name: "Acer Aspire Lite AL15-53P-56Z0 Notebook", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/ntzt_pFL5SCLaXd4Do_xng.c-r.png", lastUpdated: "Today",
+    specs: ["8GB RAM", "Windows 11 Home"],
+    ai: "The Acer Aspire Lite 15 AL15-53P is a slim and efficient 15.6-inch notebook built for everyday productivity. Powered by the Intel Core 5 120U processor. 8GB DDR4 memory and fast 512GB PCIe NVMe 4.0 SSD storage.",
+    history: [571.9],
+    prices: [
+      { store: "laptophub", price: 571.9, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Facer-aspire-lite-al15-53p-56z0-notebook.html", inStock: true },
+    ],
+  },
+  {
+    id: 19, name: "Lenovo V14 G4 AMN AMD Ryzen\u2122 5 7520U Laptop 35.6 cm (14\") Full HD", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/kRtyP69nWkmCaskGaSeaeQ.c-r.jpg", lastUpdated: "Today",
+    specs: ["Windows 11", "Full specs on retailer page"],
+    ai: "Lets you do moreWith AMD Ryzen\u2122 mobile processors and AMD Radeon\u2122 graphics. the Lenovo V14 Gen 4 laptop delivers power to get through your workday-in the office. on campus. or at home.",
+    history: [429.6],
+    prices: [
+      { store: "laptophub", price: 429.6, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Flenovo-v14-g4-amn-amd-ryzentm-5-7520u-laptop-35-6-cm-14-full-hd-8-gb-lpddr5-sdram-256-gb-ssd-wi-fi-6-802-11ax-windows-11-pro-uk-english-black.html", inStock: true },
+    ],
+  },
+  {
+    id: 20, name: "HP 200 G2a 16 inch Notebook PC AMD Ryzen\u2122 5 220 Laptop 40.6 cm (16&quo", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/Bu_gdtujYUi3FhIzH-Jj4w.c-r.jpg", lastUpdated: "Today",
+    specs: ["Full specs on retailer page"],
+    ai: "Essential features in an updated. reliable designThe HP 200 G2a 16-inch Notebook PC is purpose-built for cost-conscious educators and professionals to pack immersive visuals. flexible specs.",
+    history: [668.39],
+    prices: [
+      { store: "laptophub", price: 668.39, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fhp-200-g2a-16-inch-notebook-pc-amd-ryzentm-5-220-laptop-40-6-cm-16-wuxga-16-gb-ddr5-sdram-512-gb-ssd-wi-fi-6-802-11ax-windows-11-pro-silver.html", inStock: true },
+    ],
+  },
+  {
+    id: 21, name: "ASUS ExpertBook P1 P1503CV-582X Intel Core 5 210H Laptop 39.6 cm (15.6", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/p33LfYj9E0Cry3tC37cHtQ.c-r.jpg", lastUpdated: "Today",
+    specs: ["Full specs on retailer page"],
+    ai: "Elevate your efficiency. anywhereThe compact and elegant ASUS ExpertBook P1 weighs a mere 1.6 kg1 with a breathtaking new design.",
+    history: [454.54],
+    prices: [
+      { store: "laptophub", price: 454.54, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fasus-expertbook-p1-p1503cv-582x-intel-core-5-210h-laptop-39-6-cm-15-6-full-hd-8-gb-ddr5-sdram-256-gb-ssd-wi-fi-6-802-11ax-windows-11-pro-grey.html", inStock: true },
+    ],
+  },
+  {
+    id: 22, name: "Lenovo V15 G5 IRL Intel\u00ae Core\u2122 i5 i5-13420H Laptop 39.6 cm (15.6\"", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/9SiHrV7zoUK_DtCvR2Cg2Q.c-r.jpg", lastUpdated: "Today",
+    specs: ["15.6\" display", "Full specs on retailer page"],
+    ai: "Tailored for Small-to-Medium Businesses- Cost-effective business laptop focused on business efficiency- Enhanced & secure conferencing capabilities- Proven to endure the demands of daily use",
+    history: [457.99],
+    prices: [
+      { store: "laptophub", price: 457.99, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fcatalog%2Fproduct%2Fview%2Fid%2F3271548%2F", inStock: true },
+    ],
+  },
+  {
+    id: 23, name: "Samsung Galaxy Book4 NP754XGJ-CG2UK laptop Intel\u00ae Core\u2122 i7 i7-1355U 39", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/Zs7bYmTNXkWPXJNX050zfA.c-r.jpg", lastUpdated: "Today",
+    specs: ["Full specs on retailer page"],
+    ai: "Reliable performance for your daily hustleMaster your checklist with the 13th Gen Intel\u00ae Core\u2122 processor. delivering smooth performance for day-to-day productivity. Intel UHD Graphics.",
+    history: [569.86],
+    prices: [
+      { store: "laptophub", price: 569.86, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fsamsung-galaxy-book4-np754xgj-cg2uk-laptop-intelr-coretm-i7-i7-1355u-39-6-cm-15-6-full-hd-16-gb-lpddr4x-sdram-256-gb-ssd-wi-fi-6-802-11ax-windows-11-pro-grey.html", inStock: true },
+    ],
+  },
+  {
+    id: 24, name: "Lenovo ThinkPad L14 Gen 7 (Intel) Copilot+ PC Intel Core Ultra 5 325 L", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/SuavfOSunkmrqnAgwHyZoQ.c-r.jpg", lastUpdated: "Today",
+    specs: ["Intel Core Ultra 5 325", "Full specs on retailer page"],
+    ai: "Full product details available on LaptopHub's listing.",
+    history: [1032.97],
+    prices: [
+      { store: "laptophub", price: 1032.97, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Flenovo-thinkpad-l14-gen-7-intel-copilot-pc-intel-core-ultra-5-325-laptop-35-6-cm-14-wuxga-16-gb-ddr5-sdram-512-gb-ssd-wi-fi-7-802-11be-windows-11-pro-black-uk-english.html", inStock: true },
+    ],
+  },
+  {
+    id: 25, name: "HP EliteBook 8 G2i 14 inch Notebook Next Gen AI PC Wolf Pro Security E", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/eNGIzOp7REyMAErZu13o5g.c-r.jpg", lastUpdated: "Today",
+    specs: ["Full specs on retailer page"],
+    ai: "Adaptable AI PC for your workforceAutomate tasks to save time and multitask without lag on the easy to carry HP EliteBook 8 G2i 14 inch AI PC. This HP Copilot+ PC[4] with HP Wolf Security[5]. enterprise management.",
+    history: [1413.48],
+    prices: [
+      { store: "laptophub", price: 1413.48, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fhp-elitebook-8-g2i-14-inch-notebook-next-gen-ai-pc-wolf-pro-security-edition-copilot-pc-intel-core-ultra-7-laptop-35-6-cm-14-wuxga-16-gb-ddr5-sdram-512-gb-ssd-wi-fi-7-802-11be-windows-11-pro-silver.html", inStock: true },
+    ],
+  },
+  {
+    id: 26, name: "Lenovo ThinkPad E16 Gen 4 (Intel) Copilot+ PC Intel Core Ultra 5 325 L", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/hCdrpOi9E0yesGM1klfFAg.c-r.jpg", lastUpdated: "Today",
+    specs: ["Intel Core Ultra 5 325", "Full specs on retailer page"],
+    ai: "Ready to make the most of your dayThe Lenovo ThinkPad E16 (16\u2033 Intel) laptop exudes power. reliable performance. and robust security-for all of your business requirements.",
+    history: [1063.7],
+    prices: [
+      { store: "laptophub", price: 1063.7, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Flenovo-thinkpad-e16-gen-4-intel-copilot-pc-intel-core-ultra-5-325-laptop-40-6-cm-16-wuxga-16-gb-ddr5-sdram-512-gb-ssd-wi-fi-7-802-11be-windows-11-pro-black-english.html", inStock: true },
+    ],
+  },
+  {
+    id: 27, name: "HP ProBook 4 G1iR 16 PC Intel Core 5 120U Laptop 40.6 cm (16\") WU", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/gDS2ePiTLkiigLalNRYX-Q.c-r.jpg", lastUpdated: "Today",
+    specs: ["Full specs on retailer page"],
+    ai: "Optimize your work with a resilient. future-ready laptopThe HP ProBook 4 G1iR 16-inch Notebook PC provides growing businesses with commercial-grade performance. multi-layered endpoint security[5].",
+    history: [884.96],
+    prices: [
+      { store: "laptophub", price: 884.96, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fhp-probook-4-g1ir-16-pc-intel-core-5-120u-laptop-40-6-cm-16-wuxga-16-gb-ddr5-sdram-512-gb-ssd-wi-fi-6e-802-11ax-windows-11-pro-silver.html", inStock: true },
+    ],
+  },
+  {
+    id: 28, name: "HP ProBook 4 G1iR 14 inch Notebook PC Intel Core 5 120U Laptop 35.6 cm", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/wnHSrEl1aU-BiJ6zl4_vyA.c-r.jpg", lastUpdated: "Today",
+    specs: ["Full specs on retailer page"],
+    ai: "Optimize your work with a resilient. future-ready laptopThe HP ProBook 4 G1iR 14-inch Notebook PC provides growing businesses with commercial-grade performance. multi-layered endpoint security[5].",
+    history: [884.96],
+    prices: [
+      { store: "laptophub", price: 884.96, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fhp-probook-4-g1ir-14-inch-notebook-pc-intel-core-5-120u-laptop-35-6-cm-14-wuxga-16-gb-ddr5-sdram-512-gb-ssd-wi-fi-6e-802-11ax-windows-11-pro-silver.html", inStock: true },
+    ],
+  },
+  {
+    id: 29, name: "Microsoft Surface Laptop 7 Copilot+ PC Intel Core Ultra 5 236V 38.1 cm", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/oPvDTw7dCki3a2FbceHDWw.c-r.jpg", lastUpdated: "Today",
+    specs: ["Intel Core Ultra 5 236V", "Full specs on retailer page"],
+    ai: "Surface Laptop for Business AI-powered and built for business. Surface Laptop in 13.8-inch and 15-inch models.",
+    history: [1398.72],
+    prices: [
+      { store: "laptophub", price: 1398.72, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fmicrosoft-surface-laptop-7-copilot-pc-intel-core-ultra-5-236v-38-1-cm-15-touchscreen-16-gb-lpddr5x-sdram-256-gb-ssd-wi-fi-7-802-11be-windows-11-pro-black.html", inStock: true },
+    ],
+  },
+  {
+    id: 30, name: "ASUS TUF Gaming A16 FA607NUQ-RL009W AMD Ryzen\u2122 7 170 Laptop 40.6 cm (1", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/-tJRW82kpUO-WUh-4OK4uQ.c-r.jpg", lastUpdated: "Today",
+    specs: ["Full specs on retailer page"],
+    ai: "Portable Power. Maximum ImpactThe design philosophy behind the TUF Gaming A16 is all about blending power with portability. With this lightweight all-around powerhouse. you can enjoy seamless performance wherever you go.",
+    history: [909.31],
+    prices: [
+      { store: "laptophub", price: 909.31, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fasus-tuf-gaming-a16-fa607nuq-rl009w-amd-ryzentm-7-170-laptop-40-6-cm-16-wuxga-16-gb-ddr5-sdram-512-gb-ssd-nvidia-geforce-rtx-4050-wi-fi-6-802-11ax-windows-11-home-grey-black.html", inStock: true },
+    ],
+  },
+  {
+    id: 31, name: "Microsoft Surface Laptop 7 Surface Intel Core Ultra 5 236V 16GB RAM 25", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/QZ3ipggX10Wv5svniI42Rw.c-r.jpg", lastUpdated: "Today",
+    specs: ["Intel Core Ultra 5 236V", "16GB RAM"],
+    ai: "Surface Laptop for Business AI-powered and built for business. Surface Laptop in 13.8-inch and 15-inch models.",
+    history: [1334.06],
+    prices: [
+      { store: "laptophub", price: 1334.06, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fmicrosoft-surface-laptop-7-surface-intel-core-ultra-5-236v-16gb-ram-256gb-ssd-13-8-touchscreen-windows-11-pro-laptop-ep2-22147.html", inStock: true },
+    ],
+  },
+  {
+    id: 32, name: "Samsung Galaxy Book5 Pro (16\". Core Ultra 7. 32GB)", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/zEKyX7721UeQOVOtXQhgvg.c-r.jpg", lastUpdated: "Today",
+    specs: ["Full specs on retailer page"],
+    ai: "Powerful processor driving the Next-Gen AI PCExperience a new level of transformative AI performance on Galaxy Book5 Pro 14\" with the super-fast Intel\u00ae Core\u2122 Ultra processor (Series 2).",
+    history: [1231.2],
+    prices: [
+      { store: "laptophub", price: 1231.2, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fsamsung-galaxy-book5-pro-16-core-ultra-7-32gb.html", inStock: true },
+    ],
+  },
+  {
+    id: 33, name: "MSI Vector 16 HX AI A2XWHG-403UK Intel Core Ultra 7 255HX Laptop 40.6", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/NaplQvNh-UGrkZ0EmB2Hig.c-r.jpg", lastUpdated: "Today",
+    specs: ["Intel Core Ultra 7 255HX", "Full specs on retailer page"],
+    ai: "Designed for STEM professionals. the Vector 16 HX AI delivers cutting-edge performance and rock-solid stability. It acts as a high-tech brain. seamlessly processing complex data with speed and precision.",
+    history: [1550.85],
+    prices: [
+      { store: "laptophub", price: 1550.85, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fmsi-vector-16-hx-ai-a2xwhg-403uk-intel-core-ultra-7-255hx-laptop-40-6-cm-16-quad-hd-16-gb-ddr5-sdram-512-gb-ssd-nvidia-geforce-rtx-5070-ti-wi-fi-6e-802-11ax-windows-11-home-grey.html", inStock: true },
+    ],
+  },
+  {
+    id: 34, name: "ASUS Zenbook S14 OLED UX5406AA-SU033W Copilot+ PC Intel Core Ultra 9 3", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/kRjOz8wuWEKaAMCEB_lGFw.c-r.jpg", lastUpdated: "Today",
+    specs: ["Intel Core Ultra 9 3", "Full specs on retailer page"],
+    ai: "Pro-Level Performance. Sleek Design. ASUS Zenbook S14 is built from solid metal using an integrated molding process combined with CNC machining. This ensures uncompromised mobility with a sleek. lightweight.",
+    history: [1575.97],
+    prices: [
+      { store: "laptophub", price: 1575.97, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fasus-zenbook-s14-oled-ux5406aa-su033w-copilot-pc-intel-core-ultra-9-386h-laptop-35-6-cm-14-touchscreen-3k-32-gb-lpddr5x-sdram-1-tb-ssd-wi-fi-7-802-11be-windows-11-home-grey.html", inStock: true },
+    ],
+  },
+  {
+    id: 35, name: "Apple MacBook Pro 14-inch : M5 chip with 10-core CPU and 10-core GPU", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/0nUgzFXHAUC7z7Mz_qEdxQ.c-r.jpg", lastUpdated: "Today",
+    specs: ["Full specs on retailer page"],
+    ai: "MacBook Pro14-inch model. Now supercharged by M5.",
+    history: [1603.65],
+    prices: [
+      { store: "laptophub", price: 1603.65, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fapple-macbook-pro-14-inch-m5-chip-with-10-core-cpu-and-10-core-gpu-16gb-1tb-ssd-space-black.html", inStock: true },
+    ],
+  },
+  {
+    id: 36, name: "ASUS ROG Zephyrus G14 GA403GM-SY118W AMD Ryzen AI 9 465 Laptop 35.6 cm", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/qV7hvqRYx0iDBDLT6_0hzQ.c-r.jpg", lastUpdated: "Today",
+    specs: ["Windows 11 Pro", "Full specs on retailer page"],
+    ai: "ROG Zephyrus G14 (2026) GA403 with a Free ROG 20th Anniversary Football and T-shirtThe Dawn of A New AgeEffortlessly game. create. and collaborate on this next-gen Windows 11 Pro machine.",
+    history: [1861.48],
+    prices: [
+      { store: "laptophub", price: 1861.48, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fasus-rog-zephyrus-g14-ga403gm-sy118w-amd-ryzen-ai-9-465-laptop-35-6-cm-14-3k-16-gb-lpddr5x-sdram-1-tb-ssd-nvidia-geforce-rtx-5060-wi-fi-7-802-11be-windows-11-home-grey.html", inStock: true },
+    ],
+  },
+  {
+    id: 37, name: "Apple MacBook Pro 16-inch : M5 Pro chip with 18-core CPU and 20-core G", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/JUfUQnsUGEmbhpX_kCR1mA.c-r.jpg", lastUpdated: "Today",
+    specs: ["Full specs on retailer page"],
+    ai: "MacBook ProFast runs in the family. Now with M5. M5 Pro. and M5 Max.",
+    history: [2397.97],
+    prices: [
+      { store: "laptophub", price: 2397.97, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fapple-macbook-pro-16-inch-m5-pro-chip-with-18-core-cpu-and-20-core-gpu-24gb-1tb-ssd-silver.html", inStock: true },
+    ],
+  },
+  {
+    id: 38, name: "ASUS Zenbook A16 UX3607OA-SQ005W Copilot+ PC Snapdragon X2E-94-100 Lap", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/jeZHzVAhdEqRAHbfdOaaxQ.c-r.jpg", lastUpdated: "Today",
+    specs: ["Snapdragon X2E", "Full specs on retailer page"],
+    ai: "Ultra-light. ultra-powerfulZenbook A16 allows you to upgrade from a 14\u201d laptop to a 16\u201d laptop. at no extra weight thanks to ASUS exclusive Ceraluminum\u2122 used across the lid. frame. and base.",
+    history: [2013.59],
+    prices: [
+      { store: "laptophub", price: 2013.59, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fasus-zenbook-a16-ux3607oa-sq005w-copilot-pc-snapdragon-x2e-94-100-laptop-40-6-cm-16-3k-48-gb-lpddr5x-sdram-1-tb-ssd-wi-fi-7-802-11be-windows-11-home-beige.html", inStock: true },
+    ],
+  },
+  {
+    id: 39, name: "MSI Vector 16 HX AI A2XWIG-283UK Intel Core Ultra 9 275HX Laptop 40.6", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/NaplQvNh-UGrkZ0EmB2Hig.c-r.jpg", lastUpdated: "Today",
+    specs: ["Intel Core Ultra 9 275HX", "Full specs on retailer page"],
+    ai: "Designed for STEM professionals. the Vector 16 HX AI delivers cutting-edge performance and rock-solid stability. It acts as a high-tech brain. seamlessly processing complex data with speed and precision.",
+    history: [2003.68],
+    prices: [
+      { store: "laptophub", price: 2003.68, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fmsi-vector-16-hx-ai-a2xwig-283uk-intel-core-ultra-9-275hx-laptop-40-6-cm-16-quad-hd-16-gb-ddr5-sdram-1-tb-ssd-nvidia-geforce-rtx-5080-wi-fi-6e-802-11ax-windows-11-home-grey.html", inStock: true },
+    ],
+  },
+  {
+    id: 40, name: "Apple MacBook Pro 16-inch : M5 Max chip with 18-core CPU and 32-core G", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/nfVF6UTvdUmyw_-vusJUvQ.c-r.jpg", lastUpdated: "Today",
+    specs: ["Full specs on retailer page"],
+    ai: "MacBook ProFast runs in the family. Now with M5. M5 Pro. and M5 Max.",
+    history: [3511.51],
+    prices: [
+      { store: "laptophub", price: 3511.51, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fapple-macbook-pro-16-inch-m5-max-chip-with-18-core-cpu-and-32-core-gpu-36gb-2tb-ssd-space-black.html", inStock: true },
+    ],
+  },
+  {
+    id: 41, name: "MSI Raider A18 HX A9WIG-004UK AMD Ryzen\u2122 9 9955HX3D Laptop 45.7 cm (18", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/YxYoOJ4ZCkSNg7U2h0qAyA.c-r.jpg", lastUpdated: "Today",
+    specs: ["Full specs on retailer page"],
+    ai: "Two cosmic-level powers converged. lit up like a supernova. thus born the new cosmic-level gaming powerhouse: Raider A18 HX.",
+    history: [3196.07],
+    prices: [
+      { store: "laptophub", price: 3196.07, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fmsi-raider-a18-hx-a9wig-004uk-amd-ryzentm-9-9955hx3d-laptop-45-7-cm-18-uhd-64-gb-ddr5-sdram-2-tb-ssd-nvidia-geforce-rtx-5080-wi-fi-7-802-11be-windows-11-home-advanced-black.html", inStock: true },
+    ],
+  },
+  {
+    id: 42, name: "MSI Raider 16 MAX HX B2WJ-065UK Intel Core Ultra 9 290HX Plus Laptop 4", cat: "electronics",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/81QBlSMgaUmnC5ybDoD4Zg.c-r.jpg", lastUpdated: "Today",
+    specs: ["Intel Core Ultra 9 290HX", "32GB RAM", "2TB SSD"],
+    ai: "The MSI Raider 16 Max HX B2WJ-065UK is a high-performance 16-inch gaming laptop powered by an Intel\u00ae Core\u2122 Ultra 9 290HX Plus processor and NVIDIA\u00ae GeForce RTX\u2122 5090 Laptop GPU. It features a QHD+ 240Hz OLED display.",
+    history: [3363.31],
+    prices: [
+      { store: "laptophub", price: 3363.31, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fmsi-raider-16-max-hx-b2wj-065uk-intel-core-ultra-9-290hx-plus-laptop-40-6-cm-16-quad-hd-32-gb-ddr5-sdram-2-tb-ssd-nvidia-geforce-rtx-5090-wi-fi-7-802-11be-windows-11-home-black.html", inStock: true },
     ],
   },
 ];
@@ -199,7 +521,7 @@ const FOR_YOU = (() => {
   return list;
 })();
 
-const fmt = (n) => `BHD ${n.toFixed(3)}`;
+const fmt = (n) => `£${n.toFixed(2)}`;
 const lowest = (p) => p.prices.reduce((a, b) => (a.price + a.shipping < b.price + b.shipping ? a : b));
 
 /* delivery strings -> comparable days */
@@ -260,6 +582,9 @@ function TopBar({ title, onBack }) {
 
 function RatingRow({ rating, reviews }) {
   const C = useTheme();
+  // No fabricated ratings: if a product has no real rating data, show
+  // nothing rather than inventing a number or star.
+  if (!rating) return null;
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 4, fontSize: 12, color: C.inkSoft }}>
       <Star size={13} fill={C.gold} color={C.gold} />
@@ -291,6 +616,15 @@ function PriceConfidenceBar({ price, all }) {
    so users can tell if a "deal" is actually a good one over time */
 function PriceHistoryChart({ history }) {
   const C = useTheme();
+  // Honest handling: a single real price snapshot isn't a "history" —
+  // don't fabricate past prices to draw a trend line. Say so instead.
+  if (!history || history.length < 2) {
+    return (
+      <div style={{ fontSize: 12, color: C.inkSoft, textAlign: "center", padding: "18px 0" }}>
+        Just added — price history builds up as we track this over time.
+      </div>
+    );
+  }
   const w = 300, h = 70, pad = 8;
   const min = Math.min(...history);
   const max = Math.max(...history);
@@ -329,8 +663,8 @@ function PartnerStoresNote({ onBrowse }) {
   const catCount = Object.keys(STORE_GROUPS).length;
   return (
     <div onClick={onBrowse} style={{ background: C.blueSoft, borderRadius: 12, padding: "10px 12px", fontSize: 11, color: C.inkSoft, lineHeight: 1.5, cursor: onBrowse ? "pointer" : "default" }}>
-      <span style={{ fontWeight: 700, color: C.blueDeep }}>{storeCount} partner stores across {catCount} categories </span>
-      — big regional chains and local GCC businesses alike. We only compare stores we have a direct relationship with, so every price shown is accurate and current.
+      <span style={{ fontWeight: 700, color: C.blueDeep }}>{storeCount} partner store{storeCount === 1 ? "" : "s"} across {catCount} categor{catCount === 1 ? "y" : "ies"} </span>
+      — we only compare stores we have a direct relationship with, so every price shown is real and current. Still growing as we add more retailers.
       {onBrowse && <span style={{ display: "block", marginTop: 4, fontWeight: 700, color: C.blue }}>See all stores →</span>}
     </div>
   );
@@ -361,13 +695,20 @@ function ProductCard({ product, onOpen, onFav, isFav }) {
   const store = STORES[best.store];
   return (
     <div onClick={() => onOpen(product)} style={{ background: C.card, borderRadius: 18, padding: 14, boxShadow: "0 2px 10px rgba(14,27,51,0.06)", position: "relative", cursor: "pointer" }}>
-      <div style={{ position: "absolute", top: 10, left: 10, background: C.greenSoft, color: C.green, fontSize: 10, fontWeight: 800, padding: "4px 8px", borderRadius: 999 }}>
-        BEST VALUE
-      </div>
+      {/* "Best value" only means something once there's a real second store
+          to compare against — with a single store, the score is 10.0 by
+          construction, not because it's actually beaten any competition. */}
+      {product.prices.length > 1 && (
+        <div style={{ position: "absolute", top: 10, left: 10, background: C.greenSoft, color: C.green, fontSize: 10, fontWeight: 800, padding: "4px 8px", borderRadius: 999 }}>
+          BEST VALUE
+        </div>
+      )}
       <button onClick={(e) => { e.stopPropagation(); onFav(product.id); }} style={{ position: "absolute", top: 10, right: 10, background: C.card, border: "none", borderRadius: 999, width: 30, height: 30, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 1px 4px rgba(0,0,0,0.1)" }}>
         <Heart size={15} fill={isFav ? "#E4572E" : "none"} color={isFav ? "#E4572E" : C.inkSoft} />
       </button>
-      <div style={{ fontSize: 48, textAlign: "center", padding: "18px 0 10px" }}>{product.img}</div>
+      <div style={{ fontSize: 48, textAlign: "center", padding: "18px 0 10px" }}>
+        {product.image ? <img src={product.image} alt={product.name} style={{ maxHeight: 80, maxWidth: "80%", objectFit: "contain" }} /> : product.img}
+      </div>
       <div style={{ fontFamily: displayFont, fontWeight: 700, fontSize: 14.5, color: C.ink, marginBottom: 4 }}>{product.name}</div>
       <RatingRow rating={product.rating} reviews={product.reviews} />
       <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginTop: 8 }}>
@@ -584,7 +925,9 @@ function SearchResults({ go, favorites, toggleFav, openProduct, q, setQ, cat, se
           const pBest = bestValue(p.prices);
           return (
           <div key={p.id} onClick={() => openProduct(p)} style={{ background: C.card, borderRadius: 16, padding: 12, display: "flex", gap: 12, boxShadow: "0 2px 8px rgba(14,27,51,0.05)", position: "relative", cursor: "pointer" }}>
-            <div style={{ fontSize: 40, width: 64, height: 64, background: C.blueSoft, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{p.img}</div>
+            <div style={{ fontSize: 40, width: 64, height: 64, background: C.blueSoft, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, overflow: "hidden" }}>
+              {p.image ? <img src={p.image} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} /> : p.img}
+            </div>
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: displayFont, fontWeight: 700, fontSize: 13.5, color: C.ink }}>{p.name}</div>
               <RatingRow rating={p.rating} reviews={p.reviews} />
@@ -618,7 +961,7 @@ function ProductDetails({ product, onBack, favorites, toggleFav, addAlert, remov
       <TopBar title="Product Details" onBack={onBack} />
       <div style={{ padding: "0 20px" }}>
         <div style={{ background: C.blueSoft, borderRadius: 20, padding: "36px 0", textAlign: "center", fontSize: 76, position: "relative" }}>
-          {product.img}
+          {product.image ? <img src={product.image} alt={product.name} style={{ maxHeight: 140, maxWidth: "70%", objectFit: "contain" }} /> : product.img}
           <button onClick={() => toggleFav(product.id)} style={{ position: "absolute", top: 14, right: 14, background: C.card, border: "none", borderRadius: 999, width: 34, height: 34, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 1px 4px rgba(0,0,0,0.12)" }}>
             <Heart size={16} fill={isFav ? "#E4572E" : "none"} color={isFav ? "#E4572E" : C.inkSoft} />
           </button>
@@ -637,10 +980,15 @@ function ProductDetails({ product, onBack, favorites, toggleFav, addAlert, remov
           </div>
         </div>
 
-        <div style={{ marginTop: 16, background: C.greenSoft, borderRadius: 16, padding: 14 }}>
-          <div style={{ fontSize: 11, fontWeight: 800, color: C.green, letterSpacing: 0.4 }}>AI SUMMARY</div>
-          <div style={{ fontSize: 13, color: C.ink, marginTop: 5, lineHeight: 1.5 }}>{product.ai}</div>
-        </div>
+        {product.ai && (
+          <div style={{ marginTop: 16, background: C.greenSoft, borderRadius: 16, padding: 14 }}>
+            {/* Honest labeling: this is the retailer's own product description,
+                not an AI-generated summary of real customer reviews — we don't
+                have review data for real products, so we don't fabricate it. */}
+            <div style={{ fontSize: 11, fontWeight: 800, color: C.green, letterSpacing: 0.4 }}>PRODUCT OVERVIEW</div>
+            <div style={{ fontSize: 13, color: C.ink, marginTop: 5, lineHeight: 1.5 }}>{product.ai}</div>
+          </div>
+        )}
 
         <div style={{ marginTop: 18 }}>
           <div style={{ fontFamily: displayFont, fontWeight: 700, fontSize: 14.5, color: C.ink, marginBottom: 8 }}>Price history</div>
@@ -783,7 +1131,7 @@ function StoresDirectory({ onBack }) {
       <TopBar title="Partner Stores" onBack={onBack} />
       <div style={{ padding: "0 20px" }}>
         <div style={{ fontSize: 11.5, color: C.inkSoft, marginBottom: 16, lineHeight: 1.5 }}>
-          Every store here has a direct partnership with PricePilot — a mix of major regional chains and local GCC businesses, so you're not limited to just the big names.
+          Every store here has a direct partnership with PricePilot — a mix of major names and UK-based specialists, so you're not limited to just the big names.
         </div>
         {Object.entries(STORE_GROUPS).map(([cat, stores]) => (
           <div key={cat} style={{ marginBottom: 20 }}>
@@ -794,7 +1142,7 @@ function StoresDirectory({ onBack }) {
                   <div style={{ width: 10, height: 10, borderRadius: 999, background: s.color, flexShrink: 0 }} />
                   <span style={{ fontSize: 13, fontWeight: 600, color: C.ink, flex: 1 }}>{s.name}</span>
                   <span style={{ fontSize: 9.5, fontWeight: 800, padding: "3px 7px", borderRadius: 999, background: s.local ? C.greenSoft : C.blueSoft, color: s.local ? C.green : C.blueDeep }}>
-                    {s.local ? "LOCAL / GCC" : "INTERNATIONAL"}
+                    {s.local ? "UK" : "INTERNATIONAL"}
                   </span>
                 </div>
               ))}
@@ -850,7 +1198,9 @@ function Alerts({ alerts, removeAlert, targets, adjustTarget }) {
               return (
                 <div key={a.id} style={{ background: C.card, borderRadius: 16, padding: 14, boxShadow: "0 2px 8px rgba(14,27,51,0.05)", border: triggered ? `1.5px solid ${C.green}` : "1.5px solid transparent" }}>
                   <div style={{ display: "flex", gap: 12 }}>
-                    <div style={{ fontSize: 34, width: 54, height: 54, background: C.blueSoft, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{a.img}</div>
+                    <div style={{ fontSize: 34, width: 54, height: 54, background: C.blueSoft, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, overflow: "hidden" }}>
+                      {a.image ? <img src={a.image} alt={a.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} /> : a.img}
+                    </div>
                     <div style={{ flex: 1 }}>
                       <div style={{ fontWeight: 700, fontSize: 13, color: C.ink, fontFamily: displayFont }}>{a.name}</div>
                       <div style={{ fontSize: 11.5, color: C.inkSoft, marginTop: 3 }}>Current: <span style={{ color: C.ink, fontWeight: 700 }}>{fmt(current)}</span></div>
@@ -912,8 +1262,8 @@ function Profile({ dark, setDark }) {
             <div style={{ width: 17, height: 17, borderRadius: 999, background: "white", position: "absolute", top: 2, left: dark ? 20 : 2, transition: "left .15s" }} />
           </button>
         } />
-        <ProfileRow icon={Globe} label="Preferred country" right={<span style={{ fontSize: 12, color: C.inkSoft, fontWeight: 700 }}>Bahrain</span>} />
-        <ProfileRow icon={DollarSign} label="Preferred currency" right={<span style={{ fontSize: 12, color: C.inkSoft, fontWeight: 700 }}>BHD</span>} />
+        <ProfileRow icon={Globe} label="Preferred country" right={<span style={{ fontSize: 12, color: C.inkSoft, fontWeight: 700 }}>United Kingdom</span>} />
+        <ProfileRow icon={DollarSign} label="Preferred currency" right={<span style={{ fontSize: 12, color: C.inkSoft, fontWeight: 700 }}>GBP</span>} />
         <ProfileRow icon={Bell} label="Notifications" right={
           <button onClick={() => setNotif(!notif)} style={{ width: 40, height: 22, borderRadius: 999, background: notif ? C.blue : C.line, border: "none", position: "relative" }}>
             <div style={{ width: 17, height: 17, borderRadius: 999, background: "white", position: "absolute", top: 2, left: notif ? 20 : 2, transition: "left .15s" }} />
