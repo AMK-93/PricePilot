@@ -75,7 +75,7 @@ const STORE_GROUPS = Object.entries(STORES).reduce((groups, [id, store]) => {
 const PRODUCTS = [
   {
     id: 1, name: "Lenovo ThinkPad X13 Gen 1 (Intel Core i5)", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/9Ist2BTU8k-ndga9fzAkNg.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/9Ist2BTU8k-ndga9fzAkNg.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["13.3\" Full HD display", "Intel Core i5-10210U", "8GB RAM / 256GB SSD", "Windows 10 Pro"],
     ai: "A compact business laptop built for travel — thin, light, and durable, with all-day battery life and Wi-Fi 6 connectivity.",
     history: [480.17],
@@ -85,7 +85,7 @@ const PRODUCTS = [
   },
   {
     id: 2, name: "Microsoft Surface Laptop 7 Copilot+ PC (Core Ultra 5)", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/oPvDTw7dCki3a2FbceHDWw.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/oPvDTw7dCki3a2FbceHDWw.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["15\" touchscreen", "Intel Core Ultra 5 236V", "16GB RAM / 512GB SSD", "Windows 11 Pro"],
     ai: "A business-focused Copilot+ PC with AI-enabled performance, built for collaboration and productivity on the move.",
     history: [1568.33],
@@ -95,7 +95,7 @@ const PRODUCTS = [
   },
   {
     id: 3, name: "HP Fortis G11 Chromebook (14\")", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/tGdi7dbCNE-bsLXNW3zDUQ.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/tGdi7dbCNE-bsLXNW3zDUQ.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["14\" Full HD display", "Intel N100 quad-core", "4GB RAM / 32GB eMMC", "ChromeOS, rugged design"],
     ai: "A ruggedized Chromebook built for everyday reliability, with a reinforced 180-degree hinge and long battery life.",
     history: [343.37],
@@ -105,7 +105,7 @@ const PRODUCTS = [
   },
   {
     id: 4, name: "Samsung Galaxy Book4 (15.6\", Core 3, 8GB)", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/kZ74a4Os8UKIVaEyG_DG_w.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/kZ74a4Os8UKIVaEyG_DG_w.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["15.6\" display", "Intel Core 3", "8GB RAM", "NVIDIA GeForce MX570 A graphics"],
     ai: "A slim, well-connected laptop with a wide range of built-in ports and seamless integration with Samsung Galaxy devices.",
     history: [391.47],
@@ -115,7 +115,7 @@ const PRODUCTS = [
   },
   {
     id: 5, name: "Apple MacBook Pro 2023 16.2\" M2 Pro (16GB/500GB)", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/mnY4KKVKPEGo6llO0A3aLQ.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/mnY4KKVKPEGo6llO0A3aLQ.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["16.2\" Liquid Retina XDR", "Apple M2 Pro chip", "16GB RAM / 500GB SSD", "Silver"],
     ai: "Apple's pro-tier laptop, built for demanding creative and professional workloads with exceptional battery efficiency.",
     history: [2220.02],
@@ -125,7 +125,7 @@ const PRODUCTS = [
   },
   {
     id: 6, name: "Acer Predator Helios 18 AI (Core Ultra 9, RTX 5090)", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/8DUbqpx8Q0O4vR8sKTKUWQ.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/8DUbqpx8Q0O4vR8sKTKUWQ.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["18\" Mini LED display", "Intel Core Ultra 9", "192GB RAM / 5TB SSD", "NVIDIA GeForce RTX 5090"],
     ai: "A flagship gaming laptop with desktop-level performance, a 4K Mini LED display, and NVIDIA's latest RTX 50-series graphics.",
     history: [4340.99],
@@ -135,7 +135,7 @@ const PRODUCTS = [
   },
   {
     id: 7, name: "ASUS Chromebook Plus Enterprise CX54", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/WgMRlTF1AUegno3TD_M1Tg.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/WgMRlTF1AUegno3TD_M1Tg.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["14\" touchscreen, WQXGA", "Intel Core Ultra 7 155U", "8GB RAM / 512GB SSD", "ChromeOS"],
     ai: "A business-focused Chromebook Plus with enhanced video-call tools and offline productivity features.",
     history: [668.12],
@@ -145,7 +145,7 @@ const PRODUCTS = [
   },
   {
     id: 8, name: "ASUS Chromebook CZ11 CZ1104CM4A-MZ0022 MediaTek Kompanio 540 29.5 cm (", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/cwGDjqsmykGPkhDs_PGQBQ.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/cwGDjqsmykGPkhDs_PGQBQ.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["MediaTek Kompanio 540", "Full specs on retailer page"],
     ai: "The rugged. student-centric study mate ASUS Chromebook CZ11 is an excellent study companion for K-12 students. with a portable and durable design that guarantees enduring value and empowers engaged learning - anywhere.",
     history: [239.37],
@@ -155,7 +155,7 @@ const PRODUCTS = [
   },
   {
     id: 9, name: "HP Fortis G1m 11 Chromebook MediaTek 520 29.5 cm (11.6\") HD 4 GB", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/kOBbSka5uUmK58VZC3fpDA.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/kOBbSka5uUmK58VZC3fpDA.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["11.6\" display", "MediaTek 520", "ChromeOS"],
     ai: "The HP Fortis G1m Chromebook is purpose-built to handle the demands of modern classrooms and busy work environments. Designed with reinforced edges. a rugged chassis. and a spill-resistant keyboard.",
     history: [245.02],
@@ -165,7 +165,7 @@ const PRODUCTS = [
   },
   {
     id: 10, name: "Lenovo Chrome 100e G5 M89 MediaTek Kompanio 540 Chromebook 29.5 cm (11", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/-12992HXwU63W8BUQzZHGQ.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/-12992HXwU63W8BUQzZHGQ.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["MediaTek Kompanio 540", "Full specs on retailer page"],
     ai: "Full product details available on LaptopHub's listing.",
     history: [246.62],
@@ -175,7 +175,7 @@ const PRODUCTS = [
   },
   {
     id: 11, name: "Acer Chromebook 314 CBOA314-2H-84H8", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/U9RpFkMc0kuNQz1bVqM9Nw.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/U9RpFkMc0kuNQz1bVqM9Nw.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["ChromeOS", "Full specs on retailer page"],
     ai: "The Acer Chromebook 314 CBOA314-2H is a lightweight and efficient 14\" Chromebook designed for fast browsing. cloud-based work and everyday learning. Its sharp WUXGA IPS display provides clear visuals.",
     history: [281.36],
@@ -185,7 +185,7 @@ const PRODUCTS = [
   },
   {
     id: 12, name: "Acer Chromebook 311 C725-853M", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/PZAporhOS0-ObWy3_U1iXg.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/PZAporhOS0-ObWy3_U1iXg.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Full specs on retailer page"],
     ai: "Full product details available on LaptopHub's listing.",
     history: [312.58],
@@ -195,7 +195,7 @@ const PRODUCTS = [
   },
   {
     id: 13, name: "Acer Chromebook 311 (C725) - MediaTek Kompanio 540. 4GB RAM. 64GB. 11", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/BWBnY7OOVkaflas-IwSt3w.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/BWBnY7OOVkaflas-IwSt3w.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["11.6\" display", "MediaTek Kompanio 540", "4GB RAM", "ChromeOS"],
     ai: "Acer Chromebook 311 (C725) - MediaTek Kompanio 540. 4GB RAM. 64GB. 11.6\" HD display. Chrome OS. Product type: Chromebook. Form factor: Clamshell. Processor family: MediaTek Kompanio. Processor model: 540.",
     history: [251.48],
@@ -205,7 +205,7 @@ const PRODUCTS = [
   },
   {
     id: 14, name: "Acer Chromebook 514 (C937) - Intel N150. 4GB RAM. 128GB. 14\" WUXG", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/2_Za5rG2lyG75JIBtXJ1pA.c-r.png", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/2_Za5rG2lyG75JIBtXJ1pA.c-r.png", lastUpdated: "20 Sept 2026",
     specs: ["Intel N150", "4GB RAM", "ChromeOS"],
     ai: "Acer Chromebook 514 (C937) - Intel N150. 4GB RAM. 128GB. 14\" WUXGA display. Chrome OS. Product type: Chromebook. Form factor: Clamshell. Processor family: Intel\u00ae N. Processor model: N150. Display diagonal: 35.6 cm (14\").",
     history: [347.76],
@@ -215,7 +215,7 @@ const PRODUCTS = [
   },
   {
     id: 15, name: "Lenovo V15 G4 AMN AMD Ryzen\u2122 5 7520U Laptop 39.6 cm (15.6\") Full", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/fgi6y43qLkSTfeYKDfCJNA.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/fgi6y43qLkSTfeYKDfCJNA.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["15.6\" display", "Full specs on retailer page"],
     ai: "Improves productivity everywhere- Powerful AMD Ryzen\u2122 processors with AMD Radeon\u2122 graphics- 15\" FHD (1920 x 1080) display with low-blue light to reduce eye strain- Enhanced security features keep critical data protected- Includes numeric keypad & Service Hot Key- Ideal for on-the-go multitasking",
     history: [482.49],
@@ -225,7 +225,7 @@ const PRODUCTS = [
   },
   {
     id: 16, name: "Acer Aspire Lite AL15-410P-R6JU Notebook", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/pJ-yK6KVI0GlbabLC5vhLw.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/pJ-yK6KVI0GlbabLC5vhLw.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["AMD Ryzen 5 3500U", "8GB RAM", "Windows 11 Home"],
     ai: "The Acer Aspire Lite AL15-410P is a slim. lightweight 15.6-inch notebook designed for everyday productivity. Powered by the AMD Ryzen 5 3500U processor. 8GB DDR4 memory and fast 256GB PCIe NVMe SSD storage.",
     history: [491.73],
@@ -235,7 +235,7 @@ const PRODUCTS = [
   },
   {
     id: 17, name: "HP ProBook 4 G1iR Intel Core 5 120U Laptop 35.6 cm (14\") WUXGA 16", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/wnHSrEl1aU-BiJ6zl4_vyA.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/wnHSrEl1aU-BiJ6zl4_vyA.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Full specs on retailer page"],
     ai: "Optimize your work with a resilient. future-ready laptopThe HP ProBook 4 G1iR 14-inch Notebook PC provides growing businesses with commercial-grade performance. multi-layered endpoint security[5].",
     history: [770.58],
@@ -245,7 +245,7 @@ const PRODUCTS = [
   },
   {
     id: 18, name: "Acer Aspire Lite AL15-53P-56Z0 Notebook", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/ntzt_pFL5SCLaXd4Do_xng.c-r.png", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/ntzt_pFL5SCLaXd4Do_xng.c-r.png", lastUpdated: "20 Sept 2026",
     specs: ["8GB RAM", "Windows 11 Home"],
     ai: "The Acer Aspire Lite 15 AL15-53P is a slim and efficient 15.6-inch notebook built for everyday productivity. Powered by the Intel Core 5 120U processor. 8GB DDR4 memory and fast 512GB PCIe NVMe 4.0 SSD storage.",
     history: [571.9],
@@ -255,7 +255,7 @@ const PRODUCTS = [
   },
   {
     id: 19, name: "Lenovo V14 G4 AMN AMD Ryzen\u2122 5 7520U Laptop 35.6 cm (14\") Full HD", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/kRtyP69nWkmCaskGaSeaeQ.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/kRtyP69nWkmCaskGaSeaeQ.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Windows 11", "Full specs on retailer page"],
     ai: "Lets you do moreWith AMD Ryzen\u2122 mobile processors and AMD Radeon\u2122 graphics. the Lenovo V14 Gen 4 laptop delivers power to get through your workday-in the office. on campus. or at home.",
     history: [429.6],
@@ -265,7 +265,7 @@ const PRODUCTS = [
   },
   {
     id: 20, name: "HP 200 G2a 16 inch Notebook PC AMD Ryzen\u2122 5 220 Laptop 40.6 cm (16&quo", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/Bu_gdtujYUi3FhIzH-Jj4w.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/Bu_gdtujYUi3FhIzH-Jj4w.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Full specs on retailer page"],
     ai: "Essential features in an updated. reliable designThe HP 200 G2a 16-inch Notebook PC is purpose-built for cost-conscious educators and professionals to pack immersive visuals. flexible specs.",
     history: [668.39],
@@ -275,7 +275,7 @@ const PRODUCTS = [
   },
   {
     id: 21, name: "ASUS ExpertBook P1 P1503CV-582X Intel Core 5 210H Laptop 39.6 cm (15.6", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/p33LfYj9E0Cry3tC37cHtQ.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/p33LfYj9E0Cry3tC37cHtQ.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Full specs on retailer page"],
     ai: "Elevate your efficiency. anywhereThe compact and elegant ASUS ExpertBook P1 weighs a mere 1.6 kg1 with a breathtaking new design.",
     history: [454.54],
@@ -285,7 +285,7 @@ const PRODUCTS = [
   },
   {
     id: 22, name: "Lenovo V15 G5 IRL Intel\u00ae Core\u2122 i5 i5-13420H Laptop 39.6 cm (15.6\"", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/9SiHrV7zoUK_DtCvR2Cg2Q.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/9SiHrV7zoUK_DtCvR2Cg2Q.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["15.6\" display", "Full specs on retailer page"],
     ai: "Tailored for Small-to-Medium Businesses- Cost-effective business laptop focused on business efficiency- Enhanced & secure conferencing capabilities- Proven to endure the demands of daily use",
     history: [457.99],
@@ -295,7 +295,7 @@ const PRODUCTS = [
   },
   {
     id: 23, name: "Samsung Galaxy Book4 NP754XGJ-CG2UK laptop Intel\u00ae Core\u2122 i7 i7-1355U 39", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/Zs7bYmTNXkWPXJNX050zfA.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/Zs7bYmTNXkWPXJNX050zfA.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Full specs on retailer page"],
     ai: "Reliable performance for your daily hustleMaster your checklist with the 13th Gen Intel\u00ae Core\u2122 processor. delivering smooth performance for day-to-day productivity. Intel UHD Graphics.",
     history: [569.86],
@@ -305,7 +305,7 @@ const PRODUCTS = [
   },
   {
     id: 24, name: "Lenovo ThinkPad L14 Gen 7 (Intel) Copilot+ PC Intel Core Ultra 5 325 L", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/SuavfOSunkmrqnAgwHyZoQ.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/SuavfOSunkmrqnAgwHyZoQ.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Intel Core Ultra 5 325", "Full specs on retailer page"],
     ai: "Full product details available on LaptopHub's listing.",
     history: [1032.97],
@@ -315,7 +315,7 @@ const PRODUCTS = [
   },
   {
     id: 25, name: "HP EliteBook 8 G2i 14 inch Notebook Next Gen AI PC Wolf Pro Security E", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/eNGIzOp7REyMAErZu13o5g.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/eNGIzOp7REyMAErZu13o5g.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Full specs on retailer page"],
     ai: "Adaptable AI PC for your workforceAutomate tasks to save time and multitask without lag on the easy to carry HP EliteBook 8 G2i 14 inch AI PC. This HP Copilot+ PC[4] with HP Wolf Security[5]. enterprise management.",
     history: [1413.48],
@@ -325,7 +325,7 @@ const PRODUCTS = [
   },
   {
     id: 26, name: "Lenovo ThinkPad E16 Gen 4 (Intel) Copilot+ PC Intel Core Ultra 5 325 L", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/hCdrpOi9E0yesGM1klfFAg.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/hCdrpOi9E0yesGM1klfFAg.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Intel Core Ultra 5 325", "Full specs on retailer page"],
     ai: "Ready to make the most of your dayThe Lenovo ThinkPad E16 (16\u2033 Intel) laptop exudes power. reliable performance. and robust security-for all of your business requirements.",
     history: [1063.7],
@@ -335,7 +335,7 @@ const PRODUCTS = [
   },
   {
     id: 27, name: "HP ProBook 4 G1iR 16 PC Intel Core 5 120U Laptop 40.6 cm (16\") WU", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/gDS2ePiTLkiigLalNRYX-Q.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/gDS2ePiTLkiigLalNRYX-Q.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Full specs on retailer page"],
     ai: "Optimize your work with a resilient. future-ready laptopThe HP ProBook 4 G1iR 16-inch Notebook PC provides growing businesses with commercial-grade performance. multi-layered endpoint security[5].",
     history: [884.96],
@@ -345,7 +345,7 @@ const PRODUCTS = [
   },
   {
     id: 28, name: "HP ProBook 4 G1iR 14 inch Notebook PC Intel Core 5 120U Laptop 35.6 cm", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/wnHSrEl1aU-BiJ6zl4_vyA.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/wnHSrEl1aU-BiJ6zl4_vyA.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Full specs on retailer page"],
     ai: "Optimize your work with a resilient. future-ready laptopThe HP ProBook 4 G1iR 14-inch Notebook PC provides growing businesses with commercial-grade performance. multi-layered endpoint security[5].",
     history: [884.96],
@@ -355,7 +355,7 @@ const PRODUCTS = [
   },
   {
     id: 29, name: "Microsoft Surface Laptop 7 Copilot+ PC Intel Core Ultra 5 236V 38.1 cm", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/oPvDTw7dCki3a2FbceHDWw.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/oPvDTw7dCki3a2FbceHDWw.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Intel Core Ultra 5 236V", "Full specs on retailer page"],
     ai: "Surface Laptop for Business AI-powered and built for business. Surface Laptop in 13.8-inch and 15-inch models.",
     history: [1398.72],
@@ -365,7 +365,7 @@ const PRODUCTS = [
   },
   {
     id: 30, name: "ASUS TUF Gaming A16 FA607NUQ-RL009W AMD Ryzen\u2122 7 170 Laptop 40.6 cm (1", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/-tJRW82kpUO-WUh-4OK4uQ.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/-tJRW82kpUO-WUh-4OK4uQ.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Full specs on retailer page"],
     ai: "Portable Power. Maximum ImpactThe design philosophy behind the TUF Gaming A16 is all about blending power with portability. With this lightweight all-around powerhouse. you can enjoy seamless performance wherever you go.",
     history: [909.31],
@@ -375,7 +375,7 @@ const PRODUCTS = [
   },
   {
     id: 31, name: "Microsoft Surface Laptop 7 Surface Intel Core Ultra 5 236V 16GB RAM 25", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/QZ3ipggX10Wv5svniI42Rw.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/QZ3ipggX10Wv5svniI42Rw.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Intel Core Ultra 5 236V", "16GB RAM"],
     ai: "Surface Laptop for Business AI-powered and built for business. Surface Laptop in 13.8-inch and 15-inch models.",
     history: [1334.06],
@@ -385,7 +385,7 @@ const PRODUCTS = [
   },
   {
     id: 32, name: "Samsung Galaxy Book5 Pro (16\". Core Ultra 7. 32GB)", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/zEKyX7721UeQOVOtXQhgvg.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/zEKyX7721UeQOVOtXQhgvg.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Full specs on retailer page"],
     ai: "Powerful processor driving the Next-Gen AI PCExperience a new level of transformative AI performance on Galaxy Book5 Pro 14\" with the super-fast Intel\u00ae Core\u2122 Ultra processor (Series 2).",
     history: [1231.2],
@@ -395,7 +395,7 @@ const PRODUCTS = [
   },
   {
     id: 33, name: "MSI Vector 16 HX AI A2XWHG-403UK Intel Core Ultra 7 255HX Laptop 40.6", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/NaplQvNh-UGrkZ0EmB2Hig.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/NaplQvNh-UGrkZ0EmB2Hig.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Intel Core Ultra 7 255HX", "Full specs on retailer page"],
     ai: "Designed for STEM professionals. the Vector 16 HX AI delivers cutting-edge performance and rock-solid stability. It acts as a high-tech brain. seamlessly processing complex data with speed and precision.",
     history: [1550.85],
@@ -405,7 +405,7 @@ const PRODUCTS = [
   },
   {
     id: 34, name: "ASUS Zenbook S14 OLED UX5406AA-SU033W Copilot+ PC Intel Core Ultra 9 3", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/kRjOz8wuWEKaAMCEB_lGFw.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/kRjOz8wuWEKaAMCEB_lGFw.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Intel Core Ultra 9 3", "Full specs on retailer page"],
     ai: "Pro-Level Performance. Sleek Design. ASUS Zenbook S14 is built from solid metal using an integrated molding process combined with CNC machining. This ensures uncompromised mobility with a sleek. lightweight.",
     history: [1575.97],
@@ -415,7 +415,7 @@ const PRODUCTS = [
   },
   {
     id: 35, name: "Apple MacBook Pro 14-inch : M5 chip with 10-core CPU and 10-core GPU", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/0nUgzFXHAUC7z7Mz_qEdxQ.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/0nUgzFXHAUC7z7Mz_qEdxQ.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Full specs on retailer page"],
     ai: "MacBook Pro14-inch model. Now supercharged by M5.",
     history: [1603.65],
@@ -425,7 +425,7 @@ const PRODUCTS = [
   },
   {
     id: 36, name: "ASUS ROG Zephyrus G14 GA403GM-SY118W AMD Ryzen AI 9 465 Laptop 35.6 cm", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/qV7hvqRYx0iDBDLT6_0hzQ.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/qV7hvqRYx0iDBDLT6_0hzQ.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Windows 11 Pro", "Full specs on retailer page"],
     ai: "ROG Zephyrus G14 (2026) GA403 with a Free ROG 20th Anniversary Football and T-shirtThe Dawn of A New AgeEffortlessly game. create. and collaborate on this next-gen Windows 11 Pro machine.",
     history: [1861.48],
@@ -435,7 +435,7 @@ const PRODUCTS = [
   },
   {
     id: 37, name: "Apple MacBook Pro 16-inch : M5 Pro chip with 18-core CPU and 20-core G", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/JUfUQnsUGEmbhpX_kCR1mA.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/JUfUQnsUGEmbhpX_kCR1mA.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Full specs on retailer page"],
     ai: "MacBook ProFast runs in the family. Now with M5. M5 Pro. and M5 Max.",
     history: [2397.97],
@@ -445,7 +445,7 @@ const PRODUCTS = [
   },
   {
     id: 38, name: "ASUS Zenbook A16 UX3607OA-SQ005W Copilot+ PC Snapdragon X2E-94-100 Lap", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/jeZHzVAhdEqRAHbfdOaaxQ.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/jeZHzVAhdEqRAHbfdOaaxQ.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Snapdragon X2E", "Full specs on retailer page"],
     ai: "Ultra-light. ultra-powerfulZenbook A16 allows you to upgrade from a 14\u201d laptop to a 16\u201d laptop. at no extra weight thanks to ASUS exclusive Ceraluminum\u2122 used across the lid. frame. and base.",
     history: [2013.59],
@@ -455,7 +455,7 @@ const PRODUCTS = [
   },
   {
     id: 39, name: "MSI Vector 16 HX AI A2XWIG-283UK Intel Core Ultra 9 275HX Laptop 40.6", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/NaplQvNh-UGrkZ0EmB2Hig.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/NaplQvNh-UGrkZ0EmB2Hig.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Intel Core Ultra 9 275HX", "Full specs on retailer page"],
     ai: "Designed for STEM professionals. the Vector 16 HX AI delivers cutting-edge performance and rock-solid stability. It acts as a high-tech brain. seamlessly processing complex data with speed and precision.",
     history: [2003.68],
@@ -465,7 +465,7 @@ const PRODUCTS = [
   },
   {
     id: 40, name: "Apple MacBook Pro 16-inch : M5 Max chip with 18-core CPU and 32-core G", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/nfVF6UTvdUmyw_-vusJUvQ.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/nfVF6UTvdUmyw_-vusJUvQ.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Full specs on retailer page"],
     ai: "MacBook ProFast runs in the family. Now with M5. M5 Pro. and M5 Max.",
     history: [3511.51],
@@ -475,7 +475,7 @@ const PRODUCTS = [
   },
   {
     id: 41, name: "MSI Raider A18 HX A9WIG-004UK AMD Ryzen\u2122 9 9955HX3D Laptop 45.7 cm (18", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/YxYoOJ4ZCkSNg7U2h0qAyA.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/YxYoOJ4ZCkSNg7U2h0qAyA.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Full specs on retailer page"],
     ai: "Two cosmic-level powers converged. lit up like a supernova. thus born the new cosmic-level gaming powerhouse: Raider A18 HX.",
     history: [3196.07],
@@ -485,7 +485,7 @@ const PRODUCTS = [
   },
   {
     id: 42, name: "MSI Raider 16 MAX HX B2WJ-065UK Intel Core Ultra 9 290HX Plus Laptop 4", cat: "electronics",
-    img: "💻", image: "https://media.stockinthechannel.com/pic/81QBlSMgaUmnC5ybDoD4Zg.c-r.jpg", lastUpdated: "Today",
+    img: "💻", image: "https://media.stockinthechannel.com/pic/81QBlSMgaUmnC5ybDoD4Zg.c-r.jpg", lastUpdated: "20 Sept 2026",
     specs: ["Intel Core Ultra 9 290HX", "32GB RAM", "2TB SSD"],
     ai: "The MSI Raider 16 Max HX B2WJ-065UK is a high-performance 16-inch gaming laptop powered by an Intel\u00ae Core\u2122 Ultra 9 290HX Plus processor and NVIDIA\u00ae GeForce RTX\u2122 5090 Laptop GPU. It features a QHD+ 240Hz OLED display.",
     history: [3363.31],
@@ -1053,7 +1053,7 @@ function ProductDetails({ product, onBack, favorites, toggleFav, addAlert, remov
                             // (product id, store, price, timestamp) before
                             // redirecting, so you can see which stores/products
                             // actually convert into affiliate commissions.
-                            window.open(p.affiliateLink, "_blank", "noopener,noreferrer");
+                            window.open(p.affiliateLink, "_blank", "noopener");
                           }}
                           style={{ marginTop: 4, background: C.blue, color: "white", border: "none", borderRadius: 8, padding: "5px 10px", fontSize: 10.5, fontWeight: 700, cursor: "pointer" }}
                         >
