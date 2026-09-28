@@ -56,6 +56,10 @@ const CATEGORIES = [
    here only once their own feed is confirmed the same way, not before. */
 const STORES = {
   laptophub: { name: "LaptopHub", color: "#1E3A8A", cat: "electronics", local: true },
+  duckandcover: { name: "Duck and Cover", color: "#111111", cat: "fashion", local: true },
+  gotraka: { name: "Gotraka", color: "#16A34A", cat: "electronics", local: true },
+  tekshop: { name: "TEKshop", color: "#22C55E", cat: "electronics", local: true },
+  vevor: { name: "Vevor", color: "#334155", cat: "home", local: false },
 };
 
 /* Stores grouped by category, for the browsable directory */
@@ -491,6 +495,716 @@ const PRODUCTS = [
     history: [3363.31],
     prices: [
       { store: "laptophub", price: 3363.31, shipping: 0, delivery: "Standard delivery", affiliateLink: "https://www.laptophub.uk/hardware/?tt=30254_2466826_515952_&r=https%3A%2F%2Fwww.pchub.uk%2Fmsi-raider-16-max-hx-b2wj-065uk-intel-core-ultra-9-290hx-plus-laptop-40-6-cm-16-quad-hd-32-gb-ddr5-sdram-2-tb-ssd-nvidia-geforce-rtx-5090-wi-fi-7-802-11be-windows-11-home-black.html", inStock: true },
+    ],
+  },
+  {
+    id: 43, name: "Elix Straight Leg Jeans Mid Wash", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/d2d72d8b-e455-4caf-bdcb-2b9f1a8c89e6.jpg?v=1773061055", lastUpdated: "26 Sept 2026",
+    specs: ["Straight Leg", "Category: Jeans"],
+    ai: "Mens Elix Straight Leg Jeans - Duck and Cover Upgrade your everyday denim with the Duck and Cover Elix Straight Leg Jeans.",
+    history: [30.0],
+    prices: [
+      { store: "duckandcover", price: 30.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Felix-straight-leg-jeans-mid-wash%3Fvariant%3D57095309492607%26sfdr_ptcid%3D43189_100_762367965%26sfdr_hash%3Dd5f16faf067d6b238d9155c459477f4d", inStock: true },
+    ],
+  },
+  {
+    id: 44, name: "Elix Straight Leg Jeans Black", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/98a9972f-d3f1-443b-b117-6f9e3d406b5d.jpg?v=1773061053", lastUpdated: "26 Sept 2026",
+    specs: ["Straight Leg", "Category: Jeans"],
+    ai: "Mens Elix Straight Leg Jeans - Duck and Cover Upgrade your everyday denim with the Duck and Cover Elix Straight Leg Jeans.",
+    history: [30.0],
+    prices: [
+      { store: "duckandcover", price: 30.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Felix-straight-leg-jeans-black%3Fvariant%3D57095308411263%26sfdr_ptcid%3D43189_100_762389427%26sfdr_hash%3D8d103b889dbc7ae8dd75c57464bfe927", inStock: true },
+    ],
+  },
+  {
+    id: 45, name: "Caplaz & Frankinz T-Shirt 10pcs Assorted", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/7e5cc18e-2b07-4b9d-bb78-17fd4522dc1e_9a54f328-9a55-467d-bbc8-49a0785b7f60.jpg?_=1729244382&v=1751031217", lastUpdated: "26 Sept 2026",
+    specs: ["Category: T-Shirts", "See retailer page for full details"],
+    ai: "Stock up on essentials with the Caplaz & Frankinz T-Shirt 10-Pack. Made from cotton, these soft and breathable tees offer comfort and durability in a variety of colours, perfect for everyday wear. Fabric: 100% Cotton",
+    history: [49.99],
+    prices: [
+      { store: "duckandcover", price: 49.99, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fcaplaz-frankinz-t-shirt-10pcs-assorted%3Fvariant%3D51628903563647%26sfdr_ptcid%3D43189_100_710474130%26sfdr_hash%3De26f4472584edf7c1f8690a24959532c", inStock: true },
+    ],
+  },
+  {
+    id: 46, name: "Haltecks T-Shirt 5pk Assorted", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/8c5b8716-d0bd-40e1-8835-78b9430746b9.jpg?v=1774014730", lastUpdated: "26 Sept 2026",
+    specs: ["Category: T-Shirts", "See retailer page for full details"],
+    ai: "A 5-pack of cotton T-shirts from Duck and Cover, designed for everyday wear. Featuring self-fabric inner back neck tape and soft-touch prints across the collection, offering versatile styling options.",
+    history: [29.99],
+    prices: [
+      { store: "duckandcover", price: 29.99, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fhaltecks-t-shirt-5pk-assorted%3Fvariant%3D56900227694975%26sfdr_ptcid%3D43189_100_760076169%26sfdr_hash%3Dd0e865df2a6c73087cfea9879fa43877", inStock: true },
+    ],
+  },
+  {
+    id: 47, name: "Adamsberg Black Hoodie", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/322b6df4-4d2b-4086-8dc5-76a9482e09de.jpg?v=1787905473", lastUpdated: "26 Sept 2026",
+    specs: ["Category: Hoodies", "See retailer page for full details"],
+    ai: "Carbon fleece men's hoodie - zip sleeve pocket, kangaroo pocket, self-lined hood. 65% cotton. Was \u00a360, now \u00a319.99. In stock now.",
+    history: [35.0],
+    prices: [
+      { store: "duckandcover", price: 35.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fadamsberg-hoodie-black%3Fvariant%3D55995271151999%26sfdr_ptcid%3D43189_100_752161310%26sfdr_hash%3Db3a07d87ce0eaf62bca8825a04a287dd", inStock: true },
+    ],
+  },
+  {
+    id: 48, name: "Adamsberg Off White Hoodie", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/af9b0f32-1357-4519-b247-a65489e11c8b.jpg?v=1787905476", lastUpdated: "26 Sept 2026",
+    specs: ["Category: Hoodies", "See retailer page for full details"],
+    ai: "Carbon fleece mens hoodie with zip sleeve pocket, lined hood and kangaroo pocket. Was \u00a360.00, now \u00a319.99. In stock now.",
+    history: [35.0],
+    prices: [
+      { store: "duckandcover", price: 35.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fadamsberg-hoodie-off-white%3Fvariant%3D55995271414143%26sfdr_ptcid%3D43189_100_752161315%26sfdr_hash%3D11cf4f5aec2a4936bfb5b6f1db65c6ab", inStock: true },
+    ],
+  },
+  {
+    id: 49, name: "Moretor Chinos Black", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/6c23084b-8817-4913-bdba-28b5ec58cacf.jpg?_=1723215585&v=1771325408", lastUpdated: "26 Sept 2026",
+    specs: ["slim fit", "Category: Chinos"],
+    ai: "Men's slim fit chino lightweight canvas inner waistband facing and inner pocket badge.",
+    history: [30.99],
+    prices: [
+      { store: "duckandcover", price: 30.99, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fmoretor-chinos-black%3Fvariant%3D44039094272250%26sfdr_ptcid%3D43189_100_695965461%26sfdr_hash%3D98c911a5b31828c27a18d113501b7951", inStock: true },
+    ],
+  },
+  {
+    id: 50, name: "Mens Slim Fit Chinos Navy", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/a62ff1e9-8fc7-473d-b8f5-2f2c46115e2d.jpg?_=1723215602&v=1771325402", lastUpdated: "26 Sept 2026",
+    specs: ["Slim fit", "Category: Chinos"],
+    ai: "Slim fit navy chinos with stretch canvas fabric, clean tailoring and welt pockets. Was \u00a360.00, now \u00a330.99. Multiple sizes. Order today.",
+    history: [30.99],
+    prices: [
+      { store: "duckandcover", price: 30.99, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fmoretor-chinos-navy%3Fvariant%3D44039096828154%26sfdr_ptcid%3D43189_100_695965491%26sfdr_hash%3D1d22f4f8345ca03cfd499ad066b2e6c3", inStock: true },
+    ],
+  },
+  {
+    id: 51, name: "Adamsberg Hoodie & Joggers Set Off White", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/6f48d0e8-e88e-4306-8d85-f9ff787f17a5.jpg?v=1787905870", lastUpdated: "26 Sept 2026",
+    specs: ["Category: Tracksuits", "See retailer page for full details"],
+    ai: "The Adamsberg Tracksuit provide modern comfort, pairing the hoodie and joggers for a complete everyday look. Mens carbon fleece hoodie with printed chest detail. Front kangaroo pocket and left sleeve zip pocket.",
+    history: [59.0],
+    prices: [
+      { store: "duckandcover", price: 59.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fadamsberg-hoodie-joggers-set-off-white%3Fvariant%3D56218777354623%26sfdr_ptcid%3D43189_100_753401111%26sfdr_hash%3D020d1d36d5f7ee73eecb5d1dfeb63780", inStock: true },
+    ],
+  },
+  {
+    id: 52, name: "Danvers Zip Knit Polo Black", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/f18178d3-ce68-4a92-9d0a-cd2c47ce6b7b.jpg?v=1787905877", lastUpdated: "26 Sept 2026",
+    specs: ["Category: Polos", "See retailer page for full details"],
+    ai: "A modern knitted zip polo from Duck and Cover featuring a basket weave pattern for a clean, textured look. Finished with a branded quarter zip and ribbed trims, it offers a sharp option for everyday wear.",
+    history: [25.0],
+    prices: [
+      { store: "duckandcover", price: 25.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fdanvers-zip-knit-polo-black%3Fvariant%3D56900713644415%26sfdr_ptcid%3D43189_100_761095407%26sfdr_hash%3Da2391ce2b642e59bbecd64e4eab0d8fe", inStock: true },
+    ],
+  },
+  {
+    id: 53, name: "Wrentham Polo Black", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/871ba975-204e-4b83-96c5-df22db3bdb86.jpg?v=1787905878", lastUpdated: "26 Sept 2026",
+    specs: ["Category: Polos", "See retailer page for full details"],
+    ai: "A classic cotton pique polo from Duck and Cover featuring a clean button placket and subtle tipping for a refined finish. Designed with sleeve panel detailing and branded accents, it's an easy everyday essential.",
+    history: [25.0],
+    prices: [
+      { store: "duckandcover", price: 25.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fwrentham-polo-black%3Fvariant%3D56904606253439%26sfdr_ptcid%3D43189_100_762241027%26sfdr_hash%3Ddc6949147f888c2ed37cc2a442872e1c", inStock: true },
+    ],
+  },
+  {
+    id: 54, name: "Applewold Joggers Raisin", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/e6da2522-2755-40fe-a81b-2ed7022fa2c5.jpg?v=1787905664", lastUpdated: "26 Sept 2026",
+    specs: ["Category: Joggers", "See retailer page for full details"],
+    ai: "Introducing the Applewold Jogger, a cuffed fleece jogger built for relaxed comfort with modern details.",
+    history: [30.0],
+    prices: [
+      { store: "duckandcover", price: 30.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fapplewold-joggers-raisin%3Fvariant%3D56001216840063%26sfdr_ptcid%3D43189_100_752624629%26sfdr_hash%3D395f81ff382aa339c91eb605966033a9", inStock: true },
+    ],
+  },
+  {
+    id: 55, name: "Applewold Joggers Black", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/a0aa6eb8-a6ef-459d-8596-39e5b811136e.jpg?v=1787905666", lastUpdated: "26 Sept 2026",
+    specs: ["Category: Joggers", "See retailer page for full details"],
+    ai: "Introducing the Applewold Jogger, a cuffed fleece jogger built for relaxed comfort with modern details.",
+    history: [30.0],
+    prices: [
+      { store: "duckandcover", price: 30.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fapplewold-joggers-black%3Fvariant%3D56001217036671%26sfdr_ptcid%3D43189_100_752624634%26sfdr_hash%3D771b20091786438d7802faa0eb296736", inStock: true },
+    ],
+  },
+  {
+    id: 56, name: "Men's Chino Shorts Navy - Stretch Canvas, Sizes W30", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/845a87f2-79a8-42a6-b31e-0ab1ded254c9.jpg?_=1723215551&v=1771333998", lastUpdated: "26 Sept 2026",
+    specs: ["Category: Shorts", "See retailer page for full details"],
+    ai: "Navy stretch canvas chino shorts at \u00a316 (was \u00a349). Zip fly, welt pockets, W30-W38. Lightweight and breathable for summer. In stock now.",
+    history: [16.0],
+    prices: [
+      { store: "duckandcover", price: 16.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fmoreshore-chino-shorts-navy%3Fvariant%3D44039093158138%26sfdr_ptcid%3D43189_100_695965448%26sfdr_hash%3Dd8c6022eda52d2991bbf9d81679e2fc2", inStock: true },
+    ],
+  },
+  {
+    id: 57, name: "Moreshore Chino Shorts Olive", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/2b65d479-28a5-4b72-909a-0e752151e7ec.jpg?_=1723215566&v=1771333993", lastUpdated: "26 Sept 2026",
+    specs: ["Category: Shorts", "See retailer page for full details"],
+    ai: "Men's chino short lightweight canvas inner waistband facing and inner pocket bags.",
+    history: [16.0],
+    prices: [
+      { store: "duckandcover", price: 16.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fmoreshore-chino-shorts-olive%3Fvariant%3D44039093256442%26sfdr_ptcid%3D43189_100_695965450%26sfdr_hash%3D6b75f43c6e5800c44234f4460d67afa3", inStock: true },
+    ],
+  },
+  {
+    id: 58, name: "Jelforth Jacket Dark Olive", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/81911040-ead1-4681-aadb-27819d05808f.jpg?v=1787905218", lastUpdated: "26 Sept 2026",
+    specs: ["100% Polyester, lining 100% Polyester", "Category: Outerwear"],
+    ai: "Introducing the Jelforth Jacket Khaki - perfect for everyday wear in the cooler months.",
+    history: [85.0],
+    prices: [
+      { store: "duckandcover", price: 85.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fjelforth-jacket-khaki%3Fvariant%3D55894415999359%26sfdr_ptcid%3D43189_100_750950787%26sfdr_hash%3D1d9cf84d609d96f06e62e62378f774f1", inStock: true },
+    ],
+  },
+  {
+    id: 59, name: "Jelforth Jacket Black", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/8522ffe2-2fc0-498a-81fe-9dbd2eaa6c54.jpg?v=1787905214", lastUpdated: "26 Sept 2026",
+    specs: ["100% Polyester, lining 100% Polyester", "Category: Outerwear"],
+    ai: "Introducing the Jelforth Jacket Black - a parka designed for both function and style in cold weather.",
+    history: [85.0],
+    prices: [
+      { store: "duckandcover", price: 85.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fjelforth-jacket-black%3Fvariant%3D55894415671679%26sfdr_ptcid%3D43189_100_750668246%26sfdr_hash%3D7895811eed071bfe469fccc8fa0a3c88", inStock: true },
+    ],
+  },
+  {
+    id: 60, name: "Potenza 1/4 Zip Knit Raisin", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/1f131e9f-a3f0-49e2-8ec5-0135b67e1276.jpg?v=1787905685", lastUpdated: "26 Sept 2026",
+    specs: ["Category: Knitwear", "See retailer page for full details"],
+    ai: "Introducing the Potenza Quarter Zip Knit, crafted for easy layering and modern style.",
+    history: [40.0],
+    prices: [
+      { store: "duckandcover", price: 40.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fpotenza-1-4-zip-knit-raisin%3Fvariant%3D56001522991487%26sfdr_ptcid%3D43189_100_752935167%26sfdr_hash%3D88da091a518895d145b6a6d1d40020e5", inStock: true },
+    ],
+  },
+  {
+    id: 61, name: "Potenza 1/4 Zip Knit Stone", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/2d208a18-cc5b-473f-a4ae-7d8b44aa735b.jpg?v=1787905687", lastUpdated: "26 Sept 2026",
+    specs: ["Category: Knitwear", "See retailer page for full details"],
+    ai: "Introducing the Potenza Quarter Zip Knit, crafted for easy layering and modern style.",
+    history: [40.0],
+    prices: [
+      { store: "duckandcover", price: 40.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fpotenza-1-4-zip-knit-stone%3Fvariant%3D56001523679615%26sfdr_ptcid%3D43189_100_752935183%26sfdr_hash%3De74a380d354fb8214667ea05aea90ee1", inStock: true },
+    ],
+  },
+  {
+    id: 62, name: "Quendle Boxers 5pk Assorted", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/0f045987-65d3-4a10-b0ca-2039b7e4b613.jpg?_=1723215993&v=1773433138", lastUpdated: "26 Sept 2026",
+    specs: ["95% Cotton and 5% Elastane", "Category: Underwear"],
+    ai: "Introducing our Men's 5-Pack Boxershorts-an ultimate combination of style and comfort. Each pair features a jacquard waistband with contrasting raised logo text for a touch of sophistication.",
+    history: [30.0],
+    prices: [
+      { store: "duckandcover", price: 30.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fquendle-boxers-5pk-assorted%3Fvariant%3D45181973561594%26sfdr_ptcid%3D43189_100_702219423%26sfdr_hash%3D2de7b86e81455cde780ffb1730dd7653", inStock: true },
+    ],
+  },
+  {
+    id: 63, name: "Vianney Loungewear Set Black", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/72df2bd9-3c06-413a-ad8e-4e91355dedc7.jpg?v=1787904509", lastUpdated: "26 Sept 2026",
+    specs: ["Category: Loungewear", "See retailer page for full details"],
+    ai: "Men's 2-part loungewear set: Men's raglan printed tee and pant lounge set. Fabric:100% Cotton",
+    history: [36.0],
+    prices: [
+      { store: "duckandcover", price: 36.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fvianney-loungewear-set-black%3Fvariant%3D58287611412863%26sfdr_ptcid%3D43189_100_769184207%26sfdr_hash%3D679ca9e3c00e44ba637b890256edcbf4", inStock: true },
+    ],
+  },
+  {
+    id: 64, name: "Nesta Trainers Black", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/f8eb8506-0c2a-4f9f-9427-75d239e0d848.jpg?v=1742375061", lastUpdated: "26 Sept 2026",
+    specs: ["Category: Footwear", "See retailer page for full details"],
+    ai: "Introducing the Nesta Sneaker, a stylish canvas sneaker with a rubber toe cap and chunky sole for comfort and durability. It has contrast stitching, metal eyelets, and thick laces for a modern look.",
+    history: [25.0],
+    prices: [
+      { store: "duckandcover", price: 25.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fnesta-trainers-black%3Fvariant%3D55213555286399%26sfdr_ptcid%3D43189_100_726214679%26sfdr_hash%3Dc0f639125ad8239ca5c634b9e0e08d62", inStock: true },
+    ],
+  },
+  {
+    id: 65, name: "Francore Overshirt Navy Check", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/2b1c528b-ca7b-4793-b9ee-9fd81c02f771.jpg?_=1723203636&v=1773433123", lastUpdated: "26 Sept 2026",
+    specs: ["Category: Shirts", "See retailer page for full details"],
+    ai: "The Francore Overshirt Navy Check is the ideal winter shirt for men.",
+    history: [29.99],
+    prices: [
+      { store: "duckandcover", price: 29.99, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Ffrancore-overshirt-navy-check%3Fvariant%3D44655293071610%26sfdr_ptcid%3D43189_100_700118185%26sfdr_hash%3Db96f17b1f67975ee9fc6898f8d2170fa", inStock: true },
+    ],
+  },
+  {
+    id: 66, name: "Venture Suitcase 3pk Charcoal", cat: "fashion",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/5d2d44c5-9b45-4a05-9c6c-4d7f41286eeb.jpg?v=1756909351", lastUpdated: "26 Sept 2026",
+    specs: ["Category: Accessories", "See retailer page for full details"],
+    ai: "Introducing the Venture 3 Pack Suitcase Charcoal , a practical 3-piece luggage set designed for every journey. This istem is excluded from further discounts due to its size.",
+    history: [115.0],
+    prices: [
+      { store: "duckandcover", price: 115.0, shipping: 1.99, delivery: "Standard delivery", affiliateLink: "https://tc.tradetracker.net/?c=35470&m=2038490&a=515952&r=&u=https%3A%2F%2Fwww.duckandcover.co.uk%2Fproducts%2Fventure-suitcase-3pk-charcoal%3Fvariant%3D55995114226047%26sfdr_ptcid%3D43189_100_751007336%26sfdr_hash%3D0f89621b57ecccbfce738ac77132d788", inStock: true },
+    ],
+  },
+  {
+    id: 67, name: "LaCie Mobile Drive Secure 4 TB External HDD | USB 3.2 Grey", cat: "electronics",
+    img: "\ud83d\udd0c", image: "https://cdn.shopify.com/s/files/1/0549/5678/5895/files/fa9be20d3144ae320933d5829db635e0_ead3f1e2-a3ad-4e49-b2e4-d00beb752855.jpg?v=1736912055", lastUpdated: "27 Sept 2026",
+    specs: ["External Hard Drives", "Brand: LaCie", "2 days delivery", "Free shipping"],
+    ai: "LaCie Mobile Drive Secure. HDD capacity: 4000 GB. USB version: 3.2 Gen 1 (3.1 Gen 1). Product colour: GreyPremium Space, Sleek Design.",
+    history: [226.0],
+    prices: [
+      { store: "gotraka", price: 226.0, shipping: 0.0, delivery: "2 days", affiliateLink: "https://deals.gotraka.com/c?c=38822&m=2490651&a=515952&r=&u=https%3A%2F%2Fwww.gotraka.com%2Fproducts%2Flacie-mobile-drive-secure-external-hard-drive-4000-gb-grey", inStock: true },
+    ],
+  },
+  {
+    id: 68, name: "Kingston 2TB XS1000 Red External USB 3.2 Gen 2 Portable Solid State", cat: "electronics",
+    img: "\ud83d\udd0c", image: "https://cdn.shopify.com/s/files/1/0549/5678/5895/files/5c035a23bd0eeddc69527778ba324891.jpg?v=1736868062", lastUpdated: "27 Sept 2026",
+    specs: ["External Solid State Drives", "Brand: Kingston", "2 days delivery", "Free shipping"],
+    ai: "Kingston Technology 2TB XS1000 Red External USB 3.2 Gen 2 Portable Solid State Drive. SSD capacity: 2 TB. USB connector: USB Type-C, USB version: 3.2 Gen 2 (3.1 Gen 2). Read speed: 1050 MB/s, Write speed: 1000 MB/s.",
+    history: [335.42],
+    prices: [
+      { store: "gotraka", price: 335.42, shipping: 0.0, delivery: "2 days", affiliateLink: "https://deals.gotraka.com/c?c=38822&m=2490651&a=515952&r=&u=https%3A%2F%2Fwww.gotraka.com%2Fproducts%2Fkingston-technology-2tb-xs1000-red-external-usb-32-gen-2-portable-solid-state-drive", inStock: true },
+    ],
+  },
+  {
+    id: 69, name: "ASUS VA27DCP 27\" Full HD Monitor | 1920 x 1080 75Hz USB-C HDMI", cat: "electronics",
+    img: "\ud83d\udd0c", image: "https://cdn.shopify.com/s/files/1/0549/5678/5895/files/893d2e4d0c9af0cf41b9e66cdfafac46.jpg?v=1736843680", lastUpdated: "27 Sept 2026",
+    specs: ["Computer Monitors", "Brand: ASUS", "2 days delivery", "Free shipping"],
+    ai: "The ASUS VA27DCP 27\" Full HD Monitor combines stunning visuals with advanced eye-care technology, making it an ideal choice for both work and play.",
+    history: [275.7],
+    prices: [
+      { store: "gotraka", price: 275.7, shipping: 0.0, delivery: "2 days", affiliateLink: "https://deals.gotraka.com/c?c=38822&m=2490651&a=515952&r=&u=https%3A%2F%2Fwww.gotraka.com%2Fproducts%2Fasus-va27dcp-68-6-cm-27-1920-x-1080-pixels-full-hd-lcd-black", inStock: true },
+    ],
+  },
+  {
+    id: 70, name: "ASUS GeForce RTX 3050 6 GB GDDR6 Overclocked Graphics Card | PCIe 4.0", cat: "electronics",
+    img: "\ud83d\udd0c", image: "https://cdn.shopify.com/s/files/1/0549/5678/5895/files/26ec3ab8b30bdb78c2ffc643d2678bb9.jpg?v=1736940906", lastUpdated: "27 Sept 2026",
+    specs: ["Graphics Cards", "Brand: ASUS", "2 days delivery", "Free shipping"],
+    ai: "Perfect for gamers wanting smooth frame rates, the ASUS GeForce RTX 3050 offers immersive visuals and responsive play.",
+    history: [281.95],
+    prices: [
+      { store: "gotraka", price: 281.95, shipping: 0.0, delivery: "2 days", affiliateLink: "https://deals.gotraka.com/c?c=38822&m=2490651&a=515952&r=&u=https%3A%2F%2Fwww.gotraka.com%2Fproducts%2Fasus-geforce-rtx-3050-lp-brk-oc-edition-nvidia-6-gb-gddr6", inStock: true },
+    ],
+  },
+  {
+    id: 71, name: "Targus City Gear 3 backpack Black Polyurethane", cat: "electronics",
+    img: "\ud83d\udd0c", image: "https://cdn.shopify.com/s/files/1/0549/5678/5895/files/e937fe74c05ad1882dca51840126475d.jpg?v=1737127894", lastUpdated: "27 Sept 2026",
+    specs: ["Backpacks", "Brand: Targus", "2 days delivery", "Free shipping"],
+    ai: "Targus City Gear 3. Product main colour: Black, Material: Polyurethane, Style: City. Width: 190 mm, Depth: 280 mm, Height: 462 mm. Package width: 192 mm, Package depth: 282 mm, Package height: 462.9 mm.",
+    history: [54.49],
+    prices: [
+      { store: "gotraka", price: 54.49, shipping: 0.0, delivery: "2 days", affiliateLink: "https://deals.gotraka.com/c?c=38822&m=2490651&a=515952&r=&u=https%3A%2F%2Fwww.gotraka.com%2Fproducts%2Ftargus-city-gear-3-backpack-black-polyurethane", inStock: true },
+    ],
+  },
+  {
+    id: 72, name: "Razer Wolverine V3 Pro Black, White USB Gamepad Analogue PC, Xbox", cat: "electronics",
+    img: "\ud83d\udd0c", image: "https://cdn.shopify.com/s/files/1/0549/5678/5895/files/51b01d187bd860eca42924cc35ef24cd.jpg?v=1736868098", lastUpdated: "27 Sept 2026",
+    specs: ["Gaming Controllers", "Brand: Razer", "2 days delivery", "Free shipping"],
+    ai: "Input deviceDevice typeGamepadGaming platforms supported PC, Xbox Series S, Xbox Series XGaming control technologyAnalogueAnalog thumbsticksYesNumber of joysticks2Programmable buttonsYesPorts & interfacesConnectivity technologyWired & WirelessDevice interface USBHeadphone outYesErgonomicsProduct colourBlackCable length3 mDetachable cableYesPlug and PlayYesPowerPower sourceBatteryBattery typeBuilt-inBattery life (max)20 hSoftwareWindows operating systems supportedWindows 11 x64Weight & dimensionsWidth156.7 mmDepth105.7 mmHeight65 mmWeight304 gPackaging dataPackage width82 mmPackage depth222 mmPackage height205 mmPackage weight907 gPackaging contentTravel caseYesLogistics dataCommodity code9504500000Country of originChina",
+    history: [212.24],
+    prices: [
+      { store: "gotraka", price: 212.24, shipping: 0.0, delivery: "2 days", affiliateLink: "https://deals.gotraka.com/c?c=38822&m=2490651&a=515952&r=&u=https%3A%2F%2Fwww.gotraka.com%2Fproducts%2Frazer-wolverine-v3-pro-black-white-usb-gamepad-analogue-pc-xbox-series-s-xbox-series-x%3Fvariant%3D53524035993979", inStock: true },
+    ],
+  },
+  {
+    id: 73, name: "DELL Pro 2K Webcam - WB5023", cat: "electronics",
+    img: "\ud83d\udd0c", image: "https://cdn.shopify.com/s/files/1/0549/5678/5895/files/baf2db68fc65c69f2739dd9387f8e595.jpg?v=1736957095", lastUpdated: "27 Sept 2026",
+    specs: ["Webcams", "Brand: DELL", "2 days delivery", "Free shipping"],
+    ai: "DELL Pro 2K Webcam - WB5023. Maximum video resolution: 2560 x 1440 pixels, Camera HD type: Full HD, Maximum frame rate: 60 fps. Interface: USB 2.0, Product colour: Black, Mounting type: Clip.",
+    history: [71.41],
+    prices: [
+      { store: "gotraka", price: 71.41, shipping: 0.0, delivery: "2 days", affiliateLink: "https://deals.gotraka.com/c?c=38822&m=2490651&a=515952&r=&u=https%3A%2F%2Fwww.gotraka.com%2Fproducts%2Fdell-wb5023-webcam-2560-x-1440-pixels-usb-2-0-black", inStock: true },
+    ],
+  },
+  {
+    id: 74, name: "Kensington Pro Fit? Low-Profile Wireless Desktop Set Keyboard |", cat: "electronics",
+    img: "\ud83d\udd0c", image: "https://cdn.shopify.com/s/files/1/0549/5678/5895/files/0a3aad9a99d0c2110dbabdcfc99bc9a0.jpg?v=1739712872", lastUpdated: "27 Sept 2026",
+    specs: ["Keyboards", "Brand: Kensington", "2 days delivery", "Free shipping"],
+    ai: "Kensington Pro Fit\u00ae Low-Profile Wireless Desktop Set. Keyboard form factor: Full-size (100%). Keyboard style: Straight. Device interface: RF Wireless, Keyboard layout: QWERTY, Recommended usage: Office.",
+    history: [43.97],
+    prices: [
+      { store: "gotraka", price: 43.97, shipping: 0.0, delivery: "2 days", affiliateLink: "https://deals.gotraka.com/c?c=38822&m=2490651&a=515952&r=&u=https%3A%2F%2Fwww.gotraka.com%2Fproducts%2Fkensington-pro-fit-low-profile-wireless-desktop-set", inStock: true },
+    ],
+  },
+  {
+    id: 75, name: "TP-Link Archer AX3000 Dual-Band Wi-Fi 6 Air Router", cat: "electronics",
+    img: "\ud83d\udd0c", image: "https://cdn.shopify.com/s/files/1/0549/5678/5895/files/c5abb99f0518825ea3cbfb8e435c925c.jpg?v=1736940688", lastUpdated: "27 Sept 2026",
+    specs: ["Wireless Routers", "Brand: TP-LINK", "2 days delivery", "Free shipping"],
+    ai: "TP-Link Archer AX3000 Dual-Band Wi-Fi 6 Air Router. WAN connection type: RJ-45. Wi-Fi band: Dual-band (2.4 GHz / 5 GHz), Top Wi-Fi standard: Wi-Fi 6 (802.11ax), WLAN data transfer rate (max): 2976 Mbit/s.",
+    history: [123.62],
+    prices: [
+      { store: "gotraka", price: 123.62, shipping: 0.0, delivery: "2 days", affiliateLink: "https://deals.gotraka.com/c?c=38822&m=2490651&a=515952&r=&u=https%3A%2F%2Fwww.gotraka.com%2Fproducts%2Ftp-link-archer-ax3000-dual-band-wi-fi-6-air-router", inStock: true },
+    ],
+  },
+  {
+    id: 76, name: "Trust Primo Lithium-Ion (Li-Ion) 20000 mAh Black", cat: "electronics",
+    img: "\ud83d\udd0c", image: "https://cdn.shopify.com/s/files/1/0549/5678/5895/files/474169932ff0b1a8c1ab66944599abf7.jpg?v=1736888765", lastUpdated: "27 Sept 2026",
+    specs: ["Power Banks", "Brand: Trust", "2 days delivery", "Free shipping"],
+    ai: "Trust Primo. Battery capacity: 20000 mAh, Battery technology: Lithium-Ion (Li-Ion), Battery voltage: 3.7 V. USB A output ports: 2, USB Type-C ports quantity: 1. Total output power: 15 W.",
+    history: [32.99],
+    prices: [
+      { store: "gotraka", price: 32.99, shipping: 0.0, delivery: "2 days", affiliateLink: "https://deals.gotraka.com/c?c=38822&m=2490651&a=515952&r=&u=https%3A%2F%2Fwww.gotraka.com%2Fproducts%2Ftrust-primo-lithium-ion-li-ion-20000-mah-black", inStock: true },
+    ],
+  },
+  {
+    id: 77, name: "SanDisk Ultra Dual Drive Luxe USB flash drive 64 GB USB Type-A / USB", cat: "electronics",
+    img: "\ud83d\udd0c", image: "https://cdn.shopify.com/s/files/1/0549/5678/5895/files/16e8c9f29b3273b4390e53e6a8779481.jpg?v=1737013492", lastUpdated: "27 Sept 2026",
+    specs: ["USB Flash Drives", "Brand: Sandisk", "2 days delivery", "Free shipping"],
+    ai: "SanDisk Ultra Dual Drive Luxe. Capacity: 64 GB, Device interface: USB Type-A / USB Type-C, USB version: 3.2 Gen 1 (3.1 Gen 1), Read speed: 150 MB/s.",
+    history: [23.1],
+    prices: [
+      { store: "gotraka", price: 23.1, shipping: 0.0, delivery: "2 days", affiliateLink: "https://deals.gotraka.com/c?c=38822&m=2490651&a=515952&r=&u=https%3A%2F%2Fwww.gotraka.com%2Fproducts%2Fsandisk-ultra-dual-drive-luxe-usb-flash-drive-64-gb-usb-type-a-usb-type-c-3-2-gen-1-3-1-gen-1-stainless-steel", inStock: true },
+    ],
+  },
+  {
+    id: 78, name: "Antec 0-761345-10133-2 Midi Tower PC Case Black, Wood | Liquid", cat: "electronics",
+    img: "\ud83d\udd0c", image: "https://cdn.shopify.com/s/files/1/0549/5678/5895/files/b43ef70e934b24c1815dcc2c4c32788f.jpg?v=1736873657", lastUpdated: "27 Sept 2026",
+    specs: ["Computer Cases", "Brand: Antec", "2 days delivery", "Free shipping"],
+    ai: "Flow LuxuryF-LUX Platform, abbreviation of Flow Luxury, features ultra case structure design for excellent airflow and 5 fans included, delivering enhanced GPU cooling performance.",
+    history: [93.4],
+    prices: [
+      { store: "gotraka", price: 93.4, shipping: 0.0, delivery: "2 days", affiliateLink: "https://deals.gotraka.com/c?c=38822&m=2490651&a=515952&r=&u=https%3A%2F%2Fwww.gotraka.com%2Fproducts%2Fantec-0-761345-10133-2-computer-case-midi-tower-black-wood", inStock: true },
+    ],
+  },
+  {
+    id: 79, name: "HP 15s-fq5021na 15.6\" Laptop Intel i5 12th Gen 8GB RAM 256GB SSD", cat: "electronics",
+    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/171799-a_copy_1.jpg", lastUpdated: "27 Sept 2026",
+    specs: ["Laptops", "Brand: HP", "Free shipping", "Condition: New"],
+    ai: "Thin and light with a micro-edge display Super-portable with a lightweight design and a more comfortable view on flicker-free, micro-edge display.",
+    history: [399.0],
+    prices: [
+      { store: "tekshop", price: 399.0, shipping: 0.0, delivery: "Next day", affiliateLink: "https://conversions.tekshop.co.uk/c?c=38998&m=2423314&a=515952&r=&u=https%3A%2F%2Fwww.tekshop.co.uk%2F8r554ea-hp-15s-fq5021na-laptop-171800-a", inStock: true },
+    ],
+  },
+  {
+    id: 80, name: "Samsung Galaxy Book 4 Laptop 15.6\" Intel Core 3 100U 8GB RAM 256GB", cat: "electronics",
+    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/w/h/white-samsung_np750xgk-kg4uk_int_1.jpg", lastUpdated: "27 Sept 2026",
+    specs: ["Laptops", "Brand: Samsung", "Free shipping", "Condition: New"],
+    ai: "Performance you can count on Conquer your day with the latest Intel Core 3/5/7 processor and integrated Intel graphics, delivering super-smooth performance for streaming and seamless multitasking.",
+    history: [649.0],
+    prices: [
+      { store: "tekshop", price: 649.0, shipping: 0.0, delivery: "Next day", affiliateLink: "https://conversions.tekshop.co.uk/c?c=38998&m=2423314&a=515952&r=&u=https%3A%2F%2Fwww.tekshop.co.uk%2Fnp750xgk-kg4uk-samsung-galaxy-book-4-8gb-256gb-171912", inStock: true },
+    ],
+  },
+  {
+    id: 81, name: "Lenovo LOQ 15IAX9E 15.6\" Gaming Laptop Intel Core i7 16GB 512GB RTX", cat: "electronics",
+    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/174616-a_2_copy.jpg", lastUpdated: "27 Sept 2026",
+    specs: ["Laptops", "Brand: Lenovo", "Free shipping", "Condition: New"],
+    ai: "Premium Entry-Level Gaming Lenovo LOQ 15IAX9E 15.6\" Gaming Laptop Step into the competitive arena with confidence.",
+    history: [999.0],
+    prices: [
+      { store: "tekshop", price: 999.0, shipping: 0.0, delivery: "Next day", affiliateLink: "https://conversions.tekshop.co.uk/c?c=38998&m=2423314&a=515952&r=&u=https%3A%2F%2Fwww.tekshop.co.uk%2F83lk00dbuk-lenovo-loq-15iax9e-174616", inStock: true },
+    ],
+  },
+  {
+    id: 82, name: "Dell Pro Max 16 Plus 16\" Laptop Intel Core Ultra 7 265HX 32GB RAM", cat: "electronics",
+    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/175170-main_1_2_4.jpg", lastUpdated: "27 Sept 2026",
+    specs: ["Laptops", "Brand: Dell", "Free shipping", "Condition: New"],
+    ai: "Power Your Professional Potential Step into a new era of productivity with the Dell Pro Max 16 Plus .",
+    history: [2799.0],
+    prices: [
+      { store: "tekshop", price: 2799.0, shipping: 0.0, delivery: "Next day", affiliateLink: "https://conversions.tekshop.co.uk/c?c=38998&m=2423314&a=515952&r=&u=https%3A%2F%2Fwww.tekshop.co.uk%2Fmb16250-dell-pro-max-16-plus-16-laptop-175186", inStock: true },
+    ],
+  },
+  {
+    id: 83, name: "HP 24-cr0058na 23.8\" All-in-One Desktop PC Intel Core i3 8GB RAM", cat: "electronics",
+    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/173992-a1.jpg", lastUpdated: "27 Sept 2026",
+    specs: ["Desktops", "Brand: HP", "Free shipping", "Condition: New"],
+    ai: "Get the most out of your content with the 24 IPS LCD display. The Full HD resolution shows sharp detail and clarity, and the three-sided micro-edge design means you won't get distracted by chunky borders.",
+    history: [599.0],
+    prices: [
+      { store: "tekshop", price: 599.0, shipping: 0.0, delivery: "Next day", affiliateLink: "https://conversions.tekshop.co.uk/c?c=38998&m=2423314&a=515952&r=&u=https%3A%2F%2Fwww.tekshop.co.uk%2Fbn4m9ea-hp-24-cr0058na-23-8-all-in-one-desktop-pc-173992-b", inStock: true },
+    ],
+  },
+  {
+    id: 84, name: "Acer Aspire TC-1785 Desktop PC Intel i7-14700 16GB RAM 1TB SSD Black", cat: "electronics",
+    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/a/1/a1dt.bk6ek.00p_1_supersize-ezgif.com-avif-to-jpg-converter.jpg", lastUpdated: "27 Sept 2026",
+    specs: ["Desktops", "Brand: Acer", "Free shipping", "Condition: New"],
+    ai: "No more getting flustered on work calls either. WiFi 6E will give lag its marching orders, and your 1 TB SSD storage will find and open your files before you can even say 'screen share'.",
+    history: [799.0],
+    prices: [
+      { store: "tekshop", price: 799.0, shipping: 0.0, delivery: "Next day", affiliateLink: "https://conversions.tekshop.co.uk/c?c=38998&m=2423314&a=515952&r=&u=https%3A%2F%2Fwww.tekshop.co.uk%2Fdt-blnek-00p-acer-aspire-tc-1785-tower-desktop-pc-172367-a", inStock: true },
+    ],
+  },
+  {
+    id: 85, name: "Acer Nitro 20 N20-13H5U Gaming Desktop Intel i5 16GB RAM 1TB SSD RTX", cat: "electronics",
+    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/d/g/dg.bqbek.005_1_supersize.jpg", lastUpdated: "27 Sept 2026",
+    specs: ["Desktops", "Brand: Acer", "Free shipping", "Condition: New"],
+    ai: "Sony PlayStation 5 Pro 4K AI Upscaling | Advanced Ray Tracing | 2TB SSD | WiFi 7 Support You'd better hold on to your controller because the PlayStation 5 Pro is blazing fast.",
+    history: [999.0],
+    prices: [
+      { store: "tekshop", price: 999.0, shipping: 0.0, delivery: "Next day", affiliateLink: "https://conversions.tekshop.co.uk/c?c=38998&m=2423314&a=515952&r=&u=https%3A%2F%2Fwww.tekshop.co.uk%2Fdg-bqbek-00f-acer-nitro-20-n20-13h5u-gaming-desktop-174468", inStock: true },
+    ],
+  },
+  {
+    id: 86, name: "Honor Pad X9 11.5\" Tablet 2K Display Snapdragon 685 4GB RAM 128GB", cat: "electronics",
+    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/w/h/white-3127313_r_z001a.jpg", lastUpdated: "27 Sept 2026",
+    specs: ["Phones & Tablets", "Brand: Honor", "Free shipping", "Condition: New"],
+    ai: "Honor Pad X9 HONOR Pad X9 is a 11.5-inch 2K Tablet with Fullview display and 86% screen to body ratio which shows every detail for better user viewing experience and entertain the whole family by playing music through your speakers or sharing your best videos and photos.",
+    history: [179.0],
+    prices: [
+      { store: "tekshop", price: 179.0, shipping: 0.0, delivery: "Next day", affiliateLink: "https://conversions.tekshop.co.uk/c?c=38998&m=2423314&a=515952&r=&u=https%3A%2F%2Fwww.tekshop.co.uk%2F5301aghx-honor-pad-x9-11-5-tablet-171295-a", inStock: true },
+    ],
+  },
+  {
+    id: 87, name: "Lenovo Idea Tab 11\" 2.5K Tablet 8GB 256GB Storage with Tab Pen Blue", cat: "electronics",
+    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/174842-1.jpg", lastUpdated: "27 Sept 2026",
+    specs: ["Phones & Tablets", "Brand: Lenovo", "Free shipping", "Condition: New"],
+    ai: "11\" 2.5K Display Silky smooth 90Hz touchscreen Octa-Core Speed MediaTek Dimensity 6300 Tab Pen Included Sketch, write, and create 256GB Storage Expandable up to 2TB Stand Out in Striking Blue A Digital Canvas for Your Everyday Life Picture yourself unwinding on the sofa with a hot drink, catching up on your favourite streaming series, or lightly sketching out ideas for your next big project.",
+    history: [279.0],
+    prices: [
+      { store: "tekshop", price: 279.0, shipping: 0.0, delivery: "Next day", affiliateLink: "https://conversions.tekshop.co.uk/c?c=38998&m=2423314&a=515952&r=&u=https%3A%2F%2Fwww.tekshop.co.uk%2Fzafr0815se-lenovo-idea-tab-11-2-5k-tablet-174842", inStock: true },
+    ],
+  },
+  {
+    id: 88, name: "Nothing Phone (2) 6.7\" 120Hz AMOLED Snapdragon 8+ 12GB 256GB Android", cat: "electronics",
+    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/a/1/a10400028_1_supersize-ezgif.com-webp-to-jpg-converter.jpg", lastUpdated: "27 Sept 2026",
+    specs: ["Phones & Tablets", "Free next-day delivery", "Free shipping", "Condition: New"],
+    ai: "The new Glyph Interface- Love at first light For a world craving more me-time and less screen-time, we bring you the Glyph Interface.",
+    history: [329.0],
+    prices: [
+      { store: "tekshop", price: 329.0, shipping: 0.0, delivery: "Next day", affiliateLink: "https://conversions.tekshop.co.uk/c?c=38998&m=2423314&a=515952&r=&u=https%3A%2F%2Fwww.tekshop.co.uk%2Fa10400028-nothing-phone-2-6-7-120hz-amoled-snapdragon-8-12gb-256gb-android-white-173163-a", inStock: true },
+    ],
+  },
+  {
+    id: 89, name: "Lenovo ThinkVision P25i-30 24.5\" FHD IPS 100Hz Monitor 4ms 63F4MAT1UK", cat: "electronics",
+    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/175104-5.jpg", lastUpdated: "27 Sept 2026",
+    specs: ["Monitors", "Brand: Lenovo", "Free shipping", "Condition: New"],
+    ai: "At a glance 24.5\" FHD Display A crisp 1920 x 1080 IPS anti-glare screen offering striking clarity from any viewing angle.",
+    history: [199.0],
+    prices: [
+      { store: "tekshop", price: 199.0, shipping: 0.0, delivery: "Next day", affiliateLink: "https://conversions.tekshop.co.uk/c?c=38998&m=2423314&a=515952&r=&u=https%3A%2F%2Fwww.tekshop.co.uk%2F63f4mat1uk-lenovo-thinkvision-p25i-30-24-5-fhd-ips-100hz-monitor-175104", inStock: true },
+    ],
+  },
+  {
+    id: 90, name: "Dell Pro 27 Plus 27\" Quad HD Monitor 100Hz Refresh USB Hub", cat: "electronics",
+    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/175028-4.jpg", lastUpdated: "27 Sept 2026",
+    specs: ["Monitors", "Brand: Dell", "Free shipping", "Condition: New"],
+    ai: "At a Glance 27\" Quad HD (2560 x 1440) IPS Display Ultra-Smooth 100Hz Refresh Rate Pop-Out USB Hub with 15W Charging Fully Adjustable Stand (Height, Tilt, Swivel, Pivot) Clarity That Transforms Your Work Imagine sitting down at your desk and being greeted by incredibly sharp, vivid visuals.",
+    history: [239.0],
+    prices: [
+      { store: "tekshop", price: 239.0, shipping: 0.0, delivery: "Next day", affiliateLink: "https://conversions.tekshop.co.uk/c?c=38998&m=2423314&a=515952&r=&u=https%3A%2F%2Fwww.tekshop.co.uk%2Fp2725d-dell-pro-27-plus-27-quad-hd-monitor-175028-a", inStock: true },
+    ],
+  },
+  {
+    id: 91, name: "HyperX Cloud Alpha Wireless Gaming Headset - Black & Red", cat: "electronics",
+    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/175131-3.jpg", lastUpdated: "27 Sept 2026",
+    specs: ["Games Consoles", "Brand: HP", "Free shipping", "Condition: New"],
+    ai: "Over 300 hours of battery Get a massive 300 hours[1] of battery life and play for over a week without the battery getting low.",
+    history: [119.0],
+    prices: [
+      { store: "tekshop", price: 119.0, shipping: 0.0, delivery: "Next day", affiliateLink: "https://conversions.tekshop.co.uk/c?c=38998&m=2423314&a=515952&r=&u=https%3A%2F%2Fwww.tekshop.co.uk%2F4p5d4aa-hyperx-cloud-alpha-wireless-gaming-headset-black-red-175131", inStock: true },
+    ],
+  },
+  {
+    id: 92, name: "ASUS TUF Gaming 750W 80 Plus Gold ATX 3.1 Fully Modular Power Supply", cat: "electronics",
+    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/175127-1.jpeg", lastUpdated: "27 Sept 2026",
+    specs: ["PC Components", "Brand: Asus", "Free shipping", "Condition: New"],
+    ai: "At a glance 750W Gold Efficiency 80 PLUS Gold certification ensures superb power delivery with minimal energy wasted as heat.",
+    history: [109.0],
+    prices: [
+      { store: "tekshop", price: 109.0, shipping: 0.0, delivery: "Next day", affiliateLink: "https://conversions.tekshop.co.uk/c?c=38998&m=2423314&a=515952&r=&u=https%3A%2F%2Fwww.tekshop.co.uk%2Ftuf-gaming-750g-asus-tuf-gaming-750w-80-plus-gold-atx-3-1-fully-modular-power-supply-175127", inStock: true },
+    ],
+  },
+  {
+    id: 93, name: "Ubiquiti UniFi G6 Pro Bullet 4K PoE+ CCTV Security Camera in Black", cat: "electronics",
+    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/174633-a_7_copy.jpg", lastUpdated: "27 Sept 2026",
+    specs: ["Audio Visual", "Free next-day delivery", "Free shipping", "Condition: New"],
+    ai: "Professional 4K Security Ubiquiti UniFi G6 Pro Bullet 4K PoE+ CCTV Security Camera Imagine stepping away from your home or business knowing every entrance, driveway, and perimeter is being watched with uncompromising precision .",
+    history: [489.0],
+    prices: [
+      { store: "tekshop", price: 489.0, shipping: 0.0, delivery: "Next day", affiliateLink: "https://conversions.tekshop.co.uk/c?c=38998&m=2423314&a=515952&r=&u=https%3A%2F%2Fwww.tekshop.co.uk%2Fuvc-g6-pro-bullet-b-174633", inStock: true },
+    ],
+  },
+  {
+    id: 94, name: "VEVOR BBQ Access Door, 407x559 mm Single Outdoor Kitchen Door,", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FDMMBSCJM16X2GR6D9V0%2Fgoods_img-v2%2Foutdoor-kitchen-door-m100-1.2.jpg?timestamp=1711434634000", lastUpdated: "27 Sept 2026",
+    specs: ["Outdoors", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR BBQ Access Door, 407x559 mm Single Outdoor Kitchen Door, Stainless Steel Flush Mount Door, Wall Vertical Door with Handle, for BBQ Island, Grilling Station, Outside CabinetPrecise DimensionsPremium MaterialsHumanized DesignEasy to InstallVersatile ApplicationsCompact StructureColor: Stainless Steel Color,Item Model Number: B015D,Product Weight: 3.0 kg / 6.6 lbs,Product Dimensions: 407x559x46 mm / 16x22x2 inches,Main Material: Stainless Steel",
+    history: [33.9],
+    prices: [
+      { store: "vevor", price: 33.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Foutdoor-kitchen-door-c_10622%2Fvevor-407x559-mm-bbq-island-access-door-outdoor-kitchen-door-stainless-steel-p_010851369911", inStock: true },
+    ],
+  },
+  {
+    id: 95, name: "VEVOR Single Folding Security Gate, Lockable Scissor Gate with 360\u00b0", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FGZDZDAQM5157HX49X001V0%2Fgoods_img-v3%2Ffolding-security-gate-m100-1.2.jpg?timestamp=1750751655000", lastUpdated: "27 Sept 2026",
+    specs: ["Outdoors", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR Single Folding Security Gate, Lockable Scissor Gate with 360\u00b0 Swivel Casters, Outdoor Barricade Steel Retractable Gates, for Entry Security, Garage, Warehouse & Pool, 43.31 x 51.57 in (W x H)Lockable Swivel WheelsRetractable X TubeSecure Lock SystemSecure Hasp LockEasy InstallationWide ApplicationSingle Door / Double Sided: Single Door,Door Dimensions: 43.31 x 51.57 in / 1100 x 1310 mm,Item Model Number: XSJ-25-ZDM01,Product Weight: 32.41 lbs / 14.7 kg,Product Dimensions: 43.31 x 1.57 x 51.57 in / 1100 x 40 x 1310 mm",
+    history: [58.9],
+    prices: [
+      { store: "vevor", price: 58.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Ffolding-security-gate-c_10269%2Fvevor-single-folding-security-gate-lockable-scissor-gate-43-31-x-51-57-in-wxh--p_010517332213", inStock: true },
+    ],
+  },
+  {
+    id: 96, name: "VEVOR 7-in-1 Wi-Fi Weather Station, 7\" TFT Color Display, Wireless", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FTYN70TFTWIFI71ZZTY2%2Fgoods_img-v3%2Fweather-station-m100-1.2.jpg?timestamp=1732849132000", lastUpdated: "27 Sept 2026",
+    specs: ["Outdoors", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR 7-in-1 Wi-Fi Weather Station, 7\" TFT Color Display, Wireless Weather Station with Solar-Powered Sensor, Indoor Outdoor Monitoring for Temperature, Humidity, Wind Speed Direction, and Rainfall7-in-1 SensorIntelligent MonitoringLong Distance TransmissionHigh-Definition ScreenAluminum Rod Fixed Bracket4 x 3 in Solar PanelSolar Panel: Illuminance 38000 LUX, 5.4V, 200mA,Input: 100-240V AC, 50/60 Hz, 0.4A,Display Dimensions: 7.3 x 5.4 x 1.1 in/185.9 x 137.4 x 28.5 mm,RF Frequency: 915MHz for US, 868MHz for EU/AU/UK,IP Rating: IPX6,Output: 5.0V DC, 1000mA, 5W,Item Model Number: YT60233,Solar Panel Size: 4 x 3 in/100 x 70 mm,Net Weight: 1.36 kg/3 lbs,Sensor Dimensions: 16 x 15.6 x 14.4 in/408 x 396 x 367 mm,Main Material: ABS+PC,Wi-Fi Operation Frequency: 2.4 GHz",
+    history: [101.9],
+    prices: [
+      { store: "vevor", price: 101.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Fweather-station-c_12074%2Fvevor-7-in-1-solar-powered-wi-fi-weather-station-7-tft-with-outdoor-sensor-p_010459792132", inStock: true },
+    ],
+  },
+  {
+    id: 97, name: "VEVOR Kick Scooter for Kids Ages 8+, Teens & Adults, 2-Wheel Toddler", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FJTHBC2L8INCHQB6MP001V0%2Fgoods_img-v1%2Fkick-scooter-m100-1.2.jpg?timestamp=1759117437000", lastUpdated: "27 Sept 2026",
+    specs: ["Sports & Outdoors", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR Kick Scooter for Kids Ages 8+, Teens & Adults, 2-Wheel Toddler Scooter with Adjustable Height Handlebar, Wide Anti-Slip Deck, Foldable Lightweight for Boys & Girls up to 220 lbs, White + BlackKick StandNon-Slip HandleSurface Spraying ProcessAdjustable for Growing KidsSmooth & Stable RideSturdy & Durable BuildWheel Outer Diameter: \u03c68 in/\u03c6200 mm,Color: White + Black,Item Model Number: S200D,Product Dimensions: 35.4 x 15 x 39.4 in/900 x 380 x 1000 mm,Net Weight: 9.9 lbs/4.5 kg,Wheel Material: PU",
+    history: [38.9],
+    prices: [
+      { store: "vevor", price: 38.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Fscooters-equipment-c_12697%2Fvevor-kick-scooter-for-kids-ages-8-teens-adults-2-wheel-toddler-scooter-with-adjustable-height-handlebar-wide-anti-slip-deck-foldable-lightweight-for-boys-girls-up-to-220-lbs-white-black-p_010800687500", inStock: true },
+    ],
+  },
+  {
+    id: 98, name: "VEVOR Squat Machine, Deep Squat Rowing Machine for Home, Easy Setup &", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FQMSDJZLS3SZXM6XU1001V0%2Fgoods_img-v3%2Fsquat-machine-m100-1.2.jpg?timestamp=1757639937000", lastUpdated: "27 Sept 2026",
+    specs: ["Sports & Outdoors", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR Squat Machine, Deep Squat Rowing Machine for Home, Easy Setup & Foldable Exercise Equipment, Glute Trainer Machine with 3 High-Strength Resistance Bands, Glutes & Leg Home Workout Machine, BlackComfortable GripHigh-Quality MaterialsEasy to CleanEasy StorageMultiple Exercise ModesA Perfect Addition to Home FitnessResistance: 3 Resistance Ropes,Cushion Material: Leather, Sponge, Wood,Item Model Number: YZJ-523-3,Maximum Load Capacity: 300 lbs / 136 kg,Seat Cushion Adjustment Levels: 5 Levels,Cushion Color: Black with Red Edges,Product Dimensions: 35.4 x 22.8 x 44.1 in / 900 x 580 x 1120 mm,Cushion Dimensions: 11.3 x 8.1 x 1.8 in / 288 x 207 x 45 mm,Net Weight: 23.8 lbs / 10.8 kg",
+    history: [61.9],
+    prices: [
+      { store: "vevor", price: 61.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Fsquat-machine-c_14231%2Fvevor-squat-machine-deep-squat-rowing-machine-for-home-easy-setup-foldable-exercise-equipment-glute-trainer-machine-with-3-high-strength-resistance-bands-glutes-leg-home-workout-machine-black-p_010837343597", inStock: true },
+    ],
+  },
+  {
+    id: 99, name: "VEVOR Bike Repair Stand, 36 kg Heavy-duty Steel Bicycle Repair Stand,", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FZXCWXZJGZLDSC784IV0%2Fgoods_img-v3%2Fbike-repair-stand-m100-1.2.jpg?timestamp=1705642878000", lastUpdated: "27 Sept 2026",
+    specs: ["Automotive", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR Bike Repair Stand, 36 kg Heavy-duty Steel Bicycle Repair Stand, Adjustable Height Bike Maintenance Workstand with Magnetic Tool Tray Telescopic Arm, Foldable Bike Work Stand for Home, ShopsSturdy and Rust-Proof ConstructionEffortless Maintenance360\u00b0 Rotating Clamp80 LBS Load CapacityEnhanced StabilityTool Tray and Easy StorageSupport Legs: 4,Clamp Opening Range: 1-1.6 inch/25-40 mm,Height Range: 42.5-74.8 inch/1079.5-1900 mm,Item Model Number: TQXL-03,Max.",
+    history: [35.9],
+    prices: [
+      { store: "vevor", price: 35.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Fbike-workstands-c_12254%2Fvevor-bike-repair-stand-80lbs-adjustable-maintenance-folding-bike-rack-tool-tray-p_010397285369", inStock: true },
+    ],
+  },
+  {
+    id: 100, name: "VEVOR Electric Hoist Support Arm, 600 kg Max Load Capacity, Electric", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FHLZJTZ200100C8VC9V0%2Fgoods_img-v2%2Fhoist-support-m100-1.2.jpg?timestamp=1715044119000", lastUpdated: "27 Sept 2026",
+    specs: ["Automotive", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR Electric Hoist Support Arm, 600 kg Max Load Capacity, Electric Hoist Holder Swing Arm with Pole, Steel Hoist Frame, 180\u00b0 Swivel Scaffold Hoist Lifting Arm, Winch Hoist Arm for Workshop, GarageLift Heavy Loads with EaseStable Triangular DesignEasy Multi-Angle AdjustmentQuick and Simple InstallationVersatile and ReliableUniversal CompatibilityExtension Tube Extension Length: 14.37\u00b10.24 inches/365\u00b16 mm,Product Size (Extension Tube Extended): 51.18 x 6.69 x 31.5 inches/1300 x 170 x 800 mm,Item Model Number: DHZJ-300/600KG,Rotatable Angle: 180\u00b0,Product Weight: 40.12 lbs/18.2 kg,Material: Carbon Steel,Extended Small Square Tube: 661.39 lbs/300 kg,Swing Arm Large Square Tube: 1322.78 lbs/600 kg",
+    history: [56.9],
+    prices: [
+      { store: "vevor", price: 56.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Felectric-wire-rope-hoist-c_10453%2Fvevor-electric-hoist-support-arm-1320-lbs-max-load-capacity-electric-hoist-holder-swing-arm-with-pole-steel-hoist-frame-180-swivel-scaffold-hoist-lifting-arm-winch-hoist-arm-for-workshop-garage-p_010680499173", inStock: true },
+    ],
+  },
+  {
+    id: 101, name: "VEVOR 5 Ton/4999.9 kg Pneumatic Jack Triple Bag Air Jack Lifting", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FQJD5TSBQNS0000001V0%2Fgoods_img-v8%2Fpneumatic-jack-m100-1.2.jpg?timestamp=1650616546000", lastUpdated: "27 Sept 2026",
+    specs: ["Automotive", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR 5 Ton/4999.9 kg Pneumatic Jack Triple Bag Air Jack Lifting Height 16.5-40.6 cm Inflatable Car Jack Lifter Pneumatic Air Jack 4999.9 kg Capacity Extremely Fast Lifting11000lbs Loading Capacity6.3\"-15.75\" Lifting RangeSolid ConstructionEasy OperationLong Lever HandleWide ApplicationMin.",
+    history: [98.9],
+    prices: [
+      { store: "vevor", price: 98.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Fpneumatic-car-jack-c_10308%2Fpneumatic-car-jack-5-ton-11023-lbs-air-jack-lifting-height-up-to-16--p_010540950130", inStock: true },
+    ],
+  },
+  {
+    id: 102, name: "VEVOR 5 Pcs Diamond Hole Saw Set Diamond Drill Core Bits, M14", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FQGJJGSKKQ5JT20001V0%2Fgoods_img-v7%2Fdiamond-hole-saw-set-m100-1.2.jpg?timestamp=1632649931000", lastUpdated: "27 Sept 2026",
+    specs: ["Tools", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR 5 Pcs Diamond Hole Saw Set Diamond Drill Core Bits, M14 25/40/45/50/68MM Hole Saw Cutter Drill Bits, M14 thread Point-Accurate Drilling for Tiles Ceramic GraniteRugged Diamond DustFit for M14 ThreadSmall Gaps BetweenEasy Slug RemovalClean & ConvenientWide ApplicationGross Weight: 3 lbs / 1.36 kg,Carborundum Height: 15 mm / 0.59 in,Package Dimensions (L x W x H): 7.9 x 6.7 x 4.3 in / 20 x 17 x 11 cm,Total Length of Each Drilling Bit: 60 mm / 2.3 in,Drill Bits Diameter: 25/40/45/50/68 mm / 1/1.6/1.8/2/2.7 in,Mounting Thread: M14",
+    history: [29.9],
+    prices: [
+      { store: "vevor", price: 29.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Fhole-saw-kit-c_11426%2F5pcs-diamond-holesaw-set-25-40-45-50-68mm-m14-porcelain-25-40-45-50-68mm-granite-p_010262700622", inStock: true },
+    ],
+  },
+  {
+    id: 103, name: "VEVOR Portable Folding Workstand, 1267 x 665 mm Collapsible", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FBXSGZTPPSL4FAB6G7001V0%2Fgoods_img-v2%2Fportable-work-stand-m100-1.2.jpg?timestamp=1745551892000", lastUpdated: "27 Sept 2026",
+    specs: ["Tools", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR Portable Folding Workstand, 1267 x 665 mm Collapsible Workbench, 1135 kg Weight Capacity, No Assembly Foldable Work Stand with Storage Bag, Table Top NOT Included, for Garage Workshop OutdoorPortable Workstand with High Weight CapacityReinforced Tubing for Stability and StrengthEfficient Work SetupMulti-Purpose WorkstationThoughtful Design DetailsWide Rubber Pads for Secure GripExpanded Size: 4.16 x 2.18 ft / 1267 x 665 mm,Weight Capacity: \u22642500 lbs / 1135 kg,Number of Support Legs: 6,Item Model Number: SNT-6A,Support Surface Height: 34.13 in / 867 mm,Product Weight: 10.89 lbs / 4.94 kg,Main Material: Aluminum Alloy + Carbon Steel,Product Size: 49.88 x 26.18 x 34.13 in / 1267 x 665 x 867 mm",
+    history: [50.9],
+    prices: [
+      { store: "vevor", price: 50.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Fportable-work-stand-c_14101%2Fvevor-portable-folding-workstand-1267-x-665-mm-collapsible-work-stand-1135-kg-p_010147339727", inStock: true },
+    ],
+  },
+  {
+    id: 104, name: "VEVOR Crowd Control Stanchion, Set of 4 Pieces Stanchion Set,", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FGLZHSHDJTZGT4HKJUV0%2Fgoods_img-v9%2Fcrowd-control-stanchion-m100-1.2.jpg?timestamp=1640829863000", lastUpdated: "27 Sept 2026",
+    specs: ["Tools", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR Crowd Control Stanchion, Set of 4 Pieces Stanchion Set, Stanchion Set with 6.6 ft/2 m Black Retractable Belt, Black Crowd Control Barrier with Concrete and Metal Base - Easy Connect AssemblySteel & Iron MaterialRetractable Belt4-Way ConnectionSteady BaseEasy to AssembleWidely UsedBelt Material: Nylon,Overall Height: (Approx.) 35.4 in / 90 cm,Pole Thickness: 0.03 in / 0.8 mm,Base Diameter: 12.6 in / 32 cm,Number: 4 Pcs,Model: Heavy Duty,Belt Length: 6.6 ft / 2 m,Main Material: Stainless Steel, Iron,Belt Color: Black,Item Weight: 49 lbs / 22 kg",
+    history: [89.9],
+    prices: [
+      { store: "vevor", price: 89.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Fstanchion-c_10268%2Fvevor-4-x-retractable-crowd-control-barriers-queue-pole-post-stanchions-belt-set-p_010875136057", inStock: true },
+    ],
+  },
+  {
+    id: 105, name: "VEVOR 6-Tier Bamboo Shelf, Open Wood Bookshelf, Display Storage Rack", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FTBSJTBZZZFX69RI3MV0%2Fgoods_img-v3%2Frattan-bookshelves-m100-1.2.jpg?timestamp=1731295423000", lastUpdated: "27 Sept 2026",
+    specs: ["Furniture", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR 6-Tier Bamboo Shelf, Open Wood Bookshelf, Display Storage Rack Organizer, Freestanding Flower Plant Stand, Multifunctional Bamboo Bookshelf Ideal for Bathroom, Bedroom, Office, Study, NaturalOpen StorageSturdy & DurableSafety ProtectionQuick AssemblyVersatile UseUser-Friendly MaterialsBack Strip: 22.44 x 0.98 x 0.59 inches / 570 x 25 x 15 mm,Main Materials: Long Piece 1.30 x 0.59 inches / 33 x 15 mm, 0.98 x 0.59 inches / 25 x 15 mm,Weight Capacity: 22 lbs per Layer,Shelf Dimensions: 22.44 x 10.04 x 0.79 inches / 570 x 255 x 20 mm,Color: Bamboo Natural Color,Materials: Long Piece: 22.44 x 0.98 x 0.55 inches / 570 x 25 x 14 mm, Short Piece: 9.96 x 1.18 x 0.24 inches / 253 x 30 x 6 mm,Item Model Number: OPX-BSS-24IN-6T-N,Product Weight: 18.52 lbs / 8.4 kg,Material: Nan Bamboo,Frame Dimensions: 22.44 x 10.04 x 0.79 inches / 863 x 33 x 15 mm, 33.98 x 1.30 x 0.59 inches / 830 x 33 x 15 mm,Product Dimensions: 23.62 x 10.24 x 63.39 inches / 600 x 260 x 1610 mm,Layers: 5",
+    history: [45.9],
+    prices: [
+      { store: "vevor", price: 45.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Fbookshelves-c_13502%2Fvevor-bamboo-bookshelf-6-tiers-bamboo-ladder-bookcase-rectangle-storage-rack-p_010415805710", inStock: true },
+    ],
+  },
+  {
+    id: 106, name: "VEVOR Table Legs, 29.5\" H x 29.9\" W Steel Furniture Legs, Modular", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FZTCFKXX2830I85NBJ001V0%2Fgoods_img-v1%2Ftable-legs-m100-1.2.jpg?timestamp=1770861591000", lastUpdated: "27 Sept 2026",
+    specs: ["Furniture", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR Table Legs, 29.5\" H x 29.9\" W Steel Furniture Legs, Modular Design, Easy Assembly, 2204 lbs Max Load Heavy Duty, for Home Office Desk, Coffee Dinner Bar Tables, Workbench,2 PCS, X Frame, BlackCarbon Steel ConstructionAll-Black ScrewsNon-Slip FeetVersatile UseEasy InstallationEasy MaintenanceColor: Black,Item Model Number: HXZTXX28-30,Max Load Capacity: 2204 lbs / 1000 kg,Quantity: 2,Material: Carbon Steel,Product Dimensions: 29.9 x 4.7 x 29.5 in / 760 x 120 x 750 mm,Net Weight: 39.5 lbs / 17.9 kg",
+    history: [69.99],
+    prices: [
+      { store: "vevor", price: 69.99, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Ftable-legs-c_42696%2Fvevor-table-legs-29-5-h-x-29-9-w-steel-furniture-legs-modular-design-easy-assembly-2204-lbs-max-load-heavy-duty-for-home-office-desk-coffee-dinner-bar-tables-workbench-2-pcs-x-frame-black-p_010305032940", inStock: true },
+    ],
+  },
+  {
+    id: 107, name: "VEVOR Stainless Steel Food Prep Table Commercial Kitchen Work Table", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FCFBXGGZTSCGZCKBE4V0%2Fgoods_img-v6%2Fstainless-steel-work-table-m100-1.2.jpg?timestamp=1787821380000", lastUpdated: "27 Sept 2026",
+    specs: ["Furniture", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR Stainless Steel Food Prep Table Commercial Kitchen Work Table 45.7x121.9 cmStylish Work TableMultiple Styles AvailableDurable, Safe, and StableFlexible SetupEasy to InstallVersatile ApplicationsProduct Size (L x W x H): 18 x 48 x 34 inch / 457 x 1219 x 864 mm,Item Model Number: SCGZT1220*455T,Product Weight: 39 lbs / 17.75 kg,Material: Stainless Steel",
+    history: [107.9],
+    prices: [
+      { store: "vevor", price: 107.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Fstainless-steel-work-table-c_10625%2Fvevor-stainless-steel-food-prep-table-commercial-kitchen-work-table-18-x48--p_010922258104", inStock: true },
+    ],
+  },
+  {
+    id: 108, name: "VEVOR 4 Tiers Water Jug Holder, 5 Gallon Water Bottle Holder, Double", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2F5JLTZSSTSTZCX729CV0%2Fgoods_img-v2%2Fwater-jug-holder-m100-1.2.jpg?timestamp=1722396838000", lastUpdated: "27 Sept 2026",
+    specs: ["Storage & Organization", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR 4 Tiers Water Jug Holder, 5 Gallon Water Bottle Holder, Double Row Water Bottle Rack for 8 Bottles, Heavy Duty Water Jug Rack for Kitchen, Office, Living Room, BlackWater Bottle RackAdjustable SlotsEasy InstallationThoughtful DetailsVersatile UseVariety of SizesPrimary Material: Iron,Number of Rows: Double Row,Capacity: 8 Bottles,Number of Tiers: 4 Tiers,Color: Black,Product Model: 8 Water Bottle Rack-B,Product Dimensions: 25.6 \u00d7 13.0 \u00d7 42.9 in / 650 \u00d7 330 \u00d7 1090 mm,Net Weight: 13.71 lbs /6.22 kg,Overall Load Capacity: 335.1 lbs / 152 kg",
+    history: [35.9],
+    prices: [
+      { store: "vevor", price: 35.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Fshelving-c_13349%2Fvevor-4-tiers-water-jug-holder-double-row-water-bottle-rack-for-8-bottles-black-p_010647350818", inStock: true },
+    ],
+  },
+  {
+    id: 109, name: "VEVOR Over Washer and Dryer Storage Shelves, 6 Tiers Laundry Room", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FLDXYJZJTJK2PRT0BR001V0%2Fgoods_img-v2%2Fover-washer-and-dryer-storage-shelf-m100-1.2.jpg?timestamp=1750904226000", lastUpdated: "27 Sept 2026",
+    specs: ["Storage & Organization", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR Over Washer and Dryer Storage Shelves, 6 Tiers Laundry Room Drying Rack with Hanger Rod and Hooks, Two Rows Adjustable Washer Shelves Space Saver, for Laundry Room Storage & Organization, WhiteIncrease Storage SpaceAdjustable Shelf HeightMulti-Function DesignStable and SecureDurable QualityFit Multiple SpacesTotal Width: 63.39 in / 1610 mm,Storage Layers: 6 layers,Single Cone 4 Hooks Capacity: 22 lbs / 10 kg each,Columns: 2 columns,Depth: 13.4 in / 340 mm; 21.9 in / 555 mm,Total Height: 77.36 in / 1965 mm,Hanging Rod Capacity: 11 lbs / 5 kg each,Shelf Mesh Capacity: 44 lbs / 20 kg each,Item Model Number: SHSS8234196-6W,Maximum Load Capacity: 573 lbs / 260 kg,Working Load Capacity: 330.7 lbs / 150 kg,Net Weight: 27.78 lbs / 12.60 kg,Main Material: Carbon Steel,Washing Machine Size Fit: 29.92 in / 760 mm",
+    history: [55.9],
+    prices: [
+      { store: "vevor", price: 55.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Fwasher-pedestal-c_10860%2Fvevor-over-washer-and-dryer-storage-shelf-two-row-6-tiers-washer-rack-white-p_010475840906", inStock: true },
+    ],
+  },
+  {
+    id: 110, name: "VEVOR Pizza Stone, 15 in Round Cordierite Pizza Stone, Extra Large", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FPSSJQSYX15INBTVJF001V0%2Fgoods_img-v3%2Fpizza-stone-m100-1.2.jpg?timestamp=1758006669000", lastUpdated: "27 Sept 2026",
+    specs: ["Kitchen", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR Pizza Stone, 15 in Round Cordierite Pizza Stone, Extra Large Baking-Stone with Aluminum Peel, 0.67 in Thickness Heat-Resistant Cooking Cordierite, for Kitchen Oven, Baking Pizzas, BBQ GrillingEnhanced Baking ResultsHigh-Temperature CordieriteEasy to UseVersatile CompatibilityWide ApplicationsSmooth EdgesThickness: 0.67 in/17 mm,Product Type: Round,Item Model Number: VV38015P,Heat Tolerance: 1450 \u00b0F/787 \u00b0C,Product Dimensions: 15 x 15 x 0.67 in/381 x 381 x 17 mm,Net Weight: 8.11 lbs/3.68 kg,Main Material: Cordierite",
+    history: [23.9],
+    prices: [
+      { store: "vevor", price: 23.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Fbaking-steel-c_10611%2Fvevor-pizza-stone-15-in-round-cordierite-pizza-stone-extra-large-baking-stone-with-aluminum-peel-0-67-in-thickness-heat-resistant-cooking-cordierite-for-kitchen-oven-baking-pizzas-bbq-grilling-p_010691905513", inStock: true },
+    ],
+  },
+  {
+    id: 111, name: "VEVOR White Round Tablecloths 6 Pack, 132 Inches in Diameter, Stain-", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FDLZB132INCHBQ9NPD001V0%2Fgoods_img-v1%2Ftable-cover-m100-1.2.jpg?timestamp=1763516990000", lastUpdated: "27 Sept 2026",
+    specs: ["Kitchen", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR White Round Tablecloths 6 Pack, 132 Inches in Diameter, Stain- & Wrinkle- Resistant, Machine Washable Table Clothes, Polyester Fabric Table Covers for Wedding, Party, Banquet, Formal EventsSkin-Friendly and BreathablePrecision SewingWrinkle-ResistantEasy to MaintainIdeal PresentMultiple OptionsCounts: 6 Pcs/Box,Item Model Number: RD-TB-13,Net Weight: 14.8 lbs / 6.72 kg,Product Size: 132 inch / 3352 mm",
+    history: [48.9],
+    prices: [
+      { store: "vevor", price: 48.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Ftablecloths-c_14264%2Fvevor-white-round-tablecloths-6-pack-132-inches-in-diameter-stain-wrinkle-resistant-machine-washable-table-clothes-polyester-fabric-table-covers-for-wedding-party-banquet-formal-events-p_010438666033", inStock: true },
+    ],
+  },
+  {
+    id: 112, name: "VEVOR Artificial Wedding Arch Flowers Kit, Yellow Wedding Arch", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FHLGMHTJ3JTHS78U39V0%2Fgoods_img-v1%2Fwedding-arch-flower-kit-m100-1.2.jpg?timestamp=1739179464000", lastUpdated: "27 Sept 2026",
+    specs: ["Home Decor", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR Artificial Wedding Arch Flowers Kit, Yellow Wedding Arch Flowers with Drapes Kit (Pack of 3) - 2 Pcs Floral Arrangement, 1 Pcs Sheer Drapes, for Ceremony Bouquets Reception Backdrop DecorationWedding Arch KitFull, Realistic BloomsElegant DrapesExquisite DetailsEasy SetupRomantic Wedding DecorDrapes Material: Translucent Fabric,Flower Material: Silk Fabric,Drapes Size: 21 x 2.5 ft / 6400 x 760 mm,Curtain Color: White,Item Model Number: XH-HQ02,Flower Type: Sunflower + Peony + Rose + Button Chrysanthemum + Dahlia,Set Type: 3-Piece Set,Flower Color: Yellow + White,Corner Flower Size(Natural): 35.82 x 24.01 in / 910 x 610 mm,Tie-Back Flower Size(Natural): 27.16 x 17.12 in / 690 x 435 mm,Net Weight: 1.61 lb / 0.73 kg,Corner Flower Size(Straightened): 41.33 x 17.32 in / 1050 x 440 mm",
+    history: [34.9],
+    prices: [
+      { store: "vevor", price: 34.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Fartificial-flowers-c_13639%2Fvevor-artificial-wedding-arch-flowers-kit-yellow-with-2-pcs-flowers-1-pcs-drapes-p_010679699815", inStock: true },
+    ],
+  },
+  {
+    id: 113, name: "VEVOR Flower Ball Arrangement Bouquet 10 PCS, 19.6 x 8.6 Inch", cat: "home",
+    img: "\ud83d\udee0\ufe0f", image: "https://image.vevor.com/us%2FZSHQTXLSBS190GWMF001V0%2Fgoods_img-v2%2Fflower-balls-centerpiece-m100-1.2.jpg?timestamp=1751018217000", lastUpdated: "27 Sept 2026",
+    specs: ["Home Decor", "2-5 days delivery", "Free shipping", "New"],
+    ai: "VEVOR Flower Ball Arrangement Bouquet 10 PCS, 19.6 x 8.6 Inch Artificial Flower Balls Wedding Table Centerpieces, Faux Rose Arrangements for Wedding Centerpiece Home Decoration, Blue and White RosesPremium Lush Floral BallsPremium QualityQuick Fluff RestorationVersatile for Every MomentBefore PurchaseCustomizable OptionsItem Dimensions (L x W x H): 19.7 x 8.7 x 4.7 inch / 500 x 220 x 120 mm ,Number of Pieces: 10,Base Size: 17.32 x 4.72 inch / 440 x 120 mm,Color: Blue,Item Model Number: JN-CT-01,Material: Silk Fabric Petals, Plastic Aquatic Plants,Net Weight: 3.9 lbs / 1.79 kg",
+    history: [48.9],
+    prices: [
+      { store: "vevor", price: 48.9, shipping: 0.0, delivery: "2-5 days", affiliateLink: "https://tc.tradetracker.net/?c=34772&m=1962969&a=515952&r=&u=https%3A%2F%2Fwww.vevor.co.uk%2Fdecorative-wreaths-c_13558%2Fvevor-flower-ball-arrangement-bouquet-10-pcs-19-6-x-8-6-inch-artificial-flower-balls-wedding-table-centerpieces-faux-rose-arrangements-for-wedding-centerpiece-home-decoration-blue-and-white-roses-p_010429194946", inStock: true },
     ],
   },
 ];
