@@ -499,7 +499,7 @@ const PRODUCTS = [
   },
   {
     id: 43, name: "Elix Straight Leg Jeans Mid Wash", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/d2d72d8b-e455-4caf-bdcb-2b9f1a8c89e6.jpg?v=1773061055", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/d2d72d8b-e455-4caf-bdcb-2b9f1a8c89e6.jpg?v=1773061055", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/f241a452-2192-4b14-822e-f0c7cabf10ef.jpg?v=1773061055", lastUpdated: "26 Sept 2026",
     specs: ["Straight Leg", "Category: Jeans"],
     ai: "Mens Elix Straight Leg Jeans - Duck and Cover Upgrade your everyday denim with the Duck and Cover Elix Straight Leg Jeans.",
     history: [30.0],
@@ -509,7 +509,7 @@ const PRODUCTS = [
   },
   {
     id: 44, name: "Elix Straight Leg Jeans Black", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/98a9972f-d3f1-443b-b117-6f9e3d406b5d.jpg?v=1773061053", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/98a9972f-d3f1-443b-b117-6f9e3d406b5d.jpg?v=1773061053", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/6bdce419-74bf-4c38-a554-c89237135868.jpg?v=1773061053", lastUpdated: "26 Sept 2026",
     specs: ["Straight Leg", "Category: Jeans"],
     ai: "Mens Elix Straight Leg Jeans - Duck and Cover Upgrade your everyday denim with the Duck and Cover Elix Straight Leg Jeans.",
     history: [30.0],
@@ -519,7 +519,7 @@ const PRODUCTS = [
   },
   {
     id: 45, name: "Caplaz & Frankinz T-Shirt 10pcs Assorted", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/7e5cc18e-2b07-4b9d-bb78-17fd4522dc1e_9a54f328-9a55-467d-bbc8-49a0785b7f60.jpg?_=1729244382&v=1751031217", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/7e5cc18e-2b07-4b9d-bb78-17fd4522dc1e_9a54f328-9a55-467d-bbc8-49a0785b7f60.jpg?_=1729244382&v=1751031217", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/fb0f2d48-a7c4-4b58-8da0-32a5debec33c_97015282-c745-40e2-8fa5-e7f6ed462932.jpg?v=1751031217", lastUpdated: "26 Sept 2026",
     specs: ["Category: T-Shirts", "See retailer page for full details"],
     ai: "Stock up on essentials with the Caplaz & Frankinz T-Shirt 10-Pack. Made from cotton, these soft and breathable tees offer comfort and durability in a variety of colours, perfect for everyday wear. Fabric: 100% Cotton",
     history: [49.99],
@@ -529,7 +529,7 @@ const PRODUCTS = [
   },
   {
     id: 46, name: "Haltecks T-Shirt 5pk Assorted", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/8c5b8716-d0bd-40e1-8835-78b9430746b9.jpg?v=1774014730", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/8c5b8716-d0bd-40e1-8835-78b9430746b9.jpg?v=1774014730", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/a632a3c2-93ca-4e9b-bdef-1acbf4a01802.jpg?v=1783343447", lastUpdated: "26 Sept 2026",
     specs: ["Category: T-Shirts", "See retailer page for full details"],
     ai: "A 5-pack of cotton T-shirts from Duck and Cover, designed for everyday wear. Featuring self-fabric inner back neck tape and soft-touch prints across the collection, offering versatile styling options.",
     history: [29.99],
@@ -539,7 +539,7 @@ const PRODUCTS = [
   },
   {
     id: 47, name: "Adamsberg Black Hoodie", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/322b6df4-4d2b-4086-8dc5-76a9482e09de.jpg?v=1787905473", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/322b6df4-4d2b-4086-8dc5-76a9482e09de.jpg?v=1787905473", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/eafceea0-3aad-4916-94c1-6417285be357.jpg?v=1787905474", lastUpdated: "26 Sept 2026",
     specs: ["Category: Hoodies", "See retailer page for full details"],
     ai: "Carbon fleece men's hoodie - zip sleeve pocket, kangaroo pocket, self-lined hood. 65% cotton. Was \u00a360, now \u00a319.99. In stock now.",
     history: [35.0],
@@ -549,7 +549,7 @@ const PRODUCTS = [
   },
   {
     id: 48, name: "Adamsberg Off White Hoodie", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/af9b0f32-1357-4519-b247-a65489e11c8b.jpg?v=1787905476", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/af9b0f32-1357-4519-b247-a65489e11c8b.jpg?v=1787905476", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/809cfe66-4f03-40c4-affd-eb20b2666385.jpg?v=1787905476", lastUpdated: "26 Sept 2026",
     specs: ["Category: Hoodies", "See retailer page for full details"],
     ai: "Carbon fleece mens hoodie with zip sleeve pocket, lined hood and kangaroo pocket. Was \u00a360.00, now \u00a319.99. In stock now.",
     history: [35.0],
@@ -559,7 +559,7 @@ const PRODUCTS = [
   },
   {
     id: 49, name: "Moretor Chinos Black", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/6c23084b-8817-4913-bdba-28b5ec58cacf.jpg?_=1723215585&v=1771325408", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/6c23084b-8817-4913-bdba-28b5ec58cacf.jpg?_=1723215585&v=1771325408", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/62e6056a-4a43-491b-92eb-97971d71529f.jpg?v=1771325408", lastUpdated: "26 Sept 2026",
     specs: ["slim fit", "Category: Chinos"],
     ai: "Men's slim fit chino lightweight canvas inner waistband facing and inner pocket badge.",
     history: [30.99],
@@ -569,7 +569,7 @@ const PRODUCTS = [
   },
   {
     id: 50, name: "Mens Slim Fit Chinos Navy", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/a62ff1e9-8fc7-473d-b8f5-2f2c46115e2d.jpg?_=1723215602&v=1771325402", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/a62ff1e9-8fc7-473d-b8f5-2f2c46115e2d.jpg?_=1723215602&v=1771325402", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/670b5552-aa2d-4eb1-8dac-6836be55b49b.jpg?v=1771325403", lastUpdated: "26 Sept 2026",
     specs: ["Slim fit", "Category: Chinos"],
     ai: "Slim fit navy chinos with stretch canvas fabric, clean tailoring and welt pockets. Was \u00a360.00, now \u00a330.99. Multiple sizes. Order today.",
     history: [30.99],
@@ -579,7 +579,7 @@ const PRODUCTS = [
   },
   {
     id: 51, name: "Adamsberg Hoodie & Joggers Set Off White", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/6f48d0e8-e88e-4306-8d85-f9ff787f17a5.jpg?v=1787905870", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/6f48d0e8-e88e-4306-8d85-f9ff787f17a5.jpg?v=1787905870", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/6c00de4e-9d65-464d-b3bf-dc6ce8005d77.jpg?v=1787905871", lastUpdated: "26 Sept 2026",
     specs: ["Category: Tracksuits", "See retailer page for full details"],
     ai: "The Adamsberg Tracksuit provide modern comfort, pairing the hoodie and joggers for a complete everyday look. Mens carbon fleece hoodie with printed chest detail. Front kangaroo pocket and left sleeve zip pocket.",
     history: [59.0],
@@ -589,7 +589,7 @@ const PRODUCTS = [
   },
   {
     id: 52, name: "Danvers Zip Knit Polo Black", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/f18178d3-ce68-4a92-9d0a-cd2c47ce6b7b.jpg?v=1787905877", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/f18178d3-ce68-4a92-9d0a-cd2c47ce6b7b.jpg?v=1787905877", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/c0510390-5a01-4010-9b1a-6955f79b42f4.jpg?v=1787905877", lastUpdated: "26 Sept 2026",
     specs: ["Category: Polos", "See retailer page for full details"],
     ai: "A modern knitted zip polo from Duck and Cover featuring a basket weave pattern for a clean, textured look. Finished with a branded quarter zip and ribbed trims, it offers a sharp option for everyday wear.",
     history: [25.0],
@@ -599,7 +599,7 @@ const PRODUCTS = [
   },
   {
     id: 53, name: "Wrentham Polo Black", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/871ba975-204e-4b83-96c5-df22db3bdb86.jpg?v=1787905878", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/871ba975-204e-4b83-96c5-df22db3bdb86.jpg?v=1787905878", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/2bc61109-120d-403a-af60-ad2fb2c660ec.jpg?v=1787905879", lastUpdated: "26 Sept 2026",
     specs: ["Category: Polos", "See retailer page for full details"],
     ai: "A classic cotton pique polo from Duck and Cover featuring a clean button placket and subtle tipping for a refined finish. Designed with sleeve panel detailing and branded accents, it's an easy everyday essential.",
     history: [25.0],
@@ -609,7 +609,7 @@ const PRODUCTS = [
   },
   {
     id: 54, name: "Applewold Joggers Raisin", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/e6da2522-2755-40fe-a81b-2ed7022fa2c5.jpg?v=1787905664", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/e6da2522-2755-40fe-a81b-2ed7022fa2c5.jpg?v=1787905664", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/e442db74-f23c-409b-848f-90ae31ff8776.jpg?v=1787905665", lastUpdated: "26 Sept 2026",
     specs: ["Category: Joggers", "See retailer page for full details"],
     ai: "Introducing the Applewold Jogger, a cuffed fleece jogger built for relaxed comfort with modern details.",
     history: [30.0],
@@ -619,7 +619,7 @@ const PRODUCTS = [
   },
   {
     id: 55, name: "Applewold Joggers Black", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/a0aa6eb8-a6ef-459d-8596-39e5b811136e.jpg?v=1787905666", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/a0aa6eb8-a6ef-459d-8596-39e5b811136e.jpg?v=1787905666", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/4a82ac29-6c06-4b69-a434-6be510903338.jpg?v=1787905666", lastUpdated: "26 Sept 2026",
     specs: ["Category: Joggers", "See retailer page for full details"],
     ai: "Introducing the Applewold Jogger, a cuffed fleece jogger built for relaxed comfort with modern details.",
     history: [30.0],
@@ -629,7 +629,7 @@ const PRODUCTS = [
   },
   {
     id: 56, name: "Men's Chino Shorts Navy - Stretch Canvas, Sizes W30", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/845a87f2-79a8-42a6-b31e-0ab1ded254c9.jpg?_=1723215551&v=1771333998", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/845a87f2-79a8-42a6-b31e-0ab1ded254c9.jpg?_=1723215551&v=1771333998", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/e594a116-cd23-464f-9c10-cb98a92f3ed1.jpg?v=1771333998", lastUpdated: "26 Sept 2026",
     specs: ["Category: Shorts", "See retailer page for full details"],
     ai: "Navy stretch canvas chino shorts at \u00a316 (was \u00a349). Zip fly, welt pockets, W30-W38. Lightweight and breathable for summer. In stock now.",
     history: [16.0],
@@ -639,7 +639,7 @@ const PRODUCTS = [
   },
   {
     id: 57, name: "Moreshore Chino Shorts Olive", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/2b65d479-28a5-4b72-909a-0e752151e7ec.jpg?_=1723215566&v=1771333993", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/2b65d479-28a5-4b72-909a-0e752151e7ec.jpg?_=1723215566&v=1771333993", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/740cd21f-18b3-4485-9cea-6aa6918e8997.jpg?v=1771333994", lastUpdated: "26 Sept 2026",
     specs: ["Category: Shorts", "See retailer page for full details"],
     ai: "Men's chino short lightweight canvas inner waistband facing and inner pocket bags.",
     history: [16.0],
@@ -649,7 +649,7 @@ const PRODUCTS = [
   },
   {
     id: 58, name: "Jelforth Jacket Dark Olive", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/81911040-ead1-4681-aadb-27819d05808f.jpg?v=1787905218", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/81911040-ead1-4681-aadb-27819d05808f.jpg?v=1787905218", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/37b4751b-895f-4b00-b0f2-304e330654f2.jpg?v=1787905218", lastUpdated: "26 Sept 2026",
     specs: ["100% Polyester, lining 100% Polyester", "Category: Outerwear"],
     ai: "Introducing the Jelforth Jacket Khaki - perfect for everyday wear in the cooler months.",
     history: [85.0],
@@ -659,7 +659,7 @@ const PRODUCTS = [
   },
   {
     id: 59, name: "Jelforth Jacket Black", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/8522ffe2-2fc0-498a-81fe-9dbd2eaa6c54.jpg?v=1787905214", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/8522ffe2-2fc0-498a-81fe-9dbd2eaa6c54.jpg?v=1787905214", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/e48e7a24-681a-4516-8c44-d094d3373584.jpg?v=1787905214", lastUpdated: "26 Sept 2026",
     specs: ["100% Polyester, lining 100% Polyester", "Category: Outerwear"],
     ai: "Introducing the Jelforth Jacket Black - a parka designed for both function and style in cold weather.",
     history: [85.0],
@@ -669,7 +669,7 @@ const PRODUCTS = [
   },
   {
     id: 60, name: "Potenza 1/4 Zip Knit Raisin", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/1f131e9f-a3f0-49e2-8ec5-0135b67e1276.jpg?v=1787905685", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/1f131e9f-a3f0-49e2-8ec5-0135b67e1276.jpg?v=1787905685", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/5fc664e6-56e8-434c-9ddf-2eee7476805a.jpg?v=1787905685", lastUpdated: "26 Sept 2026",
     specs: ["Category: Knitwear", "See retailer page for full details"],
     ai: "Introducing the Potenza Quarter Zip Knit, crafted for easy layering and modern style.",
     history: [40.0],
@@ -679,7 +679,7 @@ const PRODUCTS = [
   },
   {
     id: 61, name: "Potenza 1/4 Zip Knit Stone", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/2d208a18-cc5b-473f-a4ae-7d8b44aa735b.jpg?v=1787905687", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/2d208a18-cc5b-473f-a4ae-7d8b44aa735b.jpg?v=1787905687", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/c4136f8a-ce28-4ebf-b6ea-c04216bc3856.jpg?v=1787905687", lastUpdated: "26 Sept 2026",
     specs: ["Category: Knitwear", "See retailer page for full details"],
     ai: "Introducing the Potenza Quarter Zip Knit, crafted for easy layering and modern style.",
     history: [40.0],
@@ -689,7 +689,7 @@ const PRODUCTS = [
   },
   {
     id: 62, name: "Quendle Boxers 5pk Assorted", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/0f045987-65d3-4a10-b0ca-2039b7e4b613.jpg?_=1723215993&v=1773433138", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/0f045987-65d3-4a10-b0ca-2039b7e4b613.jpg?_=1723215993&v=1773433138", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/9fa67895-8634-432f-a8cd-ef844f372f52.jpg?v=1773433138", lastUpdated: "26 Sept 2026",
     specs: ["95% Cotton and 5% Elastane", "Category: Underwear"],
     ai: "Introducing our Men's 5-Pack Boxershorts-an ultimate combination of style and comfort. Each pair features a jacquard waistband with contrasting raised logo text for a touch of sophistication.",
     history: [30.0],
@@ -699,7 +699,7 @@ const PRODUCTS = [
   },
   {
     id: 63, name: "Vianney Loungewear Set Black", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/72df2bd9-3c06-413a-ad8e-4e91355dedc7.jpg?v=1787904509", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/72df2bd9-3c06-413a-ad8e-4e91355dedc7.jpg?v=1787904509", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/63316825-3ec3-4bc1-b4af-f4ad5be0b49d.jpg?v=1787904509", lastUpdated: "26 Sept 2026",
     specs: ["Category: Loungewear", "See retailer page for full details"],
     ai: "Men's 2-part loungewear set: Men's raglan printed tee and pant lounge set. Fabric:100% Cotton",
     history: [36.0],
@@ -709,7 +709,7 @@ const PRODUCTS = [
   },
   {
     id: 64, name: "Nesta Trainers Black", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/f8eb8506-0c2a-4f9f-9427-75d239e0d848.jpg?v=1742375061", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/f8eb8506-0c2a-4f9f-9427-75d239e0d848.jpg?v=1742375061", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/0359675a-cf7d-4be7-86e6-3be8b3026396.jpg?v=1742375061", lastUpdated: "26 Sept 2026",
     specs: ["Category: Footwear", "See retailer page for full details"],
     ai: "Introducing the Nesta Sneaker, a stylish canvas sneaker with a rubber toe cap and chunky sole for comfort and durability. It has contrast stitching, metal eyelets, and thick laces for a modern look.",
     history: [25.0],
@@ -719,7 +719,7 @@ const PRODUCTS = [
   },
   {
     id: 65, name: "Francore Overshirt Navy Check", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/2b1c528b-ca7b-4793-b9ee-9fd81c02f771.jpg?_=1723203636&v=1773433123", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/2b1c528b-ca7b-4793-b9ee-9fd81c02f771.jpg?_=1723203636&v=1773433123", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/c5e6e39b-2f3c-4bfb-aeb7-0494d2495bf8.jpg?v=1773433123", lastUpdated: "26 Sept 2026",
     specs: ["Category: Shirts", "See retailer page for full details"],
     ai: "The Francore Overshirt Navy Check is the ideal winter shirt for men.",
     history: [29.99],
@@ -729,7 +729,7 @@ const PRODUCTS = [
   },
   {
     id: 66, name: "Venture Suitcase 3pk Charcoal", cat: "fashion",
-    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/5d2d44c5-9b45-4a05-9c6c-4d7f41286eeb.jpg?v=1756909351", lastUpdated: "26 Sept 2026",
+    img: "👕", image: "https://cdn.shopify.com/s/files/1/1543/1853/files/5d2d44c5-9b45-4a05-9c6c-4d7f41286eeb.jpg?v=1756909351", image2: "https://cdn.shopify.com/s/files/1/1543/1853/files/82880ad4-595a-4f82-9dc0-a2c84a1b1c71.jpg?v=1756909351", lastUpdated: "26 Sept 2026",
     specs: ["Category: Accessories", "See retailer page for full details"],
     ai: "Introducing the Venture 3 Pack Suitcase Charcoal , a practical 3-piece luggage set designed for every journey. This istem is excluded from further discounts due to its size.",
     history: [115.0],
@@ -859,7 +859,7 @@ const PRODUCTS = [
   },
   {
     id: 79, name: "HP 15s-fq5021na 15.6\" Laptop Intel i5 12th Gen 8GB RAM 256GB SSD", cat: "electronics",
-    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/171799-a_copy_1.jpg", lastUpdated: "27 Sept 2026",
+    img: "\ud83d\udcbb", lastUpdated: "27 Sept 2026",
     specs: ["Laptops", "Brand: HP", "Free shipping", "Condition: New"],
     ai: "Thin and light with a micro-edge display Super-portable with a lightweight design and a more comfortable view on flicker-free, micro-edge display.",
     history: [399.0],
@@ -869,7 +869,7 @@ const PRODUCTS = [
   },
   {
     id: 80, name: "Samsung Galaxy Book 4 Laptop 15.6\" Intel Core 3 100U 8GB RAM 256GB", cat: "electronics",
-    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/w/h/white-samsung_np750xgk-kg4uk_int_1.jpg", lastUpdated: "27 Sept 2026",
+    img: "\ud83d\udcbb", lastUpdated: "27 Sept 2026",
     specs: ["Laptops", "Brand: Samsung", "Free shipping", "Condition: New"],
     ai: "Performance you can count on Conquer your day with the latest Intel Core 3/5/7 processor and integrated Intel graphics, delivering super-smooth performance for streaming and seamless multitasking.",
     history: [649.0],
@@ -879,7 +879,7 @@ const PRODUCTS = [
   },
   {
     id: 81, name: "Lenovo LOQ 15IAX9E 15.6\" Gaming Laptop Intel Core i7 16GB 512GB RTX", cat: "electronics",
-    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/174616-a_2_copy.jpg", lastUpdated: "27 Sept 2026",
+    img: "\ud83d\udcbb", lastUpdated: "27 Sept 2026",
     specs: ["Laptops", "Brand: Lenovo", "Free shipping", "Condition: New"],
     ai: "Premium Entry-Level Gaming Lenovo LOQ 15IAX9E 15.6\" Gaming Laptop Step into the competitive arena with confidence.",
     history: [999.0],
@@ -889,7 +889,7 @@ const PRODUCTS = [
   },
   {
     id: 82, name: "Dell Pro Max 16 Plus 16\" Laptop Intel Core Ultra 7 265HX 32GB RAM", cat: "electronics",
-    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/175170-main_1_2_4.jpg", lastUpdated: "27 Sept 2026",
+    img: "\ud83d\udcbb", lastUpdated: "27 Sept 2026",
     specs: ["Laptops", "Brand: Dell", "Free shipping", "Condition: New"],
     ai: "Power Your Professional Potential Step into a new era of productivity with the Dell Pro Max 16 Plus .",
     history: [2799.0],
@@ -899,7 +899,7 @@ const PRODUCTS = [
   },
   {
     id: 83, name: "HP 24-cr0058na 23.8\" All-in-One Desktop PC Intel Core i3 8GB RAM", cat: "electronics",
-    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/173992-a1.jpg", lastUpdated: "27 Sept 2026",
+    img: "\ud83d\udcbb", lastUpdated: "27 Sept 2026",
     specs: ["Desktops", "Brand: HP", "Free shipping", "Condition: New"],
     ai: "Get the most out of your content with the 24 IPS LCD display. The Full HD resolution shows sharp detail and clarity, and the three-sided micro-edge design means you won't get distracted by chunky borders.",
     history: [599.0],
@@ -909,7 +909,7 @@ const PRODUCTS = [
   },
   {
     id: 84, name: "Acer Aspire TC-1785 Desktop PC Intel i7-14700 16GB RAM 1TB SSD Black", cat: "electronics",
-    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/a/1/a1dt.bk6ek.00p_1_supersize-ezgif.com-avif-to-jpg-converter.jpg", lastUpdated: "27 Sept 2026",
+    img: "\ud83d\udcbb", lastUpdated: "27 Sept 2026",
     specs: ["Desktops", "Brand: Acer", "Free shipping", "Condition: New"],
     ai: "No more getting flustered on work calls either. WiFi 6E will give lag its marching orders, and your 1 TB SSD storage will find and open your files before you can even say 'screen share'.",
     history: [799.0],
@@ -919,7 +919,7 @@ const PRODUCTS = [
   },
   {
     id: 85, name: "Acer Nitro 20 N20-13H5U Gaming Desktop Intel i5 16GB RAM 1TB SSD RTX", cat: "electronics",
-    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/d/g/dg.bqbek.005_1_supersize.jpg", lastUpdated: "27 Sept 2026",
+    img: "\ud83d\udcbb", lastUpdated: "27 Sept 2026",
     specs: ["Desktops", "Brand: Acer", "Free shipping", "Condition: New"],
     ai: "Sony PlayStation 5 Pro 4K AI Upscaling | Advanced Ray Tracing | 2TB SSD | WiFi 7 Support You'd better hold on to your controller because the PlayStation 5 Pro is blazing fast.",
     history: [999.0],
@@ -929,7 +929,7 @@ const PRODUCTS = [
   },
   {
     id: 86, name: "Honor Pad X9 11.5\" Tablet 2K Display Snapdragon 685 4GB RAM 128GB", cat: "electronics",
-    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/w/h/white-3127313_r_z001a.jpg", lastUpdated: "27 Sept 2026",
+    img: "\ud83d\udcbb", lastUpdated: "27 Sept 2026",
     specs: ["Phones & Tablets", "Brand: Honor", "Free shipping", "Condition: New"],
     ai: "Honor Pad X9 HONOR Pad X9 is a 11.5-inch 2K Tablet with Fullview display and 86% screen to body ratio which shows every detail for better user viewing experience and entertain the whole family by playing music through your speakers or sharing your best videos and photos.",
     history: [179.0],
@@ -939,7 +939,7 @@ const PRODUCTS = [
   },
   {
     id: 87, name: "Lenovo Idea Tab 11\" 2.5K Tablet 8GB 256GB Storage with Tab Pen Blue", cat: "electronics",
-    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/174842-1.jpg", lastUpdated: "27 Sept 2026",
+    img: "\ud83d\udcbb", lastUpdated: "27 Sept 2026",
     specs: ["Phones & Tablets", "Brand: Lenovo", "Free shipping", "Condition: New"],
     ai: "11\" 2.5K Display Silky smooth 90Hz touchscreen Octa-Core Speed MediaTek Dimensity 6300 Tab Pen Included Sketch, write, and create 256GB Storage Expandable up to 2TB Stand Out in Striking Blue A Digital Canvas for Your Everyday Life Picture yourself unwinding on the sofa with a hot drink, catching up on your favourite streaming series, or lightly sketching out ideas for your next big project.",
     history: [279.0],
@@ -949,7 +949,7 @@ const PRODUCTS = [
   },
   {
     id: 88, name: "Nothing Phone (2) 6.7\" 120Hz AMOLED Snapdragon 8+ 12GB 256GB Android", cat: "electronics",
-    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/a/1/a10400028_1_supersize-ezgif.com-webp-to-jpg-converter.jpg", lastUpdated: "27 Sept 2026",
+    img: "\ud83d\udcbb", lastUpdated: "27 Sept 2026",
     specs: ["Phones & Tablets", "Free next-day delivery", "Free shipping", "Condition: New"],
     ai: "The new Glyph Interface- Love at first light For a world craving more me-time and less screen-time, we bring you the Glyph Interface.",
     history: [329.0],
@@ -959,7 +959,7 @@ const PRODUCTS = [
   },
   {
     id: 89, name: "Lenovo ThinkVision P25i-30 24.5\" FHD IPS 100Hz Monitor 4ms 63F4MAT1UK", cat: "electronics",
-    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/175104-5.jpg", lastUpdated: "27 Sept 2026",
+    img: "\ud83d\udcbb", lastUpdated: "27 Sept 2026",
     specs: ["Monitors", "Brand: Lenovo", "Free shipping", "Condition: New"],
     ai: "At a glance 24.5\" FHD Display A crisp 1920 x 1080 IPS anti-glare screen offering striking clarity from any viewing angle.",
     history: [199.0],
@@ -969,7 +969,7 @@ const PRODUCTS = [
   },
   {
     id: 90, name: "Dell Pro 27 Plus 27\" Quad HD Monitor 100Hz Refresh USB Hub", cat: "electronics",
-    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/175028-4.jpg", lastUpdated: "27 Sept 2026",
+    img: "\ud83d\udcbb", lastUpdated: "27 Sept 2026",
     specs: ["Monitors", "Brand: Dell", "Free shipping", "Condition: New"],
     ai: "At a Glance 27\" Quad HD (2560 x 1440) IPS Display Ultra-Smooth 100Hz Refresh Rate Pop-Out USB Hub with 15W Charging Fully Adjustable Stand (Height, Tilt, Swivel, Pivot) Clarity That Transforms Your Work Imagine sitting down at your desk and being greeted by incredibly sharp, vivid visuals.",
     history: [239.0],
@@ -979,7 +979,7 @@ const PRODUCTS = [
   },
   {
     id: 91, name: "HyperX Cloud Alpha Wireless Gaming Headset - Black & Red", cat: "electronics",
-    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/175131-3.jpg", lastUpdated: "27 Sept 2026",
+    img: "\ud83d\udcbb", lastUpdated: "27 Sept 2026",
     specs: ["Games Consoles", "Brand: HP", "Free shipping", "Condition: New"],
     ai: "Over 300 hours of battery Get a massive 300 hours[1] of battery life and play for over a week without the battery getting low.",
     history: [119.0],
@@ -989,7 +989,7 @@ const PRODUCTS = [
   },
   {
     id: 92, name: "ASUS TUF Gaming 750W 80 Plus Gold ATX 3.1 Fully Modular Power Supply", cat: "electronics",
-    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/175127-1.jpeg", lastUpdated: "27 Sept 2026",
+    img: "\ud83d\udcbb", lastUpdated: "27 Sept 2026",
     specs: ["PC Components", "Brand: Asus", "Free shipping", "Condition: New"],
     ai: "At a glance 750W Gold Efficiency 80 PLUS Gold certification ensures superb power delivery with minimal energy wasted as heat.",
     history: [109.0],
@@ -999,7 +999,7 @@ const PRODUCTS = [
   },
   {
     id: 93, name: "Ubiquiti UniFi G6 Pro Bullet 4K PoE+ CCTV Security Camera in Black", cat: "electronics",
-    img: "\ud83d\udcbb", image: "https://www.tekshop.co.uk/media/catalog/product/1/7/174633-a_7_copy.jpg", lastUpdated: "27 Sept 2026",
+    img: "\ud83d\udcbb", lastUpdated: "27 Sept 2026",
     specs: ["Audio Visual", "Free next-day delivery", "Free shipping", "Condition: New"],
     ai: "Professional 4K Security Ubiquiti UniFi G6 Pro Bullet 4K PoE+ CCTV Security Camera Imagine stepping away from your home or business knowing every entrance, driveway, and perimeter is being watched with uncompromising precision .",
     history: [489.0],
@@ -1291,6 +1291,42 @@ function TopBar({ title, onBack }) {
       )}
       <div style={{ fontFamily: displayFont, fontWeight: 800, fontSize: 20, color: C.ink }}>{title}</div>
     </div>
+  );
+}
+
+/* Shows every real photo the feed actually provided for this product
+   (usually 1, sometimes 2 — affiliate feeds rarely include the full
+   gallery a retailer shows on its own site), with small thumbnails to
+   switch between them when there's more than one. Same plain <img>
+   pattern used everywhere else in the app — no extra logic, so it
+   can't behave differently from the image tags that already work. */
+function ProductGallery({ product }) {
+  const C = useTheme();
+  const images = [product.image, product.image2].filter(Boolean);
+  const [active, setActive] = useState(0);
+  return (
+    <>
+      {images[active] ? (
+        <img src={images[active]} alt={product.name} style={{ maxHeight: 140, maxWidth: "70%", objectFit: "contain" }} />
+      ) : product.img}
+      {images.length > 1 && (
+        <div style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 10 }}>
+          {images.map((img, i) => (
+            <button
+              key={i}
+              onClick={() => setActive(i)}
+              style={{
+                width: 44, height: 44, borderRadius: 10, overflow: "hidden", padding: 0,
+                border: i === active ? `2px solid ${C.blueDeep}` : "1px solid rgba(0,0,0,0.12)",
+                background: C.card, cursor: "pointer",
+              }}
+            >
+              <img src={img} alt={`${product.name} view ${i + 1}`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            </button>
+          ))}
+        </div>
+      )}
+    </>
   );
 }
 
@@ -1675,7 +1711,7 @@ function ProductDetails({ product, onBack, favorites, toggleFav, addAlert, remov
       <TopBar title="Product Details" onBack={onBack} />
       <div style={{ padding: "0 20px" }}>
         <div style={{ background: C.blueSoft, borderRadius: 20, padding: "36px 0", textAlign: "center", fontSize: 76, position: "relative" }}>
-          {product.image ? <img src={product.image} alt={product.name} style={{ maxHeight: 140, maxWidth: "70%", objectFit: "contain" }} /> : product.img}
+          <ProductGallery product={product} />
           <button onClick={() => toggleFav(product.id)} style={{ position: "absolute", top: 14, right: 14, background: C.card, border: "none", borderRadius: 999, width: 34, height: 34, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 1px 4px rgba(0,0,0,0.12)" }}>
             <Heart size={16} fill={isFav ? "#E4572E" : "none"} color={isFav ? "#E4572E" : C.inkSoft} />
           </button>
